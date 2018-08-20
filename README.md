@@ -1,0 +1,1 @@
+# apertium-smn-fin
