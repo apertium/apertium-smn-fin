@@ -1,5 +1,5 @@
 ###############################################################################
-## Makefile for Inari Saami--Finnish
+## Makefile for Northern Saami--Finnish
 ###############################################################################
 
 VERSION=0.1.0
@@ -58,7 +58,7 @@ TARGETS_COMMON =			\
 	hfst-concatenate -1 .deps/$*.autobil.nonplussed -2 .deps/$*.autobil.postplus.0,2 -o $@                 # bidix [^+]* (+ bidix [^+]*){0,2}
 
 # -------------------
-# Inari Saami analysis:
+# Northern Saami analysis:
 # -------------------
 
 .deps/$(LANG1).automorf.hfst: $(AP_SRC1)/apertium-und.$(LANG1)-und.LR.att.gz .deps/.d
@@ -80,7 +80,7 @@ $(PREFIX1).automorf-untrimmed.hfst: .deps/$(LANG1).automorf.hfst
 	hfst-fst2fst -w -i $< -o $@
 
 # -------------------
-# Inari Saami generation:
+# Northern Saami generation:
 # ---------------------
 
 $(PREFIX2).autogen.hfst: $(AP_SRC1)/apertium-$(LANG1).$(LANG1).RL.att.gz

@@ -87,11 +87,11 @@ def getAMT(f,o_dir,src_only,wer):
     
     i_tu_list = i_root.findall('.//tu')
     for tu in i_tu_list:
-        tr_sme = ET.SubElement(o_table, 'tr')
-        th_sme = ET.SubElement(tr_sme, 'th')
-        th_sme.set('class', 'tg-sme')
-        th_sme.set('colspan', '2')
-        th_sme.text = tu[0][0].text
+        tr_smn = ET.SubElement(o_table, 'tr')
+        th_smn = ET.SubElement(tr_smn, 'th')
+        th_smn.set('class', 'tg-smn')
+        th_smn.set('colspan', '2')
+        th_smn.text = tu[0][0].text
         
         print('processing ' + str(tu[0][0].text) + '\n')
 
@@ -133,11 +133,11 @@ def getAMT(f,o_dir,src_only,wer):
                     method="xml")
     print('DONE ' + str(f) + '\n\n')
 
-table_style = '<style type="text/css">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:8px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}\n.tg th{text-align:left;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:8px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}\n.tg .tg-sme{background-color:#c0c0c0;vertical-align:top;font-weight:bold;}\n.tg .tg-smn{background-color:#efefef;vertical-align:top;font-style:normal;}\n.tg .tg-amt{vertical-align:top;font-style:normal;}\n.tg .tg-wer{vertical-align:top;font-style:normal;color:grey;font-style: italic;}\n.hr.vertical{width: 0px; height: 100%;}</style>'
+table_style = '<style type="text/css">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:8px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}\n.tg th{text-align:left;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:8px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}\n.tg .tg-smn{background-color:#c0c0c0;vertical-align:top;font-weight:bold;}\n.tg .tg-smn{background-color:#efefef;vertical-align:top;font-style:normal;}\n.tg .tg-amt{vertical-align:top;font-style:normal;}\n.tg .tg-wer{vertical-align:top;font-style:normal;color:grey;font-style: italic;}\n.hr.vertical{width: 0px; height: 100%;}</style>'
 
 # parameters to be adjusted as needed
 s_lang = 'fin'
-t_lang = 'sme'
+t_lang = 'smn'
 
 try:
     os.environ["APERTIUM_HOME"]

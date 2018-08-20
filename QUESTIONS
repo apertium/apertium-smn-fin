@@ -43,7 +43,7 @@ TROND: Hmm. But that means "always", right?
 > kaikkialla ~ juohke bealde
 
 omorfi - Adv
-gt sme - bealde +Po
+gt smn - bealde +Po
 
 TROND: These are just different:
 One is compounded: fi = "all+on", 
@@ -73,7 +73,7 @@ oma+Cx N+Cx+Px ==> ieš+Px N+Cx
 
 > alddádet/alddáneattet/alddiineattet/alddesteattet
 
-	$ echo "ieš+Pron+Refl+Loc+PxPl2" | smegen
+	$ echo "ieš+Pron+Refl+Loc+PxPl2" | smngen
 	ieš+Pron+Refl+Loc+PxPl2	alddiineattet
 	ieš+Pron+Refl+Loc+PxPl2	alddesteattet
 	ieš+Pron+Refl+Loc+PxPl2	alddáneattet
@@ -81,7 +81,7 @@ oma+Cx N+Cx+Px ==> ieš+Px N+Cx
 	
 What do we do?
 TROND:
-We fix the isme-norm.fst transducer, by blocking 3 of 4.
+We fix the ismn-norm.fst transducer, by blocking 3 of 4.
 
 
 
@@ -124,7 +124,7 @@ These are fairly productive and consistent at least in finnish but the morpholog
 	hitaammin	hidas+A+Comp+Pl+Ins
 	hitaammin	hidas+A+Der/sti+Adv+Comp
 
-	$ echo "njoazibut" | sme
+	$ echo "njoazibut" | smn
 	njoazibut	njoahci+SgNomCmp+SgGenCmp+PlGenCmp+A+Comp+Sg+Nom+Use/Marg+Use/Ped+PxSg2
 	njoazibut	njoahci+SgNomCmp+SgGenCmp+PlGenCmp+A+Comp+Sg+Gen+Use/Marg+Use/Ped+PxSg2
 	njoazibut	njoahci+SgNomCmp+SgGenCmp+PlGenCmp+A+Comp+Sg+Acc+Use/Marg+Use/Ped+PxSg2
@@ -136,12 +136,12 @@ These are fairly productive and consistent at least in finnish but the morpholog
 	nopeammin	nopea+A+Der/sti+Adv+Comp
 
 
-	$ echo "hoahpubut" | sme
+	$ echo "hoahpubut" | smn
 	hoahpubut	hoahpubut+Adv+Comp
 
 
 TROND:
-~/gtsvn/kt/fin$ echo "njoazibut" | usme
+~/gtsvn/kt/fin$ echo "njoazibut" | usmn
 0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
 njoazibut	njoahci+A+Comp+Der2+Der/at+Adv
 njoazibut	njoahci+A+Comp+Sg+Acc+PxSg2
@@ -401,7 +401,7 @@ May have a note about this somewhere already. The particle POS in omorfi is a pr
 
 Split Finnish Adp into Pr and Po.
 
-Compare bidix with pp-sme-lex.txt and see how these compare. Maybe can get them all in the bidix?
+Compare bidix with pp-smn-lex.txt and see how these compare. Maybe can get them all in the bidix?
 
 
 ### Add Adp and Advs to morphology
@@ -496,7 +496,7 @@ What happens: 	^attr_nom<SN><@X><Sg><Ess>{^dát<Pron><Dem><Ess>$ ^dállu<N><Sg><
 
 ### Selecting the right words...
 
-I'm attempting to make sure that sme: nubbi, fin: toinen gets treated by the right rules in transfer. The problem is that def-cat in .t1x goes by the finnish side, and unfortunately it looks like I need to pick items by the sme side...
+I'm attempting to make sure that smn: nubbi, fin: toinen gets treated by the right rules in transfer. The problem is that def-cat in .t1x goes by the finnish side, and unfortunately it looks like I need to pick items by the smn side...
 
     <def-cat n="attrmod_1"> <!-- Svonni's grupp 1 --> 
       <cat-item tags="Pron.Dem.*.*."/> <!-- dat, dát, diet, dot, duot -->
@@ -533,12 +533,12 @@ I'm attempting to make sure that sme: nubbi, fin: toinen gets treated by the rig
 
 Currently nubbi ends up going to the rules that handle attrmod_3 because toinen is a Num., but it would ideally be part of attrmod_1, since it's an indefinite pronoun.  
 
-I realize this can be fixed by just adding this to the morphology, but I wonder if perhaps there's a way to go by the sme side. Can it be done in higher level transfers? 
+I realize this can be fixed by just adding this to the morphology, but I wonder if perhaps there's a way to go by the smn side. Can it be done in higher level transfers? 
 
 
 ### Derived adjectives
 
-	$ echo "soajálaš" | hfst-lookup .deps/sme-fin.automorf.hfst 
+	$ echo "soajálaš" | hfst-lookup .deps/smn-fin.automorf.hfst 
 	soajálaš	soadji<N><Der1><Der_laš><A><Attr>
 	soajálaš	soadji<N><Der1><Der_laš><A><Sg><Nom>
 	soajálaš	soadjá<N><Der1><Der_laš><A><Attr>
@@ -594,7 +594,7 @@ Also
 	milloinpa - goasba
 
 
-Basic question: can we construct a list of 1-1 correspondences in most of the sme and fin particles?
+Basic question: can we construct a list of 1-1 correspondences in most of the smn and fin particles?
 
 	fin 		sme
 	-pa 		-ba
@@ -681,7 +681,7 @@ pitkään                          guhkkái?
 
 ### Particles
 
-All these were listed as particles in omorfi, but i'm not sure how to translate them, some may already be listed like vaikka or kun, but can these work the same in sme?
+All these were listed as particles in omorfi, but i'm not sure how to translate them, some may already be listed like vaikka or kun, but can these work the same in smn?
 
 tarvis                          dárbu ?
 
@@ -760,7 +760,7 @@ Diehtosátnegirji lea čallojuvvon viiddes diehtočoakkáldat. Diehtosátnegirji
 
 + gokči - teknihkalaččat riekta, muhto ii leat dábálaš nie dadjat sámegillii -> viiddes
 
-+ kuten lääketieteeseen tai tekniikkaan : sme: dahje
++ kuten lääketieteeseen tai tekniikkaan : smn: dahje
 	vai - dušše go lea jearldat
 
 + máŋga fáttás - go numerála lea Sg, de substantiiva lea Sg
@@ -799,7 +799,7 @@ lääketiede -> dálkkasdieđa used to work, but now it's starred.
 
 4 luona		
 	luonasi
-	luonani		both are adv, but po in sme 
+	luonani		both are adv, but po in smn 
 		luhtán luhtte+Po+PxSg1
 	
 	- tweaked adv rule to handle Po/Adv, but maintain Adv chunk
@@ -815,7 +815,7 @@ Can't remember what the problem really is when apertium ends up with a syntactic
 
 ## Sisa/siskkil
 
-$ echo "sisa+Po" | smegen
+$ echo "sisa+Po" | smngen
 sisa+Po	sisa
 sisa+Po	siskkil
 
@@ -823,13 +823,13 @@ sisa+Po	siskkil
 
 (According to sámi-suoma-sámi sátnegirji:)
 
-$ echo govdilasas | sme 
+$ echo govdilasas | smn 
 govdilasas	govdat+V+IV+Der2+Actor+N+SgGenCmp+Use/NG+Use/Circ#+Use/Circlassa+N+Sg+Gen+Use/Ped+PxSg3
 govdilasas	govdat+V+IV+Der2+Actor+N+SgGenCmp+Use/NG+Use/Circ#+Use/Circlassa+N+Sg+Acc+Use/Ped+PxSg3
 govdilasas	govdat+V+IV+Der2+Actor+N+SgGenCmp+Use/NG+Use/Circ#+Use/Circlassa+N+Sg+Loc
 govdilasas	govdilasas+Adv
 
-$ echo govdilassii | sme
+$ echo govdilassii | smn
 govdilassii	govdat+V+IV+Der2+Actor+N+SgGenCmp+Use/NG+Use/Circ#+Use/Circlassa+N+Sg+Ill
 govdilassii	govdilassii+Adv
 
@@ -851,7 +851,7 @@ pinnalle	pinta+N+Sg+All
 
 680 #leat	^leat<V><IV><PrsPrc>$
 
-$ echo "lean" | sme
+$ echo "lean" | smn
 lean	leat+V+IV+Ind+Prs+Sg1
 lean	leat+V+IV+PrfPrc+Use/NG
 
@@ -860,24 +860,24 @@ lean	leat+V+IV+PrfPrc+Use/NG
 
 482 #stuoris	^stuoris<A><Attr>$
 
-$ echo "stuoris" | sme
+$ echo "stuoris" | smn
 stuoris	stuoris+CmpN/SgN+CmpN/SgG+CmpN/PlG+A+Sg+Nom
 
     <e><p><l>stuoris<s n="A"/></l><r>suuri<s n="A"/></r></p><par n="A_A"/></e> 
 
 need A+Attr:
 
-$ echo "stuora" | sme
+$ echo "stuora" | smn
 stuora	stuoris+CmpN/SgN+CmpN/SgG+CmpN/PlG+A+Attr+Dial/-KJ
 
-$ echo "stuorra" | sme
+$ echo "stuorra" | smn
 stuorra	stuoris+Dial/-GG+A+Attr
 
 Cannot generate.
 
 ## -go
 
-$ echo "ehpetgo" | sme
+$ echo "ehpetgo" | smn
 ehpetgo	ii+V+IV+Neg+Ind+Pl2+Qst+Use/Circ
 
 ^verb<V><NEG><@+FAUXV>{^Ii<V><IV><Neg><Ind><Pl2><Qst>$}$
@@ -886,7 +886,7 @@ does not generate; +Use/Circ
 
 I remember something about how we should be using the non-clitic question marker, e.g., ehpet go. Should I ignore this problem, or what?
 
-## Some postpositions missing in sme.lexc
+## Some postpositions missing in smn.lexc
 
 ^áigge/*áigge$
 ^guvlui/guovlu<N><Sg><Ill>$
@@ -899,7 +899,7 @@ I remember something about how we should be using the non-clitic question marker
 $ echo goalmmát | automorf
 goalmmát	goalmmát	+?
 
-$ echo goalmmát | sme
+$ echo goalmmát | smn
 goalmmát	+Use/CircNgoalmmát+A+Ord+Sg+Nom
 goalmmát	+Use/CircNgoalmmát+A+Ord+Sg+Gen+Use/Sub
 goalmmát	+Use/CircNgoalmmát+A+Ord+Sg+Acc+Use/Sub
@@ -911,7 +911,7 @@ nubbi	nubbi<Pron><Indef><Sg><Nom>
 nubbi	nubbi<Pron><Recipr><Attr>
 nubbi	nubbi<Pron><Recipr><Sg><Nom>
 
-$ echo nubbi | sme
+$ echo nubbi | smn
 nubbi	+Use/CircNnubbi+A+Ord+Sg+Nom
 nubbi	+Use/CircNnubbi+A+Ord+Attr
 nubbi	nubbi+Pron+Recipr+Sg+Nom
@@ -921,17 +921,17 @@ nubbi	nubbi+Pron+Indef+Attr
 
 ## Excl
 
-$ echo '!' | sme
+$ echo '!' | smn
 !	^excl+CLB+Use/Circ
 
-$ echo 'Perkele!' | fin-sme
+$ echo 'Perkele!' | fin-smn
 Beargalat#!
 
 <e><p><l>excl<s n="CLB"/></l><r>!<s n="Punct"/><s n="CLB"/></r></p></e>
 
 +Use/Circ preventing generation.
 
-## Some adverbs missing in sme.lexc
+## Some adverbs missing in smn.lexc
 
      95 #agi beaivvisge	^agi beaivvisge<Adv>$	^agi/ahki<N><Sg><Acc>/ahki<N><Sg><Gen>$ ^beaivvisge/*beaivvisge$
      66 #goassege	^goassege<Adv>$	^goassege/*goassege$
@@ -969,38 +969,38 @@ Beargalat#!
 
 ## Words without illative/locative
 
-fran@victorio:~$ echo nuorta+N+Sg+Ill | dsme
+fran@victorio:~$ echo nuorta+N+Sg+Ill | dsmn
 0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
 nuorta+N+Sg+Ill	nuorta+N+Sg+Ill	+?
 
-fran@victorio:~$ echo nuorta+N+Sg+Loc | dsme
+fran@victorio:~$ echo nuorta+N+Sg+Loc | dsmn
 0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
 nuorta+N+Sg+Loc	nuorta+N+Sg+Loc	+?
 
-fran@victorio:~$ echo nuorta+N+Sg+Gen | dsme
+fran@victorio:~$ echo nuorta+N+Sg+Gen | dsmn
 0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
 nuorta+N+Sg+Gen	nuortta
 
-fran@victorio:~$ echo nuorta+N+Sg+Acc | dsme
+fran@victorio:~$ echo nuorta+N+Sg+Acc | dsmn
 0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
 nuorta+N+Sg+Acc	nuortta
 
-fran@victorio:~$ echo nuorta+N+Sg+Nom | dsme
+fran@victorio:~$ echo nuorta+N+Sg+Nom | dsmn
 0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
 nuorta+N+Sg+Nom	nuorta
 
-fran@victorio:~$ echo nuorta+N+Sg+Com | dsme
+fran@victorio:~$ echo nuorta+N+Sg+Com | dsmn
 0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
 nuorta+N+Sg+Com	nuorttain
 
-fran@victorio:~$ echo nuorta+N+Ess | dsme
+fran@victorio:~$ echo nuorta+N+Ess | dsmn
 0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
 nuorta+N+Ess	nuortan
 
 
 # elämä -> eallin 
 
-Translate with verb-derived-noun instead of actio. can all agent participles coincide with such nouns in sme?
+Translate with verb-derived-noun instead of actio. can all agent participles coincide with such nouns in smn?
 
 
 # Focus particles

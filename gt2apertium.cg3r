@@ -60,7 +60,7 @@ MAP (Pl2) (p2 pl);
 MAP (Pl3) (p3 pl);
 
 MAP (<hab>) (←hab→);
-MAP (<sme>) (←sme→);
+MAP (<smn>) (←sme→);
 MAP (<sma>) (←sma→);
 MAP (<smj>) (←smj→);
 MAP (<ext>) (←ext→);

@@ -36,17 +36,8 @@
 
 <rules>
 
-  <rule weight="1.0"><!-- tulla default boahtit -->
-    <match lemma="tulla" tags="vblex.*"><select lemma="boahtit" tags="vblex.*"/></match>
-  </rule>
-  <rule weight="0.5"><!-- tulla ihtit -->
-    <match lemma="tulla" tags="vblex.*"><select lemma="ihtit" tags="vblex.*"/></match>
-  </rule>
-
-  <rule weight="1.0"><!-- tulla ihtit context -->
-    <match tags="*.ela"/>
-    <match lemma="tulla" tags="vblex.*"><select lemma="ihtit" tags="vblex.*"/></match>
-    <match tags="*.nom"/>
+  <rule weight="1.0"><!-- pitää default -->
+    <match lemma="pitää" tags="vblex.*"><select lemma="doallat" tags="vblex.*"/></match>
   </rule>
 
   <rule weight="0.5"><!-- liikot  -->
