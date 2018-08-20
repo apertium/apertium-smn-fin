@@ -1,9 +1,9 @@
 ###############################################################################
-## Makefile for Northern Saami--Finnish
+## Makefile for Inari Saami--Finnish
 ###############################################################################
 
 VERSION=0.1.0
-LANG1=sme
+LANG1=smn
 LANG2=fin
 PREFIX1=$(LANG1)-$(LANG2)
 PREFIX2=$(LANG2)-$(LANG1)
@@ -58,7 +58,7 @@ TARGETS_COMMON =			\
 	hfst-concatenate -1 .deps/$*.autobil.nonplussed -2 .deps/$*.autobil.postplus.0,2 -o $@                 # bidix [^+]* (+ bidix [^+]*){0,2}
 
 # -------------------
-# Northern Saami analysis:
+# Inari Saami analysis:
 # -------------------
 
 .deps/$(LANG1).automorf.hfst: $(AP_SRC1)/apertium-und.$(LANG1)-und.LR.att.gz .deps/.d
@@ -80,7 +80,7 @@ $(PREFIX1).automorf-untrimmed.hfst: .deps/$(LANG1).automorf.hfst
 	hfst-fst2fst -w -i $< -o $@
 
 # -------------------
-# Northern Saami generation:
+# Inari Saami generation:
 # ---------------------
 
 $(PREFIX2).autogen.hfst: $(AP_SRC1)/apertium-$(LANG1).$(LANG1).RL.att.gz
@@ -209,10 +209,10 @@ EXTRA_DIST=					\
 ## Installation
 ###############################################################################
 
-apertium_sme_findir=$(prefix)/share/apertium/$(BASENAME)/
+apertium_smn_findir=$(prefix)/share/apertium/$(BASENAME)/
 
 # Files which should be installed to $(prefix)/share/apertium/$(BASENAME)/:
-apertium_sme_fin_DATA=	\
+apertium_smn_fin_DATA=	\
 	$(TARGETS_COMMON)				\
 	$(BASENAME).$(PREFIX1).t1x			\
 	$(BASENAME).$(PREFIX1).t2x			\
@@ -242,19 +242,19 @@ clean-local:
 test-install: all
 	DESTDIR=tmp-$@ make install
 	find tmp-$@ -type f -name '*.mode' | xargs sed -i.tmp "s% '\($(prefix)\)% 'tmp-$@/\1%g"
-	echo "ja" | apertium -d tmp-$@/$(prefix)/share/apertium sme-fin | tee tmp-$@/mt
+	echo "ja" | apertium -d tmp-$@/$(prefix)/share/apertium smn-fin | tee tmp-$@/mt
 	@echo "ja" > tmp-$@/ref
 	@diff tmp-$@/ref tmp-$@/mt
-	echo "ja" | apertium -d tmp-$@/$(prefix)/share/apertium fin-sme | tee tmp-$@/mt
+	echo "ja" | apertium -d tmp-$@/$(prefix)/share/apertium fin-smn | tee tmp-$@/mt
 	@echo "ja" > tmp-$@/ref
 	@diff tmp-$@/ref tmp-$@/mt
 	@rm -rf tmp-$@
 
 test: all test-install
-	echo "ja ❡" | apertium -d . sme-fin | tee .test-mt
+	echo "ja ❡" | apertium -d . smn-fin | tee .test-mt
 	@echo "ja " > .test-ref
 	@diff .test-ref .test-mt
-	echo "ja" | apertium -d . fin-sme | tee .test-mt
+	echo "ja" | apertium -d . fin-smn | tee .test-mt
 	@echo "ja" > .test-ref
 	@diff .test-ref .test-mt
 	@rm .test-ref .test-mt
