@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modes>
+
+  <mode name="sme-fin" install="yes" gendebug="yes">
+    <pipeline>
+      <program name="hfst-proc -e -w">
+        <file name="sme-fin.automorf.hfst"/>
+      </program>
+      <program name="cg-proc" debug-suff="disam">
+        <file name="sme-fin.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -1 -n -w" debug-suff="syntax">
+        <file name="sme-fin.syn.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="sme-fin.autobil.bin"/>
+      </program>
+     <program name="lrx-proc -m">
+        <file name="sme-fin.autolex.bin"/>
+	</program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-sme-fin.sme-fin.t1x"/>
+        <file name="sme-fin.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-sme-fin.sme-fin.t2x"/>
+        <file name="sme-fin.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-sme-fin.sme-fin.t3x"/>
+        <file name="sme-fin.t3x.bin"/>
+      </program>
+      <program name="apertium-transfer -n" debug-suff="postchunk2">
+        <file name="apertium-sme-fin.sme-fin.t4x"/>
+        <file name="sme-fin.t4x.bin"/>
+      </program>
+      <program name="hfst-proc -N 1 $1">
+        <file name="sme-fin.autogen.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="fin-sme" install="yes" gendebug="yes">
+    <pipeline>
+      <program name="hfst-proc -e -w">
+        <file name="fin-sme.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -1 -w -n">
+        <file name="fin-sme.mor.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="fin-sme.autobil.bin"/>
+      </program>
+     <program name="lrx-proc -m">
+        <file name="fin-sme.autolex.bin"/>
+	</program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-sme-fin.fin-sme.t1x"/>
+        <file name="fin-sme.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-sme-fin.fin-sme.t2x"/>
+        <file name="fin-sme.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-sme-fin.fin-sme.t3x"/>
+        <file name="fin-sme.t3x.bin"/>
+      </program>
+      <program name="hfst-proc -N 1 $1">
+        <file name="fin-sme.autogen.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+
+</modes>
+
+

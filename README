@@ -1,0 +1,6 @@
+Nouns are in Google doc: http://spreadsheets.google.com/ccc?key=t0h56SM7K-FeaWoYSpVTlOA
+
+Use packages from /langs/
+
+./autogen.sh --prefix=/home/<username>/local --with-lang2=/home/<username>/source/giellatekno/langs/fin/tools/mt/apertium --with-lang1=/home/<username>/source/giellatekno/langs/sme/tools/mt/apertium
+

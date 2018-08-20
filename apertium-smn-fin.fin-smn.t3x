@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -*- nxml -*- -->
+<postchunk>
+  <section-def-cats>
+
+    <def-cat n="copulasg3">
+      <cat-item name="copulasg3"/>
+    </def-cat>
+    <def-cat n="verb">
+      <cat-item name="verb"/>
+    </def-cat>
+    <def-cat n="nom1">
+      <cat-item name="nom1"/>
+    </def-cat>
+  </section-def-cats>
+
+  <section-def-attrs>
+    <def-attr n="a_nom">
+      <attr-item tags="N"/>
+      <attr-item tags="N.Prop"/>
+    </def-attr>
+    <def-attr n="nbr">
+      <attr-item tags="sg"/>
+      <attr-item tags="pl"/>
+      <attr-item tags="NN"/>
+    </def-attr>
+    <def-attr n="a_person">
+      <attr-item tags="sg1"/>
+      <attr-item tags="sg2"/>
+      <attr-item tags="sg3"/>
+      <attr-item tags="pl1"/>
+      <attr-item tags="pl2"/>
+      <attr-item tags="pl3"/>
+      <attr-item tags="Pe4"/>
+      <attr-item tags="PD"/>
+    </def-attr>
+
+  </section-def-attrs>
+
+  <section-def-vars>
+    <def-var n="paraula"/>
+  </section-def-vars>
+
+
+  <section-rules>
+
+    <rule comment="CHUNK:">
+      <pattern>
+        <pattern-item n="nom1"/>
+      </pattern>
+      <action>
+        <out>
+          <lu>
+            <clip pos="1" part="whole"/>
+          </lu>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="CHUNK: copulasg3">
+      <pattern>
+        <pattern-item n="copulasg3"/>
+      </pattern>
+      <action>
+        <choose>
+          <when>
+            <test>
+              <equal>
+                <clip pos="1" part="a_person"/>
+                <lit-tag v="PD"/>
+              </equal>
+            </test>
+            <let>
+              <clip pos="1" part="a_person"/>
+              <lit-tag v="sg3"/>
+            </let>
+          </when>
+        </choose>
+        <out>
+          <lu>
+            <clip pos="1" part="whole"/>
+          </lu>
+          <b pos="1"/>
+          <lu>
+            <clip pos="2" part="whole"/>
+          </lu>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="CHUNK: modal verb Pekan täytyy">
+      <pattern>
+        <pattern-item n="verb"/>
+      </pattern>
+      <action>
+        <choose>
+          <when>
+            <test>
+              <equal>
+                <clip pos="1" part="a_person"/>
+                <lit-tag v="PD"/>
+              </equal>
+            </test>
+            <let>
+              <clip pos="1" part="a_person"/>
+              <lit-tag v="sg3"/>
+            </let>
+          </when>
+        </choose>
+        <out>
+          <lu>
+            <clip pos="1" part="whole"/>
+          </lu>
+        </out>
+      </action>
+    </rule>
+
+  </section-rules>
+</postchunk>

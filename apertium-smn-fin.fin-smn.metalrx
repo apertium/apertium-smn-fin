@@ -1,0 +1,124 @@
+<metalrx>
+
+
+  <def-seqs>
+    <def-seq n="word">
+       <match/>
+    </def-seq>
+    <def-seq n="non-verb">
+      <or>
+        <match tags="n.*"/>
+        <match tags="adv.*"/>
+        <match tags="adj.*"/>
+        <match tags="pr.*"/>
+        <match tags="ij.*"/>
+      </or>
+    </def-seq>
+    <def-seq n="skuovva">
+      <or>
+        <match lemma="gáma"/>  
+        <match lemma="skuovva"/>  
+      </or>
+    </def-seq>
+    <def-seq n="ela-verbs">
+      <or>
+        <match lemma="fárret"/>
+        <match lemma="boahtit"/>
+      </or>
+    </def-seq>
+    <def-seq n="ine-verbs">
+      <or>
+        <match lemma="foo"/>
+        <match lemma="bar"/>
+      </or>
+    </def-seq>
+  </def-seqs>
+
+<rules>
+
+  <rule weight="1.0"><!-- tulla default boahtit -->
+    <match lemma="tulla" tags="vblex.*"><select lemma="boahtit" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.5"><!-- tulla ihtit -->
+    <match lemma="tulla" tags="vblex.*"><select lemma="ihtit" tags="vblex.*"/></match>
+  </rule>
+
+  <rule weight="1.0"><!-- tulla ihtit context -->
+    <match tags="*.ela"/>
+    <match lemma="tulla" tags="vblex.*"><select lemma="ihtit" tags="vblex.*"/></match>
+    <match tags="*.nom"/>
+  </rule>
+
+  <rule weight="0.5"><!-- liikot  -->
+    <match lemma="pitää" tags="vblex.*"><select lemma="liikot" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.6">
+    <match lemma="pitää" tags="vblex.*"><select lemma="liikot" tags="vblex.*"/></match>
+    <match tags="*.ela"/>
+  </rule>
+
+  <rule weight="0.5"><!-- berret  -->
+    <match lemma="pitää" tags="vblex.*"><select lemma="berret" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.6">
+    <match tags="*.gen"/>
+    <match lemma="pitää" tags="vblex.*"><select lemma="berret" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.6">
+    <match lemma="pitää" tags="vblex.*"><select lemma="berret" tags="vblex.*"/></match>
+    <match tags="vblex.inf.*"/>
+  </rule>
+  <rule weight="0.6">
+    <or>
+      <match tags="*.gen"/>
+      <match tags="*.gen.*"/>
+    </or>
+    <match lemma="pitää" tags="vblex.*"><select lemma="berret" tags="vblex.*"/></match>
+  </rule>
+
+  <rule weight="1.0"><!-- vaihde default -->
+    <match lemma="vaihde" tags="n.*"><select lemma="molssa" tags="n.*"/></match>
+  </rule>
+
+  <rule weight="1.0"><!-- vaihde default -->
+    <match lemma="vaihde" tags="n.*"><select lemma="jorggáldat" tags="n.*"/></match>
+  </rule>
+
+  <rule weight="0.6">
+    <or>
+      <match lemma="vuosi"/> 
+      <match lemma="aika"/> 
+      <match lemma="kuukausi"/> 
+      <match lemma="tunti"/> 
+      <match lemma="viikko"/> 
+    </or>
+    <match lemma="vaihde" tags="n.*">
+      <select lemma="jorggáldat" tags="n.*"/>
+    </match>
+  </rule>
+  
+
+
+  <rule weight="1.0"><!-- siten default -->
+    <match lemma="siten" tags="adv"><select lemma="dakko" tags="adv"/></match>
+  </rule>
+  <rule weight="0.5">
+    <match lemma="siten" tags="adv"><select lemma="dakko" tags="adv"/></match>
+  </rule>
+
+  <rule weight="0.6">
+    <match lemma="siten" tags="adv"><select lemma="nu"/></match>
+    <match lemma=","/>
+    <match lemma="että"/>
+  </rule>
+
+
+  <!-- Verbs -->
+
+  <rule weight="1.1"><!-- siten default -->
+    <match lemma="voida" tags="vblex.*"><select lemma="sáhttit" tags="vblex.*"/></match>
+  </rule>
+
+
+</rules>
+</metalrx>

@@ -1,0 +1,387 @@
+<metalrx>
+
+
+  <def-seqs>
+    <def-seq n="word">
+       <match/>
+    </def-seq>
+    <def-seq n="non-verb">
+      <or>
+        <match tags="n.*"/>
+        <match tags="adv.*"/>
+        <match tags="adj.*"/>
+        <match tags="pr.*"/>
+        <match tags="ij.*"/>
+      </or>
+    </def-seq>
+    <def-seq n="skuovva">
+      <or>
+        <match lemma="gáma"/>  
+        <match lemma="skuovva"/>  
+      </or>
+    </def-seq>
+    <def-seq n="ela-verbs">
+      <or>
+        <match lemma="fárret"/>
+        <match lemma="boahtit"/>
+      </or>
+    </def-seq>
+    <def-seq n="ine-verbs">
+      <or>
+        <match lemma="foo"/>
+        <match lemma="bar"/>
+      </or>
+    </def-seq>
+  </def-seqs>
+
+<rules>
+
+  <rule>
+    <match lemma="ii" tags="vblex.*"/>
+    <match lemma="ge" tags="pcle.*"><select lemma="kaan" tags="adv.*"/></match>
+  </rule>
+
+ 
+  <rule weight="1.0">
+    <match lemma="ieš" tags="prn.*"><select lemma="oma" tags="adj.*"/></match>
+  </rule>
+
+  <rule weight="1.5">
+    <match lemma="ieš" tags="prn.ref.*.*.@SUBJ→"><select lemma="itse" tags="prn.ref.*"/></match>
+  </rule>
+
+  <rule weight="1.0">
+    <match lemma="suohkan" tags="n.*"><select lemma="kunta" tags="n.*"/></match>
+  </rule>
+
+  <rule weight="1.0">
+    <match lemma="liikot" tags="vblex.*"><select lemma="tykätä" tags="vblex.*"/></match>
+  </rule>
+
+  <rule weight="1.0"> <!-- Odne beaivi báitá. = Tänään aurinko paistaa --> 
+    <match lemma="beaivi" tags="n.*"><select lemma="aurinko" tags="n.*"/></match>
+    <match lemma="báitit" tags="vblex.*"/>
+  </rule>
+
+  <rule weight="1.0">
+    <match lemma="báitit" tags="vblex.*"><select lemma="paistaa" tags="vblex.*"/></match>
+  </rule>
+
+  <rule weight="1.0">
+    <match lemma="oabbá" tags="n.*"><select lemma="sisko" tags="n.*"/></match>
+  </rule>
+
+  <rule weight="1.0"><!-- rules to be written -->
+    <match lemma="nisu" tags="n.*"><select lemma="nainen" tags="n.*"/></match>
+  </rule>
+  <rule weight="0.5">
+    <match lemma="nisu" tags="n.*"><select lemma="vaimo" tags="n.*"/></match>
+  </rule>
+  <rule weight="0.5">
+    <match lemma="nisu" tags="n.*"><select lemma="vehnä" tags="n.*"/></match>
+  </rule>
+
+  <rule weight="1.0"><!-- rules to be written -->
+    <match lemma="girji" tags="n.*"><select lemma="kirja" tags="n.*"/></match>
+  </rule>
+  <rule weight="0.5">
+    <match lemma="girji" tags="n.*"><select lemma="kirje" tags="n.*"/></match>
+  </rule>
+  <rule weight="0.5">
+    <match lemma="girji" tags="n.*"><select lemma="kirjonta" tags="n.*"/></match>
+  </rule>
+
+  <rule weight="1.0">
+     <match lemma="sápmi" tags="n.*"><select lemma="saamelainen" tags="n.*"/></match>
+   </rule>
+   <rule weight="0.5">
+     <match lemma="sápmi" tags="n.*"><select lemma="saame" tags="n.*"/></match>
+   </rule>
+
+   <rule weight="1.0">
+      <match lemma="bargu" tags="n.*"><select lemma="työ" tags="n.*"/></match>
+    </rule>
+    <rule weight="0.5">
+      <match lemma="bargu" tags="n.*"><select lemma="teos" tags="n.*"/></match>
+    </rule>
+    <rule weight="0.5">
+      <match lemma="bargu" tags="n.*"><select lemma="tehtävä" tags="n.*"/></match>
+    </rule>
+  
+    <rule weight="1.0">
+       <match lemma="guovlu" tags="n.*"><select lemma="alue" tags="n.*"/></match>
+     </rule>
+     <rule weight="0.5">
+       <match lemma="guovlu" tags="n.*"><select lemma="suunta" tags="n.*"/></match>
+     </rule>
+     <rule weight="0.5">
+       <match lemma="guovlu" tags="n.*"><select lemma="seutu" tags="n.*"/></match>
+     </rule>
+     <rule weight="0.5">
+       <match lemma="guovlu" tags="n.*"><select lemma="kampus" tags="n.*"/></match>
+     </rule>
+     <rule weight="0.6">
+	   	<match lemma="universitehta" tags="n.*"/>
+       <match lemma="guovlu" tags="n.*"><select lemma="kampus" tags="n.*"/></match>
+     </rule>
+	  
+  <rule weight="1.0">
+     <match lemma="goddi" tags="n.*"><select lemma="villiporo" tags="n.*"/></match>
+   </rule>
+   <rule weight="0.5">
+     <match lemma="goddi" tags="n.*"><select lemma="kunta" tags="n.*"/></match>
+   </rule>
+   <rule weight="0.6">
+     <match  tags="*.cmp"/>
+     <match lemma="goddi" tags="n.*"><select lemma="kunta" tags="n.*"/></match>
+   </rule>
+ 
+   <rule weight="1.0">
+     <match lemma="čájehit" tags="vblex.*"><select lemma="näyttää" tags="vblex.*"/></match>
+   </rule>
+   <rule weight="0.5">
+     <match lemma="čájehit" tags="vblex.*"><select lemma="ilmentää" tags="vblex.*"/></match>
+   </rule>
+   
+   <rule weight="1.0">
+     <match lemma="lohkat" tags="vblex.*"><select lemma="lukea" tags="vblex.*"/></match>
+   </rule>
+   <rule weight="0.5">
+     <match lemma="lohkat" tags="vblex.*"><select lemma="laskea" tags="vblex.*"/></match>
+   </rule>
+   <rule weight="0.5">
+     <match lemma="lohkat" tags="vblex.*"><select lemma="sanoa" tags="vblex.*"/></match>
+   </rule>
+   
+   <rule weight="1.0">
+     <match lemma="čállit" tags="vblex.*"><select lemma="kirjoittaa" tags="vblex.*"/></match>
+   </rule>
+   <rule weight="0.5">
+     <match lemma="čállit" tags="vblex.*"><select lemma="avata" tags="vblex.*"/></match>
+   </rule>
+   
+   <rule weight="1.0">
+     <match lemma="gákti" tags="n.*"><select lemma="lapinpuku" tags="n.*"/></match>
+   </rule>
+   <rule weight="0.6">
+     <match lemma="gákti" tags="n.*"><select lemma="viitta" tags="n.*"/></match>
+   </rule>
+   
+   <rule weight="1.0">
+     <match lemma="čujuhus" tags="n.*"><select lemma="osoite" tags="n.*"/></match>
+   </rule>
+   <rule weight="0.6">
+     <match lemma="čujuhus" tags="n.*"><select lemma="viite" tags="n.*"/></match>
+   </rule>
+   
+  <rule weight="1.0"><!-- rules to be written -->
+    <match lemma="eadni" tags="n.*"><select lemma="äiti" tags="n.*"/></match>
+  </rule>
+  <rule weight="0.5">
+    <match lemma="eadni" tags="n.*"><select lemma="emä" tags="n.*"/></match>
+  </rule>
+  <rule weight="0.5">
+    <match lemma="eadni" tags="n.*"><select lemma="emo" tags="n.*"/></match>
+  </rule>
+  <rule weight="0.6">
+    <match lemma="beassi" tags="n.*"/>
+    <match lemma="eadni" tags="n.*"><select lemma="emo" tags="n.*"/></match>
+  </rule>
+  <rule weight="0.6">
+    <match lemma="beassi" tags="n.*"/>
+    <match lemma="eadni" tags="n.*"><select lemma="emo" tags="n.*"/></match>
+  </rule>
+
+  <rule weight="1.0"><!-- rules to be written -->
+    <match lemma="seammá" tags="adv.*"><select lemma="sama" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.5">
+    <match lemma="seammá" tags="adv.*"><select lemma="yhtä" tags="adv.*"/></match>
+  </rule>
+
+  <rule weight="1.0">
+    <match lemma="jođán" tags="adj.*"><select lemma="nopea" tags="adj.*"/></match>
+  </rule>
+  <rule weight="0.5">
+    <match lemma="jođán" tags="adj.*"><select lemma="nopsa" tags="adj.*"/></match>
+  </rule>
+
+  <rule weight="1.0">
+    <match lemma="fiinnis" tags="adj.*"><select lemma="hieno" tags="adj.*"/></match>
+  </rule>
+  <rule weight="0.5">
+    <match lemma="fiinnis" tags="adj.*"><select lemma="ohut" tags="adj.*"/></match>
+  </rule>
+
+  <rule weight="1.0"><!-- rules to be written -->
+    <match lemma="ain" tags="adv.*"><select lemma="edelleen" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.5">
+    <match lemma="ain" tags="adv.*"><select lemma="yhä" tags="adv.*"/></match>
+  </rule>
+
+  <rule weight="1.0"><!-- rules to be written -->
+    <match lemma="dieđusge" tags="adv.*"><select lemma="tietenkin" tags="part.*"/></match>
+  </rule>
+  <rule weight="0.5">
+    <match lemma="dieđusge" tags="adv.*"><select lemma="tietenkään" tags="part.*"/></match>
+  </rule>
+  <rule weight="0.6">
+      <match lemma="ii" tags="vblex.*"/>
+    <match lemma="dieđusge" tags="adv.*"><select lemma="tietenkään" tags="part.*"/></match>
+  </rule>
+  <rule weight="0.6">
+      <match lemma="ii" tags="vblex.*"/>
+      <match lemma="leat" tags="vblex.*"/>
+    <match lemma="dieđusge" tags="adv.*"><select lemma="tietenkään" tags="part.*"/></match>
+  </rule>
+
+  <rule weight="1.0"><!-- rules to be written -->
+    <match lemma="goitge" tags="adv.*"><select lemma="kuitenkin" tags="part.*"/></match>
+  </rule>
+  <rule weight="0.5">
+    <match lemma="goitge" tags="adv.*"><select lemma="kuitenkaan" tags="part.*"/></match>
+  </rule>
+  <rule weight="0.6">
+      <match lemma="ii" tags="vblex.*"/>
+    <match lemma="goitge" tags="adv.*"><select lemma="kuitenkaan" tags="part.*"/></match>
+  </rule>
+  <rule weight="0.6">
+      <match lemma="ii" tags="vblex.*"/>
+      <match lemma="leat" tags="vblex.*"/>
+    <match lemma="goitge" tags="adv.*"><select lemma="kuitenkaan" tags="part.*"/></match>
+  </rule>
+
+  <rule weight="1.0"><!-- rules to be written -->
+    <match lemma="allin" tags="adv.*"><select lemma="ylhäällä" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.5">
+    <match lemma="allin" tags="adv.*"><select lemma="ylhäältä" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.6">
+    <or>
+      <match lemma="boahtit" tags="vblex.*"/>
+      <match lemma="gahččat" tags="vblex.*"/>
+      <match lemma="gahčalit" tags="vblex.*"/>
+    </or>
+    <match lemma="allin" tags="adv.*"><select lemma="ylhäältä" tags="adv.*"/></match>
+  </rule>
+
+  <rule weight="1.0"><!-- rules to be written -->
+    <match lemma="duoppe" tags="adv.*"><select lemma="tuolla" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.5">
+    <match lemma="duoppe" tags="adv.*"><select lemma="tuolta" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.6">
+    <or>
+      <match lemma="boahtit" tags="vblex.*"/>
+      <match lemma="gahččat" tags="vblex.*"/>
+      <match lemma="gahčalit" tags="vblex.*"/>
+    </or>
+    <match lemma="duoppe" tags="adv.*"><select lemma="tuolta" tags="adv.*"/></match>
+  </rule>
+
+  <rule weight="1.0">
+    <match lemma="dáppe" tags="adv.*"><select lemma="täälla" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.5">
+    <match lemma="dáppe" tags="adv.*"><select lemma="täälta" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.6">
+    <or>
+      <match lemma="boahtit" tags="vblex.*"/>
+      <match lemma="gahččat" tags="vblex.*"/>
+      <match lemma="gahčalit" tags="vblex.*"/>
+    </or>
+    <match lemma="dáppe" tags="adv.*"><select lemma="täälta" tags="adv.*"/></match>
+  </rule>
+
+  <rule weight="1.0">
+    <match lemma="eret" tags="adv.*"><select lemma="poissa" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.5">
+    <match lemma="eret" tags="adv.*"><select lemma="pois" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.6">
+    <or>
+      <match lemma="mannat" tags="vblex.*"/>
+      <match lemma="vuolgit" tags="vblex.*"/>
+    </or>
+    <match lemma="eret" tags="adv.*"><select lemma="pois" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.5">
+    <match lemma="eret" tags="adv.*"><select lemma="kotoisin" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.6">
+      <match lemma="leat" tags="vblex.*"/>
+    <match lemma="eret" tags="adv.*"><select lemma="kotoisin" tags="adv.*"/></match>
+  </rule>
+
+
+  <rule weight="1.0"><!-- rules to be written -->
+    <match lemma="biebmu" tags="n.*"><select lemma="ruoka" tags="n.*"/></match>
+  </rule>
+  <rule weight="0.5">
+    <match lemma="biebmu" tags="n.*"><select lemma="ravinto" tags="n.*"/></match>
+  </rule>
+
+  <rule weight="0.9">
+    <match lemma="gáhttu" tags="n.*"><select lemma="katto" tags="n.*"/></match>
+    <match lemma="organisašuvdna" tags="n.*"/>
+  </rule>
+  <rule weight="0.9">
+    <match lemma="gáhttu" tags="n.*"><select lemma="katto" tags="n.*"/></match>
+  </rule>
+  <rule weight="1.0">
+    <match lemma="gáhttu" tags="n.*"><select lemma="kissa" tags="n.*"/></match>
+  </rule>
+
+
+  <rule weight="1.0">
+    <match lemma="báhkka" tags="n.*"><select lemma="paketti" tags="n.*"/></match>
+  </rule>
+  <rule weight="0.6">
+      <match tags="adv.*"/>
+      <match lemma="leat" tags="vblex.*"/>
+    <match lemma="báhkka" tags="n.*"><select lemma="helle" tags="n.*"/></match>
+  </rule>
+  <rule weight="0.6">
+      <match tags="adv.*"/>
+      <match lemma="ii" tags="vblex.*"/>
+      <match lemma="leat" tags="vblex.*"/>
+    <match lemma="báhkka" tags="n.*"><select lemma="helle" tags="n.*"/></match>
+  </rule>
+  <rule weight="0.5">
+    <match lemma="báhkka" tags="n.*"><select lemma="helle" tags="n.*"/></match>
+  </rule>
+
+  <rule weight="1.0">
+    <match lemma="eará" tags="prn.*"><select lemma="muu" tags="prn.*"/></match>
+  </rule>
+  <rule weight="1.0">
+    <match lemma="čora" tags="n.*"><select lemma="porotokka" tags="n.*"/></match>
+  </rule>
+
+  <rule weight="1.0">
+    <match lemma="vai" tags="cnjsub.*">
+      <select lemma="jotta" tags="cnjsub.*"/>
+    </match>
+  </rule>
+
+  <rule weight="1.0">
+    <match lemma=","/>
+    <match lemma="vai" tags="cnjsub.*">
+      <select lemma="jotta" tags="cnjsub.*"/>
+    </match>
+  </rule>
+
+  <rule weight="1.5">
+    <match/>
+    <match lemma="vai" tags="cnjsub.*">
+      <select lemma="tai" tags="cnjcoo.*"/>
+    </match>
+  </rule>
+
+</rules>
+</metalrx>

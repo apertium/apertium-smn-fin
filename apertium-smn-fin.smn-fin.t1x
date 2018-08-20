@@ -1,0 +1,2785 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -*- nxml -*- -->
+<transfer default="chunk">
+  <section-def-cats>
+    <def-cat n="default">
+      <cat-item tags="*"/>
+    </def-cat>
+    <def-cat n="connegii">
+      <cat-item tags="vblex.*.connegii.*"/>
+    </def-cat>
+    <def-cat n="qst">
+      <cat-item tags="pcle.qst.*"/>
+    </def-cat>
+    <def-cat n="supn">
+      <cat-item tags="vblex.*.supn.*"/>
+    </def-cat>
+    <def-cat n="cnp">
+      <cat-item tags="cnjcoo.@CNP"/>
+    </def-cat>
+    <def-cat n="ii">
+      <cat-item lemma="ii" tags="vblex.*"/>
+    </def-cat>
+    <def-cat n="inf">
+      <cat-item tags="vblex.*.inf.*"/>
+      <cat-item tags="vblex.*.actio.*"/>
+    </def-cat>
+    <def-cat n="attr">
+      <cat-item lemma="ieš" tags="prn.ref.*"/>
+      <cat-item tags="prn.dem.*.@→N"/>
+      <cat-item tags="prn.dem.*.@→Num"/>
+      <cat-item tags="prn.ind.*.@→N"/>
+      <cat-item tags="num.*.*.@→N"/>
+      <cat-item tags="prn.*.attr.*"/>
+      <cat-item tags="num.*.*.attr.*"/>
+      <cat-item tags="adj.*.attr.*"/>
+      <cat-item tags="adj.*.cmp"/>
+      <cat-item tags="adj.*.cmp.*"/>
+      <cat-item tags="adj.attr.*"/>
+      <cat-item tags="vblex.*.prsprc.@→N"/>
+      <cat-item tags="adj.cmp_attr.*"/>
+    </def-cat>
+    <def-cat n="goahti-prfprc">
+      <cat-item tags="vblex.*.der_goahti.vblex.prfprc.*"/>
+    </def-cat>
+    <def-cat n="goahti">
+      <cat-item tags="vblex.*.der_goahti.*"/>
+    </def-cat>
+    <def-cat n="pron">
+      <cat-item tags="prn.*"/>
+    </def-cat>
+    <def-cat n="prsprc">
+      <cat-item tags="vblex.*.prsprc.*"/>
+    </def-cat>
+    <def-cat n="pass-prc">
+      <cat-item tags="vblex.*.der_passs.vblex.iv.prfprc.*"/>
+      <cat-item tags="vblex.*.der_passl.vblex.iv.prfprc.*"/>
+      <cat-item tags="vblex.*.der_passs.vblex.iv.prsprc.*"/>
+      <cat-item tags="vblex.*.der_passl.vblex.iv.prsprc.*"/>
+    </def-cat>
+    <def-cat n="prfprc">
+      <cat-item tags="vblex.*.prfprc.*"/>
+    </def-cat>
+    <def-cat n="leat-fin">
+      <cat-item lemma="leat" tags="vblex.*.indic.pres.*"/>
+      <cat-item lemma="leat" tags="vblex.*.indic.pret.*"/>
+    </def-cat>
+    <def-cat n="conneg-pret">
+      <cat-item tags="vblex.*.indic.pret.conneg.*"/>
+    </def-cat>
+    <def-cat n="pot">
+      <cat-item tags="vblex.*.pot.*"/>
+    </def-cat>
+    <def-cat n="cond">
+      <cat-item tags="vblex.*.cond.*"/>
+    </def-cat>
+    <def-cat n="fin">
+      <cat-item tags="vblex.*.indic.pres.*"/>
+      <cat-item tags="vblex.*.indic.pret.*"/>
+    </def-cat>
+    <def-cat n="pass-pres-conneg">
+      <cat-item tags="vblex.*.der_passs.vblex.iv.indic.pres.conneg.*"/>
+      <cat-item tags="vblex.*.der_passl.vblex.iv.indic.pres.conneg.*"/>
+    </def-cat>
+    <def-cat n="pass-fin">
+      <cat-item tags="vblex.*.der_passs.vblex.iv.indic.pres.*"/>
+      <cat-item tags="vblex.*.der_passs.vblex.iv.indic.pret.*"/>
+      <cat-item tags="vblex.*.der_passl.vblex.iv.indic.pres.*"/>
+      <cat-item tags="vblex.*.der_passl.vblex.iv.indic.pret.*"/>
+    </def-cat>
+    <def-cat n="word">
+      <cat-item tags="n.*"/>
+      <cat-item tags="adj.*"/>
+      <cat-item tags="vblex.*"/>
+       <cat-item tags="prn.*"/>
+       <cat-item tags="adv.*"/>
+   </def-cat>
+    <def-cat n="adv">
+      <cat-item tags="adv.*"/>
+    </def-cat>
+    <def-cat n="part">
+      <cat-item tags="part.*"/>
+    </def-cat>
+    <def-cat n="adj">
+      <cat-item tags="adj.*"/>
+    </def-cat>
+    <def-cat n="num-nomacc">                           
+      <cat-item tags="num.sg.nom.*"/>                  
+      <cat-item tags="num.sg.acc.*"/>                  
+    </def-cat>                                         
+    <def-cat n="num-nom">                           
+      <cat-item tags="num.sg.nom.*"/>                  
+    </def-cat>                                         
+    <def-cat n="num-acc">                           
+      <cat-item tags="num.sg.acc.*"/>                  
+    </def-cat>                                         
+    <def-cat n="num-card">                           
+      <cat-item tags="num.arab.*.@HNOUN"/>                  
+    </def-cat>                                         
+    <def-cat n="num-card-cmp">                           
+      <cat-item tags="num.arab.cmp_splitr"/>                  
+      <cat-item tags="num.arab.cmp_splitr.*"/>                  
+    </def-cat>                                         
+    <def-cat n="n-sg-accgen">                             
+      <cat-item tags="n.*.sg.gen.*"/>                     
+      <cat-item tags="n.*.*.sg.gen.*"/>                   
+      <cat-item tags="n.*.sg.acc.*"/>                     
+      <cat-item tags="n.*.*.sg.acc.*"/>                   
+   </def-cat>  
+   <def-cat n="adj-cmp">
+      <cat-item tags="adj.*.cmp_attr.cmp_splitr"/>
+      <cat-item tags="adj.*.cmp_attr.cmp_splitr.*"/>
+   </def-cat>  
+    <def-cat n="prop-cmp">
+      <cat-item tags="np.*.cmp_sgnom.cmp"/>
+      <cat-item tags="np.*.cmp_sgnom.cmp.*"/>
+    </def-cat>
+    <def-cat n="top-cmp">
+      <cat-item tags="np.top.*.cmp.*"/>
+      <cat-item tags="np.top.*.cmp"/>
+      <cat-item tags="np.top.cmp.*"/>
+      <cat-item tags="np.top.cmp"/>
+   </def-cat>  
+
+    <def-cat n="nom-cmp-splitr">
+      <cat-item tags="n.cmp_sgnom.cmp_splitr"/>
+      <cat-item tags="n.cmp_sgnom.cmp_splitr.*"/>
+      <cat-item tags="n.*.cmp_sgnom.cmp_splitr.*"/>
+      <cat-item tags="n.*.cmp_plgen.cmp_splitr"/>
+      <cat-item tags="n.*.cmp_plgen.cmp_splitr.*"/>
+   </def-cat>  
+
+    <def-cat n="nom-cmp">
+      <cat-item tags="n.cmp"/>
+      <cat-item tags="n.*.cmp"/>
+      <cat-item tags="n.cmp.*"/>
+      <cat-item tags="n.*.cmp.*"/>
+      <cat-item tags="n.cmp_sgnom.cmp"/>
+      <cat-item tags="n.cmp_sgnom.cmp.*"/>
+      <cat-item tags="n.cmp_sggen.cmp"/>
+      <cat-item tags="n.cmp_sggen.cmp.*"/>
+      <cat-item tags="n.*.cmp_sgnom.cmp"/>
+      <cat-item tags="n.*.cmp_sh.cmp"/>
+      <cat-item tags="n.*.cmp_sgnom.cmp.*"/>
+      <cat-item tags="n.*.cmp_sggen.cmp"/>
+      <cat-item tags="n.*.cmp_sggen.cmp.*"/>
+      <cat-item tags="n.cmp_sgnom.cmp_hyph.cmp"/>
+      <cat-item tags="n.cmp_sgnom.cmp_hyph.cmp.*"/>
+      <cat-item tags="n.cmp_sggen.cmp_hyph.cmp"/>
+      <cat-item tags="n.cmp_sggen.cmp_hyph.cmp.*"/>
+      <cat-item tags="n.*.cmp_sgnom.cmp_hyph.cmp"/>
+      <cat-item tags="n.*.cmp_sgnom.cmp_hyph.cmp.*"/>
+      <cat-item tags="n.*.cmp_sggen.cmp_hyph.cmp"/>
+      <cat-item tags="n.*.cmp_sggen.cmp_hyph.cmp.*"/>
+      <cat-item tags="n.cmp_plnom.cmp"/>
+      <cat-item tags="n.cmp_plnom.cmp.*"/>
+      <cat-item tags="n.cmp_plgen.cmp"/>
+      <cat-item tags="n.cmp_plgen.cmp.*"/>
+      <cat-item tags="n.*.cmp_plnom.cmp"/>
+      <cat-item tags="n.*.cmp_plnom.cmp.*"/>
+      <cat-item tags="n.*.cmp_plgen.cmp"/>
+      <cat-item tags="n.*.cmp_plgen.cmp.*"/>
+      <cat-item tags="n.cmp_plnom.cmp_hyph.cmp"/>
+      <cat-item tags="n.cmp_plnom.cmp_hyph.cmp.*"/>
+      <cat-item tags="n.cmp_plgen.cmp_hyph.cmp"/>
+      <cat-item tags="n.cmp_plgen.cmp_hyph.cmp.*"/>
+      <cat-item tags="n.*.cmp_plnom.cmp_hyph.cmp"/>
+      <cat-item tags="n.*.cmp_plnom.cmp_hyph.cmp.*"/>
+      <cat-item tags="n.*.cmp_plgen.cmp_hyph.cmp"/>
+      <cat-item tags="n.*.cmp_plgen.cmp_hyph.cmp.*"/>
+    </def-cat>
+
+   <def-cat n="foc">
+      <cat-item lemma="ba" tags="pcle.*"/>
+      <cat-item lemma="ban" tags="pcle.*"/>
+      <cat-item lemma="bat" tags="pcle.*"/>
+      <cat-item lemma="ge" tags="pcle.*"/>
+      <cat-item lemma="ges" tags="pcle.*"/>
+      <cat-item lemma="gis" tags="pcle.*"/>
+      <cat-item lemma="han" tags="pcle.*"/>
+      <cat-item lemma="nai" tags="pcle.*"/>
+      <cat-item lemma="son" tags="pcle.*"/>
+      <cat-item lemma="go" tags="pcle.*"/>
+    </def-cat>
+
+
+    <def-cat n="nom">
+      <cat-item tags="n.*"/>
+      <cat-item tags="vblex.*.der_nomact.n.*"/>
+      <cat-item tags="np.*"/>
+    </def-cat>
+    <def-cat n="sent">
+      <cat-item tags="sent"/>
+      <cat-item tags="sent.*"/>
+    </def-cat>
+  </section-def-cats>
+
+
+
+
+
+  <section-def-attrs>
+    <def-attr n="a_numtype">
+      <attr-item tags="arab"/>
+      <attr-item tags="card"/>
+    </def-attr>
+    <def-attr n="a_ntype">
+      <attr-item tags="nomag"/>
+    </def-attr>
+    <def-attr n="a_dialect">
+      <attr-item tags="south"/>
+    </def-attr>
+    <def-attr n="a_known">
+      <attr-item tags="known"/>
+    </def-attr>
+    <def-attr n="a_conneg">
+      <attr-item tags="conneg"/>
+      <attr-item tags="connegii"/>
+    </def-attr>
+    <def-attr n="a_voice">
+      <attr-item tags="actv"/>
+    </def-attr>
+    <def-attr n="a_qst">
+      <attr-item tags="qst"/>
+    </def-attr>
+    <def-attr n="a_mood_temps">
+      <attr-item tags="cond"/>
+      <attr-item tags="cond.pres"/>
+      <attr-item tags="cond.pret"/>
+    </def-attr>
+    <def-attr n="a_tense">
+      <attr-item tags="pres"/>
+      <attr-item tags="pret"/>
+    </def-attr>
+    <def-attr n="a_mood">
+      <attr-item tags="indic"/>
+      <attr-item tags="cond"/>
+      <attr-item tags="pot"/>
+    </def-attr>
+    <def-attr n="a_prc">
+      <attr-item tags="prfprc"/>
+      <attr-item tags="prsprc"/>
+    </def-attr>
+    <def-attr n="a_nonfin">
+      <attr-item tags="inf"/>
+      <attr-item tags="ger"/>
+      <attr-item tags="vgen"/>
+      <attr-item tags="vabess"/>
+      <attr-item tags="supn"/>
+      <attr-item tags="actio.nom"/>
+      <attr-item tags="agprc.sg.nom"/>
+      <attr-item tags="vabess.adj.attr"/>
+      <attr-item tags="infma.sg.ine"/>
+      <attr-item tags="infe.sg.ine"/>
+      <attr-item tags="infma.sg.ins"/>
+      <attr-item tags="infa.sg.tra"/>
+      <attr-item tags="infma.sg.abe"/>
+      <attr-item tags="actio.ine"/>
+      <attr-item tags="actio.gen"/>
+      <attr-item tags="actio.ess"/>
+      <attr-item tags="der_minen.sg.ela"/>
+      <attr-item tags="der_minen.sg.gen"/>
+      <attr-item tags="der_minen.sg.tra"/>
+    </def-attr>
+    <def-attr n="a_pass">
+      <attr-item tags="der_passs.vblex.iv"/>
+      <attr-item tags="der_passl.vblex.iv"/>
+    </def-attr>
+    <def-attr n="a_deriv">
+      <attr-item tags="der_dimin"/>
+      <attr-item tags="der_minen"/>
+      <attr-item tags="der_sti"/>
+      <attr-item tags="der_aadv.adv"/>
+      <attr-item tags="der_dimin.n"/>
+      <attr-item tags="der_nomact.n"/>
+      <attr-item tags="der_dimin.adj"/>
+      <attr-item tags="der_goahti.vblex"/>
+    </def-attr>
+    <def-attr n="a_attr">
+      <attr-item tags="attr"/>
+      <attr-item tags="cmp_attr"/>
+      <attr-item tags="ND.attr"/>
+      <attr-item tags="sg.loc.attr"/>
+      <attr-item tags="pl.com.attr"/>
+      <attr-item tags="pl.loc.attr"/>
+      <attr-item tags="sg.ill.attr"/>
+      <attr-item tags="pl.ill.attr"/>
+      <attr-item tags="ND.CD"/>
+    </def-attr>
+    <def-attr n="a_der_s">
+      <attr-item tags="der_s"/>
+    </def-attr>
+    <def-attr n="a_adj">
+      <attr-item tags="adj"/>
+    </def-attr>
+    <def-attr n="a_dem">
+      <attr-item tags="dem"/>
+    </def-attr>
+    <def-attr n="a_prn">
+      <attr-item tags="pers"/>
+    </def-attr>
+    <def-attr n="a_pos">
+      <attr-item tags="n"/>
+      <attr-item tags="n.acr"/>
+      <attr-item tags="adj"/>
+      <attr-item tags="adv"/>
+      <attr-item tags="num"/>
+      <attr-item tags="np"/>
+      <attr-item tags="prn"/>
+      <attr-item tags="prn.pers"/>
+    </def-attr>
+    <def-attr n="a_nom">
+      <attr-item tags="n"/>
+      <attr-item tags="np"/>
+      <attr-item tags="prn"/>
+    </def-attr>
+    <def-attr n="a_grau">
+      <attr-item tags="sup"/>
+    </def-attr>
+
+    <def-attr n="a_nbr">
+      <attr-item tags="ND"/>
+      <attr-item tags="sg"/>
+      <attr-item tags="pl"/>
+      <attr-item tags="du"/>
+    </def-attr>
+
+    <def-attr n="a_cmp_only">
+      <attr-item tags="cmp"/>
+    </def-attr>
+
+    <def-attr n="a_cmp">
+      <attr-item tags="cmp_attr.cmp_splitr"/>
+      <attr-item tags="n.cmp"/>
+      <attr-item tags="cmp.guio"/>
+      <attr-item tags="cmp.hyph"/>
+      <attr-item tags="cmp_sh.cmp"/>
+      <attr-item tags="cmp_sh.cmp_hyph.cmp"/>
+      <attr-item tags="cmp_attr.cmp_hyph.cmp"/>
+
+
+      <attr-item tags="cmp_sgnom.cmp_hyph.cmp"/>
+      <attr-item tags="cmp_sggen.cmp_hyph.cmp"/>
+      <attr-item tags="cmp_sgnom.cmp"/>
+      <attr-item tags="cmp_sgnom.cmp.guio"/>
+      <attr-item tags="cmp_sggen.cmp"/>
+      <attr-item tags="cmp_sgnom.cmp_splitr"/>
+      <attr-item tags="cmp_sggen.cmp_splitr"/>
+
+      <attr-item tags="cmp_plnom.cmp_splitr"/>
+      <attr-item tags="cmp_plgen.cmp_splitr"/>
+
+      <attr-item tags="sg.nom.cmp"/>
+      <attr-item tags="sg.gen.cmp"/>
+
+      <attr-item tags="cmp_plnom.cmp_hyph.cmp"/>
+      <attr-item tags="cmp_plgen.cmp_hyph.cmp"/>
+      <attr-item tags="cmp_plnom.cmp"/>
+      <attr-item tags="cmp_plgen.cmp"/>
+      <attr-item tags="cmpn_pln.cmp.guio"/>
+      <attr-item tags="pl.nom.cmp"/>
+      <attr-item tags="pl.gen.cmp"/>
+      <attr-item tags="pl.nom.cmp_splitr"/>
+      <attr-item tags="pl.gen.cmp_splitr"/>
+
+      <attr-item tags="cmp_splitr"/>
+      <attr-item tags="cmp_attr"/>
+      <attr-item tags="cmp"/>
+    </def-attr>
+    <def-attr n="a_ess">
+      <attr-item tags="pl.ess"/>
+      <attr-item tags="sg.ess"/>
+      <attr-item tags="ND.ess"/>
+      <attr-item tags="ess"/>
+    </def-attr>
+
+    <def-attr n="a_px_pers">
+      <attr-item tags="p1.sg"/>
+      <attr-item tags="p2.sg"/>
+      <attr-item tags="p3.sg"/>
+      <attr-item tags="p1.du"/>
+      <attr-item tags="p2.du"/>
+      <attr-item tags="p3.du"/>
+      <attr-item tags="p1.pl"/>
+      <attr-item tags="p2.pl"/>
+      <attr-item tags="p3.pl"/>
+      <attr-item tags="px1sg"/>
+      <attr-item tags="px2sg"/>
+      <attr-item tags="px3sg"/>
+      <attr-item tags="px1du"/>
+      <attr-item tags="px2du"/>
+      <attr-item tags="px3du"/>
+      <attr-item tags="px1pl"/>
+      <attr-item tags="px2pl"/>
+      <attr-item tags="px3pl"/>
+    </def-attr>
+
+
+    <def-attr n="a_pers">
+      <attr-item tags="p1.sg"/>
+      <attr-item tags="p2.sg"/>
+      <attr-item tags="p3.sg"/>
+      <attr-item tags="p1.du"/>
+      <attr-item tags="p2.du"/>
+      <attr-item tags="p3.du"/>
+      <attr-item tags="p1.pl"/>
+      <attr-item tags="p2.pl"/>
+      <attr-item tags="p3.pl"/>
+    </def-attr>
+
+    <def-attr n="a_px">
+      <attr-item tags="px1sg"/>
+      <attr-item tags="px2sg"/>
+      <attr-item tags="px3sg"/>
+      <attr-item tags="px1du"/>
+      <attr-item tags="px2du"/>
+      <attr-item tags="px3du"/>
+      <attr-item tags="px1pl"/>
+      <attr-item tags="px2pl"/>
+      <attr-item tags="px3pl"/>
+      <attr-item tags="XD"/>
+    </def-attr>
+
+    <def-attr n="sg_acc">
+      <attr-item tags="sg.acc"/>
+    </def-attr>
+
+    <def-attr n="sg_num_cas">
+      <attr-item tags="sg.nom"/>
+      <attr-item tags="sg.acc"/>
+    </def-attr>
+
+
+
+    <def-attr n="a_cas">
+      <attr-item tags="CD"/>
+      <attr-item tags="nom"/>
+      <attr-item tags="acc"/>
+      <attr-item tags="par"/>
+      <attr-item tags="com"/>
+      <attr-item tags="ess"/>
+      <attr-item tags="ela"/>
+      <attr-item tags="ine"/>
+      <attr-item tags="ill"/>
+      <attr-item tags="all"/>
+      <attr-item tags="ade"/>
+      <attr-item tags="dat"/>
+      <attr-item tags="gen"/>
+      <attr-item tags="tra"/>
+      <attr-item tags="loc"/>
+      <attr-item tags="ins"/>
+      <attr-item tags="abl"/>
+    </def-attr>
+
+    <def-attr n="x_func">
+      <attr-item tags="←ext→"/>
+      <attr-item tags="←hab→"/>
+    </def-attr>
+
+    <def-attr n="a_func_obj">
+      <attr-item tags="@←OBJ"/>
+      <attr-item tags="@OBJ"/>
+      <attr-item tags="@OBJ→"/>
+      <attr-item tags="@-F←OBJ"/>
+      <attr-item tags="@-FOBJ"/>
+      <attr-item tags="@-FOBJ→"/>
+    </def-attr>
+
+    <def-attr n="a_func">
+      <attr-item tags="@→A"/>
+      <attr-item tags="@A←"/>
+      <attr-item tags="@←ADVL"/>
+      <attr-item tags="@←ADVL-ela"/>
+      <attr-item tags="@←ADVL-ine"/>
+      <attr-item tags="@→ADVL"/>
+      <attr-item tags="@ADVL"/>
+      <attr-item tags="@ADVL←"/>
+      <attr-item tags="@ADVL→"/>
+      <attr-item tags="@ADVL-ela→"/>
+      <attr-item tags="@ADVL-ine→"/>
+      <attr-item tags="@ADVLcs-ela→"/>
+      <attr-item tags="@ADVLcs-ine→"/>
+      <attr-item tags="@ADVLqst-ela→"/>
+      <attr-item tags="@ADVLqst-ine→"/>
+      <attr-item tags="@ADVLhab→"/>
+      <attr-item tags="@←ADVLhab"/>
+      <attr-item tags="@←SUBJext"/>
+      <attr-item tags="@ADVL→CS"/>
+      <attr-item tags="@ADVL←OBJ"/>
+      <attr-item tags="@ADVL→SUBJ"/>
+      <attr-item tags="@APP"/>
+      <attr-item tags="@APP-ADVL←"/>
+      <attr-item tags="@APP-N←"/>
+      <attr-item tags="@APP-Num←"/>
+      <attr-item tags="@APP-Pron←"/>
+      <attr-item tags="@APP→Pron"/>
+      <attr-item tags="@→CC"/>
+      <attr-item tags="@CNP"/>
+      <attr-item tags="@COMP-CS←"/>
+      <attr-item tags="@CVP"/>
+      <attr-item tags="@-F←ADVL"/>
+      <attr-item tags="@-F←ADVL-ine"/>
+      <attr-item tags="@-F←ADVL-ela"/>
+      <attr-item tags="@-FADVL"/>
+      <attr-item tags="@-FADVL→"/>
+      <attr-item tags="@-FADVL-ine→"/>
+      <attr-item tags="@-FADVL-ela→"/>
+      <attr-item tags="@-FAUXV"/>
+      <attr-item tags="@\+FAUXV"/>
+      <attr-item tags="@+FAUXV"/>
+      <attr-item tags="@-FMAINV"/>
+      <attr-item tags="@\+FMAINV"/>
+      <attr-item tags="@+FMAINV"/>
+      <attr-item tags="@-F←OBJ"/>
+      <attr-item tags="@-FOBJ"/>
+      <attr-item tags="@-FOBJ→"/>
+      <attr-item tags="@-F←OPRED"/>
+      <attr-item tags="@-FOPRED→"/>
+      <attr-item tags="@-F←SPRED"/>
+      <attr-item tags="@-FSPRED→"/>
+      <attr-item tags="@-FSUBJ→"/>
+      <attr-item tags="@HNOUN"/>
+      <attr-item tags="@INTERJ"/>
+      <attr-item tags="@→N"/>
+      <attr-item tags="@N"/>
+      <attr-item tags="@N←"/>
+      <attr-item tags="@→Num;"/>
+      <attr-item tags="@→Num"/>
+      <attr-item tags="@Num←"/>
+      <attr-item tags="@←OBJ"/>
+      <attr-item tags="@OBJ"/>
+      <attr-item tags="@OBJ→"/>
+      <attr-item tags="@OBJ→SPRED"/>
+      <attr-item tags="@-OPRED→"/>
+      <attr-item tags="@←OPRED"/>
+      <attr-item tags="@OPRED"/>
+      <attr-item tags="@OPRED→"/>
+      <attr-item tags="@→P"/>
+      <attr-item tags="@P←"/>
+      <attr-item tags="@PCLE"/>
+      <attr-item tags="@←PPRED"/>
+      <attr-item tags="@PPRED"/>
+      <attr-item tags="@→Pron"/>
+      <attr-item tags="@Pron←"/>
+      <attr-item tags="@-SPRED→"/>
+      <attr-item tags="@←SPRED"/>
+      <attr-item tags="@SPRED"/>
+      <attr-item tags="@SPRED→"/>
+      <attr-item tags="@SPRED←OBJ"/>
+      <attr-item tags="@←SUBJ"/>
+      <attr-item tags="@SUBJ"/>
+      <attr-item tags="@SUBJ→"/>
+      <attr-item tags="@SUBJ←ADVL"/>
+      <attr-item tags="@SUBJ←OBJ"/>
+      <attr-item tags="@VOC"/>
+      <attr-item tags="@X"/>
+    </def-attr>
+
+    <def-attr n="a_foc">
+<attr-item tags="foc_be"/>
+<attr-item tags="foc_kin"/>
+<attr-item tags="foc_pa"/>
+<attr-item tags="foc_son"/>
+
+      <attr-item tags="foc_sun"/>
+       <attr-item tags="foc_ba"/>
+       <attr-item tags="foc_neg-ge"/>
+       <attr-item tags="foc_pos-ge"/>
+       <attr-item tags="foc_bat"/>
+       <attr-item tags="foc_han"/>
+       <attr-item tags="foc_naj"/>
+       <attr-item tags="foc_ges"/>
+       <attr-item tags="foc_gis"/>
+       <attr-item tags="foc_gin"/>
+       <attr-item tags="foc_ban"/>
+       <attr-item tags="foc_be"/>
+       <attr-item tags="foc_hal"/>
+       <attr-item tags="foc_uv"/>
+       <attr-item tags="foc_ge"/>
+  </def-attr>
+
+    <def-attr n="a_sem">
+      <attr-item tags="sem_act_fruit"/>
+      <attr-item tags="sem_ani_group_prod-vis"/>
+      <attr-item tags="sem_body-abstr_feat-cogn"/>
+      <attr-item tags="sem_body_plc-elevate"/>
+      <attr-item tags="sem_build-part_cat"/>
+      <attr-item tags="sem_build-part_cat_ctain"/>
+      <attr-item tags="sem_build-part_cat_ctain_mat"/>
+      <attr-item tags="sem_build-part_ctain"/>
+      <attr-item tags="sem_build-part_ctain_mat"/>
+      <attr-item tags="sem_build-part_ctain_obj"/>
+      <attr-item tags="sem_clth-jewl_curr_obj"/>
+      <attr-item tags="sem_clth-jewl_curr_obj_org"/>
+      <attr-item tags="sem_clth-jewl_fruit"/>
+      <attr-item tags="sem_clth_obj-clo"/>
+      <attr-item tags="sem_edu_geom"/>
+      <attr-item tags="sem_feat-phys_plc"/>
+      <attr-item tags="sem_group_prod-vis"/>
+      <attr-item tags="sem_hum-prof"/>
+      <attr-item tags="sem_hum_mat_tool"/>
+      <attr-item tags="sem_hum_tool-it"/>
+      <attr-item tags="sem_obj_symbol"/>
+      <attr-item tags="sem_act"/>
+      <attr-item tags="sem_act_group"/>
+      <attr-item tags="sem_act_plc"/>
+      <attr-item tags="sem_act_route"/>
+      <attr-item tags="sem_adr"/>
+      <attr-item tags="sem_amount"/>
+      <attr-item tags="sem_amount_build"/>
+      <attr-item tags="sem_amount_semcon"/>
+      <attr-item tags="sem_ani"/>
+      <attr-item tags="sem_ani-fish"/>
+      <attr-item tags="sem_ani_body-abstr_hum"/>
+      <attr-item tags="sem_ani_build"/>
+      <attr-item tags="sem_ani_build-part"/>
+      <attr-item tags="sem_ani_build_hum_txt"/>
+      <attr-item tags="sem_ani_group"/>
+      <attr-item tags="sem_ani_group_hum"/>
+      <attr-item tags="sem_ani_hum"/>
+      <attr-item tags="sem_ani_hum_plc"/>
+      <attr-item tags="sem_ani_hum_time"/>
+      <attr-item tags="sem_ani_plc"/>
+      <attr-item tags="sem_ani_plc_txt"/>
+      <attr-item tags="sem_ani_time"/>
+      <attr-item tags="sem_ani_veh"/>
+      <attr-item tags="sem_aniprod"/>
+      <attr-item tags="sem_aniprod_hum"/>
+      <attr-item tags="sem_aniprod_obj-clo"/>
+      <attr-item tags="sem_aniprod_perc-phys"/>
+      <attr-item tags="sem_aniprod_plc"/>
+      <attr-item tags="sem_aniprod_plc_route"/>
+      <attr-item tags="sem_body"/>
+      <attr-item tags="sem_body-abstr"/>
+      <attr-item tags="sem_body-abstr_prod-audio_semcon"/>
+      <attr-item tags="sem_body_body-abstr"/>
+      <attr-item tags="sem_body_clth"/>
+      <attr-item tags="sem_body_food"/>
+      <attr-item tags="sem_body_group_hum"/>
+      <attr-item tags="sem_body_group_hum_time"/>
+      <attr-item tags="sem_body_hum"/>
+      <attr-item tags="sem_body_mat"/>
+      <attr-item tags="sem_body_measr"/>
+      <attr-item tags="sem_body_obj_tool-catch"/>
+      <attr-item tags="sem_body_plc"/>
+      <attr-item tags="sem_body_time"/>
+      <attr-item tags="sem_build"/>
+      <attr-item tags="sem_build-part"/>
+      <attr-item tags="sem_build-part_plc"/>
+      <attr-item tags="sem_build_build-part"/>
+      <attr-item tags="sem_build_clth-part"/>
+      <attr-item tags="sem_build_edu_org"/>
+      <attr-item tags="sem_build_event_org"/>
+      <attr-item tags="sem_build_obj"/>
+      <attr-item tags="sem_build_org"/>
+      <attr-item tags="sem_build_route"/>
+      <attr-item tags="sem_cat"/>
+      <attr-item tags="sem_cat_group_hum"/>
+      <attr-item tags="sem_cat_group_hum_plc"/>
+      <attr-item tags="sem_clth"/>
+      <attr-item tags="sem_clth-jewl"/>
+      <attr-item tags="sem_clth-jewl_curr"/>
+      <attr-item tags="sem_clth-jewl_money"/>
+      <attr-item tags="sem_clth-jewl_org"/>
+      <attr-item tags="sem_clth-jewl_plant"/>
+      <attr-item tags="sem_clth-part"/>
+      <attr-item tags="sem_clth_hum"/>
+      <attr-item tags="sem_ctain"/>
+      <attr-item tags="sem_ctain-abstr"/>
+      <attr-item tags="sem_ctain-abstr_org"/>
+      <attr-item tags="sem_ctain-clth"/>
+      <attr-item tags="sem_ctain-clth_plant"/>
+      <attr-item tags="sem_ctain-clth_veh"/>
+      <attr-item tags="sem_ctain_feat-phys"/>
+      <attr-item tags="sem_ctain_furn"/>
+      <attr-item tags="sem_ctain_plc"/>
+      <attr-item tags="sem_ctain_tool"/>
+      <attr-item tags="sem_ctain_tool-measr"/>
+      <attr-item tags="sem_curr"/>
+      <attr-item tags="sem_curr_org"/>
+      <attr-item tags="sem_dance"/>
+      <attr-item tags="sem_dance_org"/>
+      <attr-item tags="sem_dance_prod-audio"/>
+      <attr-item tags="sem_date"/>
+      <attr-item tags="sem_dir"/>
+      <attr-item tags="sem_domain"/>
+      <attr-item tags="sem_domain_food-med"/>
+      <attr-item tags="sem_domain_hum"/>
+      <attr-item tags="sem_domain_prod-audio"/>
+      <attr-item tags="sem_drink"/>
+      <attr-item tags="sem_drink_plant"/>
+      <attr-item tags="sem_dummytag"/>
+      <attr-item tags="sem_edu"/>
+      <attr-item tags="sem_edu_event"/>
+      <attr-item tags="sem_edu_group_hum"/>
+      <attr-item tags="sem_edu_hum"/>
+      <attr-item tags="sem_edu_mat"/>
+      <attr-item tags="sem_edu_org"/>
+      <attr-item tags="sem_event"/>
+      <attr-item tags="sem_event_food"/>
+      <attr-item tags="sem_event_hum"/>
+      <attr-item tags="sem_event_plc"/>
+      <attr-item tags="sem_event_plc-elevate"/>
+      <attr-item tags="sem_event_time"/>
+      <attr-item tags="sem_feat"/>
+      <attr-item tags="sem_feat-measr"/>
+      <attr-item tags="sem_feat-measr_plc"/>
+      <attr-item tags="sem_feat-phys"/>
+      <attr-item tags="sem_feat-phys_tool-write"/>
+      <attr-item tags="sem_feat-phys_veh"/>
+      <attr-item tags="sem_feat-phys_wthr"/>
+      <attr-item tags="sem_feat-psych"/>
+      <attr-item tags="sem_feat-psych_hum"/>
+      <attr-item tags="sem_feat_plant"/>
+      <attr-item tags="sem_fem"/>
+      <attr-item tags="sem_food"/>
+      <attr-item tags="sem_food-med"/>
+      <attr-item tags="sem_food_perc-phys"/>
+      <attr-item tags="sem_food_plant"/>
+      <attr-item tags="sem_furn"/>
+      <attr-item tags="sem_game"/>
+      <attr-item tags="sem_game_obj-play"/>
+      <attr-item tags="sem_geom"/>
+      <attr-item tags="sem_geom_obj"/>
+      <attr-item tags="sem_group"/>
+      <attr-item tags="sem_group_hum"/>
+      <attr-item tags="sem_group_hum_org"/>
+      <attr-item tags="sem_group_hum_plc"/>
+      <attr-item tags="sem_group_hum_prod-vis"/>
+      <attr-item tags="sem_group_org"/>
+      <attr-item tags="sem_group_sign"/>
+      <attr-item tags="sem_group_txt"/>
+      <attr-item tags="sem_hum"/>
+      <attr-item tags="sem_hum-prof"/>
+      <attr-item tags="sem_hum-abstr"/>
+      <attr-item tags="sem_hum_lang"/>
+      <attr-item tags="sem_hum_lang_plc"/>
+      <attr-item tags="sem_hum_lang_time"/>
+      <attr-item tags="sem_hum_obj"/>
+      <attr-item tags="sem_hum_org"/>
+      <attr-item tags="sem_hum_plant"/>
+      <attr-item tags="sem_hum_plc"/>
+      <attr-item tags="sem_hum_tool"/>
+      <attr-item tags="sem_hum_veh"/>
+      <attr-item tags="sem_hum_wthr"/>
+      <attr-item tags="sem_ideol"/>
+      <attr-item tags="sem_lang"/>
+      <attr-item tags="sem_lang_tool"/>
+      <attr-item tags="sem_mal"/>
+      <attr-item tags="sem_mat"/>
+      <attr-item tags="sem_mat_plant"/>
+      <attr-item tags="sem_mat_txt"/>
+      <attr-item tags="sem_measr"/>
+      <attr-item tags="sem_measr_sign"/>
+      <attr-item tags="sem_measr_time"/>
+      <attr-item tags="sem_money"/>
+      <attr-item tags="sem_money_obj"/>
+      <attr-item tags="sem_money_txt"/>
+      <attr-item tags="sem_obj"/>
+      <attr-item tags="sem_obj-clo"/>
+      <attr-item tags="sem_obj-cogn"/>
+      <attr-item tags="sem_obj-el"/>
+      <attr-item tags="sem_obj-ling"/>
+      <attr-item tags="sem_obj-play"/>
+      <attr-item tags="sem_obj-play_sport"/>
+      <attr-item tags="sem_obj-rope"/>
+      <attr-item tags="sem_obj-surfc"/>
+      <attr-item tags="sem_obj_semcon"/>
+      <attr-item tags="sem_obj_state"/>
+      <attr-item tags="sem_org"/>
+      <attr-item tags="sem_org_prod-cogn"/>
+      <attr-item tags="sem_org_rule"/>
+      <attr-item tags="sem_org_txt"/>
+      <attr-item tags="sem_org_veh"/>
+      <attr-item tags="sem_part"/>
+      <attr-item tags="sem_part_prod-cogn"/>
+      <attr-item tags="sem_part_substnc"/>
+      <attr-item tags="sem_perc-cogn"/>
+      <attr-item tags="sem_perc-emo"/>
+      <attr-item tags="sem_perc-emo_wthr"/>
+      <attr-item tags="sem_perc-phys"/>
+      <attr-item tags="sem_perc-psych"/>
+      <attr-item tags="sem_phonenr"/>
+      <attr-item tags="sem_plant"/>
+      <attr-item tags="sem_plant-part"/>
+      <attr-item tags="sem_plant_plant-part"/>
+      <attr-item tags="sem_plant_tool"/>
+      <attr-item tags="sem_plant_tool-measr"/>
+      <attr-item tags="sem_plc"/>
+      <attr-item tags="sem_plc-abstr"/>
+      <attr-item tags="sem_plc-abstr_rel_state"/>
+      <attr-item tags="sem_plc-abstr_route"/>
+      <attr-item tags="sem_plc-elevate"/>
+      <attr-item tags="sem_plc-line"/>
+      <attr-item tags="sem_plc-water"/>
+      <attr-item tags="sem_plc_pos"/>
+      <attr-item tags="sem_plc_route"/>
+      <attr-item tags="sem_plc_state"/>
+      <attr-item tags="sem_plc_substnc"/>
+      <attr-item tags="sem_plc_substnc_wthr"/>
+      <attr-item tags="sem_plc_time"/>
+      <attr-item tags="sem_plc_time_wthr"/>
+      <attr-item tags="sem_plc_tool-catch"/>
+      <attr-item tags="sem_plc_wthr"/>
+      <attr-item tags="sem_pos"/>
+      <attr-item tags="sem_process"/>
+      <attr-item tags="sem_prod"/>
+      <attr-item tags="sem_prod-audio"/>
+      <attr-item tags="sem_prod-audio_txt"/>
+      <attr-item tags="sem_prod-cogn"/>
+      <attr-item tags="sem_prod-cogn_txt"/>
+      <attr-item tags="sem_prod-ling"/>
+      <attr-item tags="sem_prod-vis"/>
+      <attr-item tags="sem_rel"/>
+      <attr-item tags="sem_route"/>
+      <attr-item tags="sem_rule"/>
+      <attr-item tags="sem_semcon"/>
+      <attr-item tags="sem_semcon_txt"/>
+      <attr-item tags="sem_sign"/>
+      <attr-item tags="sem_sport"/>
+      <attr-item tags="sem_state"/>
+      <attr-item tags="sem_state-sick"/>
+      <attr-item tags="sem_state-sick_substnc"/>
+      <attr-item tags="sem_substnc"/>
+      <attr-item tags="sem_substnc_wthr"/>
+      <attr-item tags="sem_sur"/>
+      <attr-item tags="sem_symbol"/>
+      <attr-item tags="sem_time"/>
+      <attr-item tags="sem_time_wthr"/>
+      <attr-item tags="sem_tool"/>
+      <attr-item tags="sem_tool-catch"/>
+      <attr-item tags="sem_tool-clean"/>
+      <attr-item tags="sem_tool-it"/>
+      <attr-item tags="sem_tool-measr"/>
+      <attr-item tags="sem_tool-music"/>
+      <attr-item tags="sem_tool-write"/>
+      <attr-item tags="sem_txt"/>
+      <attr-item tags="sem_veh"/>
+      <attr-item tags="sem_wpn"/>
+      <attr-item tags="sem_wthr"/>
+      <attr-item tags="sem_year"/>
+      <attr-item tags="top"/>
+      <attr-item tags="cog"/>
+      <attr-item tags="ant"/>
+    </def-attr>
+
+
+
+  </section-def-attrs>
+  <section-def-vars>
+    <def-var n="number"/>
+    <def-var n="current_verb"/>
+    <def-var n="cn_sn"/>
+  </section-def-vars>
+  <section-def-macros>
+ 
+    <def-macro n="lexical-cleanup1" npar="1">
+		<choose>   
+        <when>
+          <test>
+             <and><equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="se"/></equal>
+               <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal></and>
+          </test>
+          <let><clip pos="1" side="tl" part="lem"/><get-case-from pos="1"><lit v="ne"/></get-case-from></let> 
+        </when>
+        <when>
+          <test>
+             <and><equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="tämä"/></equal>
+               <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal></and>
+          </test>
+          <let><clip pos="1" side="tl" part="lem"/><get-case-from pos="1"><lit v="nämä"/></get-case-from></let> 
+        </when>
+        <when>
+          <test>
+             <and><equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="nämä"/></equal>
+               <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></equal></and>
+          </test>
+          <let><clip pos="1" side="tl" part="lem"/><get-case-from pos="1"><lit v="tämä"/></get-case-from></let> 
+        </when>
+        <when>
+          <test>
+             <and><equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="ne"/></equal>
+               <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></equal></and>
+          </test>
+          <let><clip pos="1" side="tl" part="lem"/><get-case-from pos="1"><lit v="se"/></get-case-from></let> 
+        </when>
+
+
+		</choose>    
+    </def-macro>  
+
+    <def-macro n="remove-semtags1" npar="1">
+      <let><clip pos="1" side="tl" part="a_sem"/><lit v=""/></let>
+    </def-macro>
+
+    <def-macro n="remove-semtags2" npar="2">
+      <let><clip pos="1" side="tl" part="a_sem"/><lit v=""/></let>
+      <let><clip pos="2" side="tl" part="a_sem"/><lit v=""/></let>
+    </def-macro>
+
+    <def-macro n="remove-semtags3" npar="3">
+      <let><clip pos="1" side="tl" part="a_sem"/><lit v=""/></let>
+      <let><clip pos="2" side="tl" part="a_sem"/><lit v=""/></let>
+      <let><clip pos="3" side="tl" part="a_sem"/><lit v=""/></let>
+    </def-macro>
+
+    <def-macro n="concord-nominal2" npar="2"> <!-- 1: head, 2: modifier -->
+      <choose>
+        <when>
+          <test><and><not><equal caseless="yes"><clip pos="2" side="tl" part="lem"/><lit v="koko"/></equal></not>
+                     <not><equal caseless="yes"><clip pos="2" side="tl" part="lem"/><lit v="eri"/></equal></not>
+                     <equal><clip pos="2" side="tl" part="a_nbr"/><lit v=""/></equal></and></test>
+          <let><clip pos="2" side="tl" part="tags"/><concat><clip pos="2" side="tl" part="tags"/><lit-tag v="ND"/></concat></let>
+        </when>
+      </choose>
+      <choose>
+        <when>
+          <test><and><not><equal caseless="yes"><clip pos="2" side="tl" part="lem"/><lit v="koko"/></equal></not>
+                     <not><equal caseless="yes"><clip pos="2" side="tl" part="lem"/><lit v="eri"/></equal></not>
+                     <equal><clip pos="2" side="tl" part="a_cas"/><lit v=""/></equal></and></test>
+          <let><clip pos="2" side="tl" part="tags"/><concat><clip pos="2" side="tl" part="tags"/><lit-tag v="CD"/></concat></let>
+        </when>
+      </choose>
+      <choose>
+        <when>
+          <test><and><or> <!-- Either [@→N and not "moni" ], +Attr or [ not +Gen, +Dem ] -->
+                     <and><equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@→N"/></equal>
+                          <not><equal caseless="yes"><clip pos="2" side="tl" part="lem"/><lit v="moni"/></equal></not></and>
+                     <and><not><equal><clip pos="2" side="tl" part="a_cas"/><lit-tag v="gen"/></equal></not>
+
+                          <not><equal><clip pos="2" side="tl" part="a_dem"/><lit v=""/></equal></not></and>
+                     <not><equal><clip pos="2" side="tl" part="a_attr"/><lit v=""/></equal></not> </or>
+                          <not><equal><clip pos="2" side="tl" part="a_numtype"/><lit-tag v="card"/></equal></not></and>
+          </test>
+          <let><clip pos="2" side="tl" part="a_cas"/><clip pos="1" side="tl" part="a_cas"/></let>
+          <let><clip pos="2" side="tl" part="a_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
+        </when>
+      </choose>
+
+      <call-macro n="lexical-cleanup1"><with-param pos="1"/></call-macro>
+      <call-macro n="lexical-cleanup1"><with-param pos="2"/></call-macro>
+    </def-macro>
+
+    <def-macro n="concord-nominal3" npar="3">
+      <call-macro n="concord-nominal2"><with-param pos="1"/><with-param pos="2"/></call-macro>
+      <call-macro n="concord-nominal2"><with-param pos="1"/><with-param pos="3"/></call-macro>
+    </def-macro>
+
+    <def-macro n="handle-nominal-derivation2" npar="2"> 
+      <call-macro n="handle-nominal-derivation1"><with-param pos="1"/></call-macro>
+      <call-macro n="handle-nominal-derivation1"><with-param pos="2"/></call-macro>
+    </def-macro>
+
+    <def-macro n="handle-nominal-derivation3" npar="3"> 
+      <call-macro n="handle-nominal-derivation1"><with-param pos="1"/></call-macro>
+      <call-macro n="handle-nominal-derivation1"><with-param pos="2"/></call-macro>
+      <call-macro n="handle-nominal-derivation1"><with-param pos="3"/></call-macro>
+    </def-macro>
+
+    <def-macro n="neg-verb-nonfin1" npar="1">
+      <choose> <!-- Fix this when we know how to do it  -->
+        <when>
+          <test><equal><clip pos="1" side="sl" part="a_nonfin"/><lit-tag v="supn"/></equal></test>
+          <let><clip pos="1" side="tl" part="tags"/><lit-tag v="vblex.neg.actv.p3.sg"/></let>
+        </when>
+      </choose>
+    </def-macro>
+
+    <def-macro n="convert-passive1" npar="1">
+      <choose> 
+        <when> <!-- <vblex><pasv><indic><pres><pe4> -->
+          <test><and><or><equal><clip pos="1" side="sl" part="a_tense"/><lit-tag v="pres"/></equal>
+                    <equal><clip pos="1" side="sl" part="a_tense"/><lit-tag v="pret"/></equal></or>
+                    <equal><clip pos="1" side="sl" part="a_conneg"/><lit v=""/></equal></and></test>
+          <let><clip pos="1" side="tl" part="tags"/><concat><lit-tag v="vblex.pasv.indic"/>
+                                                    <clip pos="1" side="tl" part="a_tense"/><lit-tag v="pe4"/></concat></let>
+        </when>
+        <when> <!--  "sanoa" vblex pasv indic pres pe4 conneg -->
+          <test><and><equal><clip pos="1" side="sl" part="a_tense"/><lit-tag v="pres"/></equal>
+                    <equal><clip pos="1" side="sl" part="a_conneg"/><lit-tag v="conneg"/></equal></and></test>
+          <let><clip pos="1" side="tl" part="tags"/><lit-tag v="vblex.pasv.indic.pres.pe4.conneg"/></let>
+        </when>
+        <when> <!--  "sanoa" vblex pasv indic pret conneg -->
+          <test><and><equal><clip pos="1" side="sl" part="a_tense"/><lit-tag v="pret"/></equal>
+                    <equal><clip pos="1" side="sl" part="a_conneg"/><lit-tag v="conneg"/></equal></and></test>
+          <let><clip pos="1" side="tl" part="tags"/><lit-tag v="vblex.pasv.indic.pret.conneg"/></let>
+        </when>
+        <when> <!-- <vblex><pss><prfprc><sg><nom> -->
+          <test><equal><clip pos="1" side="sl" part="a_prc"/><lit-tag v="prfprc"/></equal></test>
+          <let><clip pos="1" side="tl" part="tags"/><lit-tag v="vblex.pasv.prfprc.sg.nom"/></let>
+        </when>
+
+      </choose>
+    </def-macro>
+
+    <def-macro n="pers-to-px1" npar="1">
+      <choose>
+        <when>
+          <test><equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p1.sg"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_px_pers"/><lit-tag v="px1sg"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p2.sg"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_px_pers"/><lit-tag v="px2sg"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p3.sg"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_px_pers"/><lit-tag v="px3sg"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p1.du"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_px_pers"/><lit-tag v="px1du"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p2.du"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_px_pers"/><lit-tag v="px2du"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p3.du"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_px_pers"/><lit-tag v="px3du"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p1.pl"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_px_pers"/><lit-tag v="px1pl"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p2.pl"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_px_pers"/><lit-tag v="px2pl"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p3.pl"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_px_pers"/><lit-tag v="px3pl"/></let>
+        </when>
+      </choose>
+    </def-macro>
+
+    <def-macro n="handle-nominal-derivation1" npar="1">
+      <choose>
+        <when>
+          <test><equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_nomact.n"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_minen"/></let>
+          <let><clip pos="1" side="tl" part="a_voice"/><lit v=""/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_aadv.adv"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_sti"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_dimin.n"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_deriv"/><lit v=""/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_dimin.adj"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_deriv"/><lit v=""/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_dimin"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_deriv"/><lit v=""/></let>
+        </when>
+      </choose>
+    </def-macro>
+
+    <def-macro n="default-conversion1" npar="1">
+      <let><clip pos="1" side="tl" part="a_known"/><lit v=""/></let>
+      <let><clip pos="1" side="tl" part="x_func"/><lit v=""/></let>
+      <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+      <let><clip pos="1" side="tl" part="a_dialect"/><lit v=""/></let>
+      <let><var n="cn_sn"/><lit v=""/></let>
+<!--      <let><clip pos="1" side="tl" part="a_attr"/><lit-tag v="ND.CD"/></let>-->
+
+      <!-- ==== AGREEMENT ==== -->
+
+      <choose>
+        <when>
+          <test><not><equal><clip pos="1" side="tl" part="a_attr"/><lit v=""/></equal></not></test>
+          <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let>
+          <choose>
+            <when>
+              <test><equal><clip pos="1" side="sl" part="a_nbr"/><lit v=""/></equal></test>
+              <let><clip pos="1" side="tl" part="tags"/><concat><clip pos="1" side="tl" part="tags"/><lit-tag v="ND"/></concat></let>
+            </when>
+            <otherwise>
+              <let><clip pos="1" side="tl" part="tags"/><concat><clip pos="1" side="tl" part="tags"/> 
+                                                                <clip pos="1" side="sl" part="a_nbr"/></concat></let>
+            </otherwise>
+          </choose>
+          <choose>
+            <when>
+              <test><equal><clip pos="1" side="sl" part="a_cas"/><lit v=""/></equal></test>
+            <let><clip pos="1" side="tl" part="tags"/><concat><clip pos="1" side="tl" part="tags"/><lit-tag v="CD"/></concat></let>
+            </when>
+            <otherwise>
+              <let><clip pos="1" side="tl" part="tags"/><concat><clip pos="1" side="tl" part="tags"/> 
+                                                                <clip pos="1" side="sl" part="a_cas"/></concat></let>
+            </otherwise>
+          </choose>
+        </when>
+      </choose>
+
+      <!-- ==== LEXICAL ==== -->
+
+      <choose>
+        <when>
+          <test><equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="koko"/></equal></test>
+          <!--<let><clip pos="1" side="tl" part="tags"/><lit-tag v="prn.qnt"/></let>-->
+          <let><clip pos="1" side="tl" part="tags"/><lit-tag v="part"/></let>
+        </when>
+        <when>
+          <test><equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="eri"/></equal></test>
+          <let><clip pos="1" side="tl" part="tags"/><lit-tag v="part"/></let>
+        </when>
+      </choose>
+
+      <!-- ==== CASES ==== -->
+
+      <choose>
+        <when>
+          <test><and><equal><clip pos="1" side="tl" part="a_cas"/><lit-tag v="acc"/></equal>
+                     <not><equal><clip pos="1" side="sl" part="a_func_obj"/><lit v=""/></equal></not>
+                     <not><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="prn.pers"/></equal></not></and></test>
+          <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="par"/></let>
+        </when>
+        <when>
+          <test><and><equal><clip pos="1" side="tl" part="a_cas"/><lit-tag v="acc"/></equal>
+                     <not><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="prn.pers"/></equal></not></and></test>
+          <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="gen"/></let>
+        </when>
+        <when>
+          <test><and><equal><clip pos="1" side="tl" part="a_cas"/><lit-tag v="loc"/></equal>
+                     <or><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal>
+                     <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal></or></and></test>
+          <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="ela"/></let>
+        </when>
+        <when>
+          <test><and><equal><clip pos="1" side="tl" part="a_cas"/><lit-tag v="ill"/></equal>
+                     <equal><clip pos="1" side="sl" part="a_sem"/><lit-tag v="sem_lang"/></equal></and></test>
+          <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="tra"/></let>
+        </when>
+        <when>
+          <test><and><equal><clip pos="1" side="tl" part="a_cas"/><lit-tag v="loc"/></equal>
+                     <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@N←"/></equal></and></test>
+          <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="ela"/></let>
+        </when>
+        <when>
+          <test><and><equal><clip pos="1" side="tl" part="a_cas"/><lit-tag v="nom"/></equal>
+                     <or><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@←SUBJ"/></equal>
+                         <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@SUBJ→"/></equal>
+                         <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@SUBJ"/></equal></or>
+                     <equal><clip pos="1" side="sl" part="x_func"/><lit-tag v="←ext→"/></equal></and></test>
+          <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="par"/></let>
+        </when>
+
+        <when>
+          <test><and><equal><clip pos="1" side="tl" part="a_cas"/><lit-tag v="loc"/></equal>
+                     <equal><clip pos="1" side="sl" part="x_func"/><lit-tag v="←hab→"/></equal></and></test>
+          <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="ade"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_cas"/><lit-tag v="loc"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="ine"/></let>
+        </when>
+        <when>
+          <test><and><equal><clip pos="1" side="tl" part="a_cas"/><lit-tag v="com"/></equal>
+                     <or><equal><clip pos="1" side="tl" part="a_nom"/><lit-tag v="n"/></equal>
+                         <equal><clip pos="1" side="tl" part="a_nom"/><lit-tag v="prn"/></equal>
+                         <equal><clip pos="1" side="tl" part="a_nom"/><lit-tag v="np"/></equal>
+                     </or>
+                     <not><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@→N"/></equal></not>
+                     <not><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@→Num"/></equal></not>
+                </and></test>
+          <let><clip pos="1" side="tl" part="a_cas"/><concat><lit-tag v="gen"/><lit v="$ ^kanssa"/><lit-tag v="post"/></concat></let>
+          <let><var n="cn_sn"/><lit v="n_kanssa"/></let>
+        </when>
+        <when>
+          <test><and><equal><clip pos="1" side="tl" part="a_cas"/><lit-tag v="com"/></equal>
+                  <or>   <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@→Num"/></equal>
+                       <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@→N"/></equal></or>
+                     <not><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="prn.pers"/></equal></not></and></test>
+          <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="gen"/></let>
+        </when>
+        <when>
+          <test><and><equal><clip pos="1" side="tl" part="a_cas"/><lit-tag v="com"/></equal>
+                     <or><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@→Num"/></equal>
+                       <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@→N"/></equal></or>
+                     <not><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="prn.pers"/></equal></not></and></test>
+          <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="gen"/></let>
+        </when>
+        <when>
+          <test><and><equal><clip pos="1" side="tl" part="a_cas"/><lit-tag v="com"/></equal>
+                     <not><or><equal><clip pos="1" side="tl" part="a_nom"/><lit-tag v="n"/></equal>
+                              <equal><clip pos="1" side="tl" part="a_nom"/><lit-tag v="np"/></equal></or></not></and></test>
+          <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="gen"/></let>
+        </when>
+        <when>
+          <test><and><equal><clip pos="1" side="tl" part="a_cas"/><lit-tag v="gen"/></equal>
+                     <or><equal><clip pos="1" side="sl" part="a_sem"/><lit-tag v="sem_time"/></equal>
+                         <equal><clip pos="1" side="sl" part="a_sem"/><lit-tag v="sem_time_wthr"/></equal>
+                         <equal><clip pos="1" side="sl" part="a_sem"/><lit-tag v="sem_plc_time"/></equal></or>
+                     <or><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@ADVL→"/></equal>
+                         <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@APP-ADVL←"/></equal>
+                         <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@←ADVL"/></equal></or></and></test>
+          <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="ess"/></let>
+        </when>
+
+      </choose>
+
+      <!-- ==== POSSESSION ==== -->
+
+      <choose>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_px"/><lit-tag v="px1du"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_px"/><lit-tag v="px1pl"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_px"/><lit-tag v="px2du"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_px"/><lit-tag v="px2pl"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_px"/><lit-tag v="px3du"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_px"/><lit-tag v="px3pl"/></let>
+        </when>
+      </choose>
+
+      <!-- ==== NUMBER ==== -->
+
+      <choose>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="du"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+        </when>
+      </choose>
+
+      <!-- ==== QUESTION WORD ==== -->
+
+      <choose>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_qst"/><lit-tag v="qst"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_qst"/><concat><lit v="+ko"/><lit-tag v="qst"/></concat></let>
+        </when>
+      </choose>
+
+      <choose>
+        <when>
+          <test><or><equal><clip pos="1" side="tl" part="a_prc"/><lit-tag v="prfprc"/></equal>
+                    <equal><clip pos="1" side="tl" part="a_prc"/><lit-tag v="prsprc"/></equal></or></test>
+          <let><clip pos="1" side="tl" part="whole"/>
+               <concat><clip pos="1" side="tl" part="whole"/><lit-tag v="sg.nom"/></concat></let>
+        </when>
+      </choose>
+
+      <!-- ==== COMPOUNDING ==== -->
+
+      <choose>
+        <when>
+          <test><or><equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_sggen.cmp"/></equal>
+                    <equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_sggen.cmp_hyph.cmp"/></equal>
+                    <equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_sh.cmp_hyph.cmp"/></equal>
+                    <equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_sh.cmp"/></equal></or></test>
+          <let><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="sg.gen.cmp"/></let>
+        </when>
+        <when>
+          <test><or><equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_sgnom.cmp"/></equal>
+                    <equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_sgnom.cmp.guio"/></equal>
+                    <equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_sgnom.cmp_hyph.cmp"/></equal></or></test>
+          <let><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="sg.nom.cmp"/></let>
+        </when>
+        <when>
+          <test><or><equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_plgen.cmp"/></equal>
+                    <equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_plgen.cmp_hyph.cmp"/></equal></or></test>
+          <let><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="pl.gen.cmp"/></let>
+        </when>
+        <when>
+          <test><or><equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_plnom.cmp"/></equal>
+                    <equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_plnom.cmp_hyph.cmp"/></equal></or></test>
+          <let><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="pl.nom.cmp"/></let>
+        </when>
+        <when>
+          <test><or><equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_sgnom.cmp_splitr"/></equal>
+                    <equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_attr.cmp_splitr"/></equal>
+                    <equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_splitr"/></equal>
+                    <equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_attr.cmp_hyph.cmp"/></equal>
+                    <equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_sggen.cmp_splitr"/></equal></or></test>
+          <let><clip pos="1" side="tl" part="a_cmp"/><concat><lit-tag v="sg.nom"/><lit v="$^-"/><lit-tag v="guio"/></concat></let>
+        </when>
+        <when>
+          <test><or><equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_plnom.cmp_splitr"/></equal>
+                    <equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_attr.cmp_splitr"/></equal>
+                    <equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmpn_pln.cmp.guio"/></equal>
+                    <equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_plgen.cmp_splitr"/></equal></or></test>
+          <let><clip pos="1" side="tl" part="a_cmp"/><concat><lit-tag v="pl.gen"/><lit v="$^-"/><lit-tag v="guio"/></concat></let>
+        </when>
+        <when>
+          <test><and><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="adv"/></equal>
+                    <equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp"/></equal></and></test>
+          <let><clip pos="1" side="tl" part="a_cmp"/><lit v=""/></let>
+        </when>
+        <when>
+          <test><and><or><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="num"/></equal>
+                         <equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="n.acr"/></equal></or>
+                     <equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp.guio"/></equal></and></test>
+          <let><clip pos="1" side="tl" part="a_cmp"/><concat><lit-tag v="sg.nom"/><lit v="$^-"/><lit-tag v="guio"/></concat></let>
+        </when>
+      </choose>
+
+      <!-- COMPOUNDING CLEANUP  -->
+
+      <choose>
+        <when>
+          <test><and><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="num"/></equal>
+                     <not><equal><clip pos="1" side="tl" part="a_cmp"/><lit v=""/></equal></not></and></test>
+          <let><clip pos="1" side="tl" part="a_cmp"/><lit v=""/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="n.cmp"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="n.sg.nom.cmp"/></let>
+        </when>
+      </choose>
+
+      <!--  ESSIVE -->
+
+      <choose>
+        <when>
+          <test><and><equal><clip pos="1" side="tl" part="a_ess"/><lit-tag v="ess"/></equal>
+                     <or><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="n"/></equal>
+                         <equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="num"/></equal>
+                         <equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="np"/></equal>
+                         <equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="prn"/></equal>
+                         <equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="adj"/></equal></or></and></test>
+          <let><clip pos="1" side="tl" part="a_ess"/><lit-tag v="sg.ess"/></let>
+        </when>
+      </choose>
+
+      <!--  COMPOUNDING CLEANUP II -->
+
+      <choose>
+        <when>
+          <test>
+                     <or><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="adj"/></equal>
+                         <equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="prn"/></equal></or></test>
+          <let><clip pos="1" side="tl" part="a_cmp"/><lit v=""/></let>
+        </when>
+      </choose>
+
+
+      <!-- Last resort: Translate passive as active :( -->
+      <choose>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_pass"/><lit-tag v="der_passs.vblex.iv"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_pass"/><lit v=""/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_pass"/><lit-tag v="der_passl.vblex.iv"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_pass"/><lit v=""/></let>
+        </when>
+      </choose>
+
+      <choose>
+        <when>
+          <test><equal><var n="cn_sn"/><lit v=""/></equal></test>
+          <let><var n="cn_sn"/><lit v="x"/></let>
+        </when>
+      </choose>
+    </def-macro>
+
+    <def-macro n="default-conversion2" npar="2">
+      <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+      <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
+    </def-macro>
+
+    <def-macro n="default-conversion3" npar="3">
+      <call-macro n="default-conversion1"><with-param pos="3"/></call-macro>
+      <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
+      <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+    </def-macro>
+
+    <def-macro n="default-conversion-nonfin1" npar="1">
+      <choose>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_nonfin"/><lit-tag v="vabess"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_nonfin"/><lit-tag v="infma.sg.abe"/></let>
+          <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let>
+          <let><clip pos="1" side="tl" part="a_adj"/><lit v=""/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_nonfin"/><lit-tag v="vgen"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_nonfin"/><lit-tag v="infma.sg.ins"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_nonfin"/><lit-tag v="ger"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_nonfin"/><lit-tag v="infe.sg.ine"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_nonfin"/><lit-tag v="inf"/></equal></test>
+          <!--<let><clip pos="1" side="tl" part="a_nonfin"/><lit-tag v="der_minen.sg.ela"/></let>-->
+          <let><clip pos="1" side="tl" part="a_nonfin"/><lit-tag v="infa.sg.lat"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_nonfin"/><lit-tag v="actio.gen"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_nonfin"/><lit-tag v="der_minen.sg.tra"/></let>
+          <let><clip pos="1" side="tl" part="a_voice"/><lit v=""/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_nonfin"/><lit-tag v="actio.ine"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_nonfin"/><lit-tag v="der_minen.sg.ela"/></let><!--was: gen -->
+          <let><clip pos="1" side="tl" part="a_voice"/><lit v=""/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_nonfin"/><lit-tag v="actio.ess"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_nonfin"/><lit-tag v="infma.sg.ine"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_nonfin"/><lit-tag v="supn"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_nonfin"/><lit-tag v="infa.sg.tra.2"/></let>
+          <call-macro n="pers-to-px1"><with-param pos="1"/></call-macro>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_nonfin"/><lit-tag v="actio.nom"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_nonfin"/><lit-tag v="agprc.sg.nom"/></let>
+          <let><clip pos="1" side="tl" part="a_voice"/><lit v=""/></let>
+        </when>
+      </choose>
+    </def-macro>
+
+    <def-macro n="pcle-foc1" npar="1">
+      <choose>   
+        <when>
+          <test>
+               <equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_gis"/></equal>
+          </test>
+          <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let>
+          <let><clip pos="1" side="tl" part="tags"/><concat>
+            <clip pos="1" side="tl" part="tags"/><lit v="+kin"/><lit-tag v="adv"/></concat>
+          </let> 
+        </when>
+        <when>
+          <test>
+               <or><equal><clip pos="1" side="tl" part="a_foc"/><lit-tag v="foc_be"/></equal>
+               <equal><clip pos="1" side="tl" part="a_foc"/><lit-tag v="foc_bat"/></equal>
+               <equal><clip pos="1" side="tl" part="a_foc"/><lit-tag v="foc_ba"/></equal></or>
+          </test>
+          <let><clip pos="1" side="tl" part="a_foc"/><lit-tag v="foc_pa"/></let>
+        </when>
+        <when>
+          <test>
+               <or><equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_neg-ge"/></equal>
+                   <equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_ge"/></equal></or>
+          </test>
+          <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let>
+          <let><clip pos="1" side="tl" part="tags"/><concat>
+            <clip pos="1" side="tl" part="tags"/><lit v="+kaan"/><lit-tag v="adv"/></concat>
+          </let> 
+        </when>
+        <when>
+          <test>
+               <or><equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_pos-ge"/></equal>
+                   <equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_ges"/></equal>
+                   <equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_ge"/></equal></or>
+          </test>
+          <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let>
+          <let><clip pos="1" side="tl" part="tags"/><concat>
+            <clip pos="1" side="tl" part="tags"/><lit v="+kin"/><lit-tag v="adv"/></concat>
+          </let> 
+        </when>
+        <when>
+          <test>
+               <equal><clip pos="1" side="tl" part="a_foc"/><lit-tag v="foc_naj"/></equal>
+          </test>
+          <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let>
+          <let><clip pos="1" side="tl" part="whole"/><concat>
+            <clip pos="1" side="tl" part="whole"/>
+            <lit v="$ ^"/>
+            <lit v="kai"/><lit-tag v="part"/>
+            </concat>
+          </let> 
+        </when>
+
+
+       </choose>    
+     </def-macro>
+ 
+
+    <def-macro n="pcle-foc2" npar="2">
+      <choose>   
+        <when>
+          <test>
+               <equal><clip pos="2" side="tl" part="a_foc"/><lit-tag v="foc_gis"/></equal>
+          </test>
+          <let><clip pos="1" side="tl" part="tags"/><concat>
+          <clip pos="1" side="tl" part="tags"/><lit-tag v="foc_kin"/></concat>
+          </let> 
+        </when>
+        <when>
+          <test>
+               <equal><clip pos="2" side="tl" part="a_foc"/><lit-tag v="foc_han"/></equal>
+          </test>
+          <let><clip pos="1" side="tl" part="tags"/><concat>
+          <clip pos="1" side="tl" part="tags"/><lit-tag v="foc_han"/></concat>
+          </let> 
+        </when>
+        <when>
+          <test>
+               <or>
+               <equal><clip pos="2" side="tl" part="a_foc"/><lit-tag v="foc_be"/></equal>
+               <equal><clip pos="2" side="tl" part="a_foc"/><lit-tag v="foc_ba"/></equal></or>
+          </test>
+          <let><clip pos="1" side="tl" part="tags"/><concat>
+          <clip pos="1" side="tl" part="tags"/><lit-tag v="foc_pa"/></concat>
+          </let> 
+        </when>
+        <when>
+          <test>
+               <or><equal><clip pos="2" side="tl" part="a_foc"/><lit-tag v="foc_neg-ge"/></equal>
+               <equal><clip pos="2" side="tl" part="a_foc"/><lit-tag v="foc_ge"/></equal>
+               <equal><clip pos="2" side="tl" part="a_foc"/><lit-tag v="foc_kin"/></equal></or>
+          </test>
+          <let><clip pos="1" side="tl" part="tags"/><concat>
+          <clip pos="1" side="tl" part="tags"/><lit v="+kin"/><lit-tag v="adv"/></concat>
+          </let> 
+        </when>
+		</choose>    
+    </def-macro>  
+    
+    <def-macro n="num-nom1" npar="1">
+		<choose>   
+        <when>
+          <test>
+               <equal><clip pos="1" side="tl" part="sg_num_cas"/><lit-tag v="sg.acc"/></equal>
+          </test>
+          <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="nom"/></let> 
+        </when>
+
+		</choose>    
+    </def-macro>  
+   
+
+  </section-def-macros>
+  <section-rules>
+
+    <rule comment="REGLA: ADV">
+      <pattern>
+        <pattern-item n="adv"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+        <let><clip pos="1" side="tl" part="a_grau"/><lit v=""/></let>
+        <out>
+          <chunk name="adv" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SAdv"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: ADJ-CMP">
+      <pattern>
+        <pattern-item n="adj-cmp"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="handle-nominal-derivation1"><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="a" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SA"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+
+    <rule comment="REGLA: ADJ">
+      <pattern>
+        <pattern-item n="adj"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="handle-nominal-derivation1"><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="a" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SA"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: PRON">
+      <pattern>
+        <pattern-item n="pron"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk namefrom="cn_sn" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    
+    
+
+    <!-- SECTION: Sintagmes nominals -->
+
+    <rule comment="REGLA: PROP-CMP">
+      <pattern>
+        <pattern-item n="prop-cmp"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="handle-nominal-derivation1"><with-param pos="1"/></call-macro>
+        <let><clip pos="1" side="tl" part="a_cmp_only"/><lit v=""/></let>
+        <out>
+          <chunk name="n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <lu>
+              <lit v="-"/><lit-tag v="guio"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: NOM-CMP-SPLITR">
+      <pattern>
+        <pattern-item n="nom-cmp-splitr"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="handle-nominal-derivation1"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="n-" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: NOM-CMP">
+      <pattern>
+        <pattern-item n="nom-cmp"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="handle-nominal-derivation1"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="n-" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: NOM">
+      <pattern>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="handle-nominal-derivation1"><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: NOM-CMP NOM-CMP NOM">
+      <pattern>
+        <pattern-item n="nom-cmp"/>
+        <pattern-item n="nom-cmp"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags3"><with-param pos="3"/><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion3"><with-param pos="3"/><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="handle-nominal-derivation3"><with-param pos="3"/><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="3"/></call-macro>
+        <out>
+          <chunk name="n-n-n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <mlu>
+              <lu><clip pos="1" side="tl" part="whole"/></lu>
+              <lu><clip pos="2" side="tl" part="whole"/></lu>
+              <lu><clip pos="3" side="tl" part="whole"/></lu>
+            </mlu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: TOP-CMP NOM">
+      <pattern>
+        <pattern-item n="top-cmp"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags2"><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion2"><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="handle-nominal-derivation2"><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="2"/></call-macro>
+        <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
+        <let><clip pos="1" side="tl" part="a_cas"/><lit v=""/></let>
+        <out>
+          <chunk name="n-n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu><clip pos="1" side="tl" part="lem"/><lit-tag v="np.sg.nom"/></lu>
+            <lu><clip pos="2" side="tl" part="whole"/></lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: NOM-CMP NOM">
+      <pattern>
+        <pattern-item n="nom-cmp"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags2"><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion2"><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="handle-nominal-derivation2"><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="2"/></call-macro>
+        <out>
+          <chunk name="n-n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <mlu>
+              <lu><clip pos="1" side="tl" part="whole"/></lu>
+              <lu><clip pos="2" side="tl" part="whole"/></lu>
+            </mlu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: NOM-CMP ATTR NOM">
+      <pattern>
+        <pattern-item n="nom-cmp"/>
+        <pattern-item n="attr"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags3"><with-param pos="3"/><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion3"><with-param pos="3"/><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="handle-nominal-derivation3"><with-param pos="3"/><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="concord-nominal2"><with-param pos="3"/><with-param pos="2"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="3"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="2"/></call-macro>
+        <let><clip pos="2" side="tl" part="a_der_s"/><lit v=""/></let>
+        <out>
+          <chunk name="n-a-n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <mlu>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+            </mlu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: NUM-CARD-CMP">
+      <pattern>
+        <pattern-item n="num-card-cmp"/>
+      </pattern>
+      <action>
+        <choose>
+          <when><test><or><equal><clip pos="1" side="tl" part="lem"/><lit v="0"/></equal>
+                          <equal><clip pos="1" side="tl" part="a_numtype"/><lit v=""/></equal></or></test>
+                <let><clip pos="1" side="tl" part="whole"/><concat><clip pos="1" side="tl" part="lem"/><lit-tag v="num.sg.nom"/></concat></let>
+          </when>
+          <otherwise>
+                <let><clip pos="1" side="tl" part="whole"/><concat><clip pos="1" side="tl" part="lem"/><lit-tag v="num.card.sg.nom"/></concat></let>
+          </otherwise>
+        </choose>
+        <out>
+          <chunk name="z" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SNum"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <lu>
+              <lit v="-"/><lit-tag v="guio"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: NUM-CARD-CMP NOM">
+      <pattern>
+        <pattern-item n="num-card-cmp"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags2"><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion2"><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="handle-nominal-derivation2"><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="concord-nominal2"><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="2"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+        <choose>
+          <when><test><or><equal><clip pos="1" side="tl" part="lem"/><lit v="0"/></equal>
+                          <equal><clip pos="1" side="tl" part="a_numtype"/><lit v=""/></equal></or></test>
+                <let><clip pos="1" side="tl" part="whole"/><concat><clip pos="1" side="tl" part="lem"/><lit-tag v="num.sg.nom"/></concat></let>
+          </when>
+          <otherwise>
+                <let><clip pos="1" side="tl" part="whole"/><concat><clip pos="1" side="tl" part="lem"/><lit-tag v="num.card.sg.nom"/></concat></let>
+          </otherwise>
+        </choose>
+        <out>
+          <chunk name="z-n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <lu>
+              <lit v="-"/><lit-tag v="guio"/>
+            </lu>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+ 
+    <!-- MOVE THIS RULE TO MACROS -->
+    <rule comment="REGLA: num-nomacc n-sg to n-par"> <!-- Mun oainnán guokte nieidda. Minä näen kaksi tyttöä. -->    
+      <pattern>                                        
+        <pattern-item n="num-nomacc"/>                 
+        <pattern-item n="n-sg-accgen"/>                   
+      </pattern>     
+      <action>
+        <call-macro n="num-nom1"><with-param pos="1"/></call-macro>
+        <call-macro n="remove-semtags2"><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion2"><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="handle-nominal-derivation2"><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="2"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+          <let><clip pos="2" side="tl" part="a_cas"/><lit-tag v="par"/></let> 
+	<out>
+          <chunk name="z-n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>    
+              <clip pos="1" side="tl" part="tags"/>   
+	        </lu>
+	        <b pos="1"/>
+	        <lu>
+              <clip pos="2" side="tl" part="whole"/>   
+		    </lu>
+          </chunk>
+        </out>
+      </action>                                  
+    </rule> 
+
+
+    <rule comment="REGLA: ATTR TOP-CMP NOM">
+      <pattern>
+        <pattern-item n="attr"/>
+        <pattern-item n="top-cmp"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <call-macro n="remove-semtags2"><with-param pos="3"/><with-param pos="2"/></call-macro>
+        <call-macro n="default-conversion3"><with-param pos="3"/><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="handle-nominal-derivation3"><with-param pos="3"/><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="concord-nominal2"><with-param pos="3"/><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="3"/></call-macro>
+        <out>
+          <chunk name="a-n-n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu><clip pos="2" side="tl" part="lem"/><lit-tag v="np.sg.nom"/></lu>
+            <lu><clip pos="3" side="tl" part="whole"/></lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+
+    <rule comment="REGLA: ATTR NOM-CMP NOM">
+      <pattern>
+        <pattern-item n="attr"/>
+        <pattern-item n="nom-cmp"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <call-macro n="remove-semtags2"><with-param pos="3"/><with-param pos="2"/></call-macro>
+        <call-macro n="default-conversion3"><with-param pos="3"/><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="handle-nominal-derivation3"><with-param pos="3"/><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="concord-nominal2"><with-param pos="3"/><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="3"/></call-macro>
+        <out>
+          <chunk name="a-n-n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <mlu>
+              <lu><clip pos="2" side="tl" part="whole"/></lu>
+              <lu><clip pos="3" side="tl" part="whole"/></lu>
+            </mlu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: ATTR NOM">
+      <pattern>
+        <pattern-item n="attr"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags2"><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion2"><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="handle-nominal-derivation2"><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="concord-nominal2"><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="2"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="a-n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+
+    <rule comment="REGLA: ATTR NOM-CMP NOM-CMP NOM"> <!-- This rule takes 1.6 s to compile -->
+      <pattern>
+        <pattern-item n="attr"/>
+        <pattern-item n="nom-cmp"/>
+        <pattern-item n="nom-cmp"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+
+        <call-macro n="remove-semtags1"><with-param pos="2"/></call-macro>
+        <call-macro n="remove-semtags3"><with-param pos="4"/><with-param pos="3"/><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion3"><with-param pos="4"/><with-param pos="3"/><with-param pos="2"/></call-macro>
+        <call-macro n="handle-nominal-derivation1"><with-param pos="1"/></call-macro>
+        <call-macro n="handle-nominal-derivation3"><with-param pos="4"/><with-param pos="3"/><with-param pos="2"/></call-macro>
+        <call-macro n="concord-nominal2"><with-param pos="4"/><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="4"/></call-macro>
+        <out>
+          <chunk name="a-n-n-n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <mlu>
+              <lu><clip pos="2" side="tl" part="whole"/></lu>
+              <lu><clip pos="3" side="tl" part="whole"/></lu>
+              <lu><clip pos="4" side="tl" part="whole"/></lu>
+            </mlu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+
+    <rule comment="REGLA: ATTR ATTR NOM-CMP NOM">
+      <pattern>
+        <pattern-item n="attr"/>
+        <pattern-item n="attr"/>
+        <pattern-item n="nom-cmp"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="3"/></call-macro>
+        <call-macro n="remove-semtags3"><with-param pos="4"/><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="3"/></call-macro>
+        <call-macro n="default-conversion3"><with-param pos="4"/><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="handle-nominal-derivation1"><with-param pos="4"/></call-macro>
+        <call-macro n="concord-nominal3"><with-param pos="4"/><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="2"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="4"/></call-macro>
+        <out>
+          <chunk name="a-a-n-n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b pos="2"/>
+            <mlu>
+              <lu><clip pos="3" side="tl" part="whole"/></lu>
+              <lu><clip pos="4" side="tl" part="whole"/></lu>
+            </mlu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: ATTR ATTR NOM">
+      <pattern>
+        <pattern-item n="attr"/>
+        <pattern-item n="attr"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags3"><with-param pos="3"/><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion3"><with-param pos="3"/><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="handle-nominal-derivation1"><with-param pos="3"/></call-macro>
+        <call-macro n="concord-nominal3"><with-param pos="3"/><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="2"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="3"/></call-macro>
+        <out>
+          <chunk name="a-a-n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: ATTR CNP ATTR NOM">
+      <pattern>
+        <pattern-item n="attr"/>
+        <pattern-item n="cnp"/>
+        <pattern-item n="attr"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
+        <call-macro n="remove-semtags3"><with-param pos="4"/><with-param pos="3"/><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion3"><with-param pos="4"/><with-param pos="3"/><with-param pos="1"/></call-macro>
+        <call-macro n="handle-nominal-derivation1"><with-param pos="4"/></call-macro>
+        <call-macro n="concord-nominal3"><with-param pos="4"/><with-param pos="3"/><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="3"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="4"/></call-macro>
+        <out>
+          <chunk name="a-c-a-n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b pos="2"/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+            <b pos="3"/>
+            <lu>
+              <clip pos="4" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+<!-- this rule takes 25 seconds to compile -->
+<!--
+   <rule comment="REGLA: ATTR CNP ATTR NOM-CMP NOM-CMP NOM">
+      <pattern>
+        <pattern-item n="attr"/>
+        <pattern-item n="cnp"/>
+        <pattern-item n="attr"/>
+        <pattern-item n="nom-cmp"/>
+        <pattern-item n="nom-cmp"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="4"/></call-macro>
+        <call-macro n="remove-semtags2"><with-param pos="5"/><with-param pos="4"/></call-macro>
+        <call-macro n="remove-semtags3"><with-param pos="6"/><with-param pos="3"/><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion2"><with-param pos="5"/><with-param pos="4"/></call-macro>
+        <call-macro n="default-conversion3"><with-param pos="6"/><with-param pos="3"/><with-param pos="1"/></call-macro>
+        <call-macro n="handle-nominal-derivation1"><with-param pos="5"/></call-macro>
+        <call-macro n="handle-nominal-derivation1"><with-param pos="6"/></call-macro>
+        <call-macro n="concord-nominal3"><with-param pos="6"/><with-param pos="3"/><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="a-c-a-n-n-n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b pos="2"/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+            <b pos="3"/>
+            <mlu>
+              <lu><clip pos="4" side="tl" part="whole"/></lu>
+              <lu><clip pos="5" side="tl" part="whole"/></lu>
+              <lu><clip pos="6" side="tl" part="whole"/></lu>
+            </mlu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    -->
+    
+ 
+   <!-- SECTION: Adverbials -->
+
+    <!-- SECTION: Numerals and quantifiers -->
+
+ 
+    <rule comment="REGLA: NUM-CARD">
+      <pattern>
+        <pattern-item n="num-card"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion-nonfin1"><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="z" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SNum"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+ 
+   
+       
+    <!-- SECTION: Verb groups -->
+
+    <rule comment="REGLA: GOAHTI">
+      <pattern>
+        <pattern-item n="goahti"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion-nonfin1"><with-param pos="1"/></call-macro>
+        <let><clip pos="1" side="tl" part="a_deriv"/><lit v=""/></let>
+        <out>
+          <chunk name="v" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+            <lu>
+              <get-case-from pos="1"><lit v="alkaa"/></get-case-from>
+              <clip pos="1" side="tl" part="tags"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/><lit-tag v="vblex.actv.infa.sg.lat"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: INF">
+      <pattern>
+        <pattern-item n="inf"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion-nonfin1"><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="v" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: LEAT-FIN GOAHTI-PRFPRC">
+      <pattern>
+        <pattern-item n="leat-fin"/>
+        <pattern-item n="goahti-prfprc"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="2"/></call-macro>
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
+        <call-macro n="default-conversion-nonfin1"><with-param pos="2"/></call-macro>
+        <let><clip pos="2" side="tl" part="a_deriv"/><lit v=""/></let>
+        <out>
+          <chunk name="v" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <get-case-from pos="2"><lit v="alkaa"/></get-case-from>
+              <clip pos="2" side="tl" part="tags"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/><lit-tag v="vblex.actv.infa.sg.lat"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: LEAT-FIN PRFPRC">
+      <pattern>
+        <pattern-item n="leat-fin"/>
+        <pattern-item n="prfprc"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags2"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <call-macro n="default-conversion2"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="2"/></call-macro>
+        <out>
+          <chunk name="v-prc" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+
+    <rule comment="REGLA: POT">
+      <pattern>
+        <pattern-item n="pot"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <let><clip pos="1" side="tl" part="a_tense"/><lit v=""/></let>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="v" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: COND">
+      <pattern>
+        <pattern-item n="cond"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <let><clip pos="1" side="tl" part="a_tense"/><lit v=""/></let>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="v" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: CONNEG-PRET">
+      <pattern>
+        <pattern-item n="conneg-pret"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <let><clip pos="1" side="tl" part="tags"/><concat><clip pos="1" side="tl" part="tags"/><lit-tag v="ND"/></concat></let>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="conneg" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.NEG"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: PASS-PRC">
+      <pattern>
+        <pattern-item n="pass-prc"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="convert-passive1"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="v" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.PASS"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: PASS-FIN">
+      <pattern>
+        <pattern-item n="pass-fin"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="convert-passive1"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="v" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.PASS"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: FIN">
+      <pattern>
+        <pattern-item n="fin"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="v" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: II">
+      <pattern>
+        <pattern-item n="ii"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="neg-verb-nonfin1"><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+        <let><clip pos="1" side="tl" part="a_mood"/><lit v=""/></let>
+        <out>
+          <chunk name="ii" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.NEG"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: SUPN">
+      <pattern>
+        <pattern-item n="supn"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion-nonfin1"><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+        <let><clip pos="1" side="tl" part="a_mood"/><lit v=""/></let>
+        <out>
+          <chunk name="supn" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.XD"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+ 
+    <rule comment="REGLA: II PASS-PRES-CONNEG">
+      <pattern>
+        <pattern-item n="ii"/>
+        <pattern-item n="pass-pres-conneg"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags2"><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion2"><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="neg-verb-nonfin1"><with-param pos="1"/></call-macro>
+        <let><clip pos="1" side="tl" part="a_mood"/><lit v=""/></let>
+        <call-macro n="convert-passive1"><with-param pos="2"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="2"/></call-macro>
+        <out>
+          <chunk name="ii-conneg" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.NEG"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+
+    <rule comment="REGLA: II CONNEG-PRET">
+      <pattern>
+        <pattern-item n="ii"/>
+        <pattern-item n="conneg-pret"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="2"/></call-macro>
+        <call-macro n="default-conversion2"><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <call-macro n="neg-verb-nonfin1"><with-param pos="1"/></call-macro>
+        <let><clip pos="2" side="tl" part="tags"/><concat>
+                     <clip pos="2" side="tl" part="tags"/>
+                     <clip pos="1" side="tl" part="a_nbr"/></concat></let>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="2"/></call-macro>
+        <let><clip pos="1" side="tl" part="a_mood"/><lit v=""/></let>
+        <out>
+          <chunk name="ii-conneg" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.NEG"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: II FOC">
+      <pattern>
+        <pattern-item n="ii"/>
+        <pattern-item n="foc"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="neg-verb-nonfin1"><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc2"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <let><clip pos="1" side="tl" part="a_mood"/><lit v=""/></let>
+        <out>
+          <chunk name="ii" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.NEG"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+
+    <rule comment="REGLA: KO">
+      <pattern>
+        <pattern-item n="qst"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <out>
+          <chunk name="qst" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="QST"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+
+
+
+    <!-- ConNegII is almost always a disambiguation/trimming fail, so just turn it into Inf -->
+    <rule comment="REGLA: CONNEGII">
+      <pattern>
+        <pattern-item n="connegii"/>
+      </pattern>
+      <action> 
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion-nonfin1"><with-param pos="1"/></call-macro>
+        <let><clip pos="1" side="tl" part="a_conneg"/><lit-tag v="infa.sg.lat"/></let>
+        <out>
+          <chunk name="conneg" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: DEFAULT">
+      <pattern>
+        <pattern-item n="default"/>
+      </pattern>
+      <action>
+        <call-macro n="remove-semtags1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion-nonfin1"><with-param pos="1"/></call-macro>
+        <call-macro n="handle-nominal-derivation1"><with-param pos="1"/></call-macro>
+        <call-macro n="pcle-foc1"><with-param pos="1"/></call-macro>
+        <choose><when>
+          <test><not><equal><clip pos="1" side="tl" part="lem"/><lit v=""/></equal></not></test>
+          <out>
+            <chunk name="x" case="caseFirstWord">
+              <tags>
+                <tag><lit-tag v="SX"/></tag>
+              </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+            </chunk>
+          </out>
+        </when></choose>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: SENT">
+      <pattern>
+        <pattern-item n="sent"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="sent" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SENT"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="upper-lower case for any word">
+      <pattern>
+        <pattern-item n="default"/>
+      </pattern>
+      <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="any" case="caseFirstWord"> 
+            <tags> <tag> <lit-tag v="default"/> </tag> </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu> 
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+  
+  </section-rules>
+</transfer>

@@ -1,0 +1,226 @@
+Alphabet
+
+%<adj%>
+%<comp%>
+%<sup%>
+%<n%>
+%<prsprc%> 
+%<prtprc%> 
+%<prfprc%> 
+%<cmp%>
+%<rcmpnd%>
+
+%<foc%_son%>
+
+%<der%_car%>
+%<der%_caus%>
+%<der%_dimin%>
+%<der%_inchl%>
+%<der%_keahtta%>
+%<der%_lasj%>
+%<der%_sasj%>
+%<der%_vuota%>
+
+%<der%_a%>
+%<der%_adv%>
+%<der%_aadv%>
+%<der%_dimin%>
+%<der%_nomact%>
+%<der%_nomag%>
+%<der%_passl%>
+%<der%_passs%>
+%<der%_adda%>
+%<der%_ahtti%>
+%<der%_alla%>
+%<der%_amoš%>
+%<der%_asti%>
+%<der%_at%>
+%<der%_d%>
+%<der%_dáfot%>
+%<der%_eamoš%>
+%<der%_easti%>
+%<der%_geahtes%>
+%<der%_goahti%>
+%<der%_h%>
+%<der%_halla%>
+%<der%_heapmi%>
+%<der%_huhtti%>
+%<der%_huvva%>
+%<der%_j%>
+%<der%_jagáš%>
+%<der%_l%>
+%<der%_las%>
+%<der%_laš%>
+%<der%_lágan%>
+%<der%_lágaš%>
+%<der%_meahttun%>
+%<der%_muš%>
+%<der%_nammasaš%>
+%<der%_nuolus%>
+%<der%_náittot%>
+%<der%_saš%>
+%<der%_seagat%>
+%<der%_st%>
+%<der%_stuvva%>
+%<der%_stávval%>
+%<der%_supmi%>
+%<der%_suttat%>
+%<der%_t%>
+%<der%_upmi%>
+%<der%_veara%>
+%<der%_viđá%>
+%<der%_vuohta%>
+%<der%_ár%>
+
+;				! end of Alphabet
+
+Sets
+
+Cmp =
+%<cmp%>
+%<rcmpnd%>
+;
+
+Adj = 
+%<adj%>
+;
+
+N = 
+%<n%> 
+;
+
+Prc = 
+%<prsprc%> 
+%<prtprc%> 
+%<prfprc%> 
+;
+
+UnhandledFoc = 
+%<foc%_son%>
+;
+
+Derivations =
+%<der%_a%>
+%<der%_adv%>
+%<der%_aadv%>
+%<der%_dimin%>
+%<der%_nomact%>
+%<der%_nomag%>
+%<der%_passl%>
+%<der%_passs%>
+%<der%_adda%>
+%<der%_ahtti%>
+%<der%_alla%>
+%<der%_amoš%>
+%<der%_asti%>
+%<der%_at%>
+%<der%_d%>
+%<der%_dáfot%>
+%<der%_eamoš%>
+%<der%_easti%>
+%<der%_geahtes%>
+%<der%_goahti%>
+%<der%_h%>
+%<der%_halla%>
+%<der%_heapmi%>
+%<der%_huhtti%>
+%<der%_huvva%>
+%<der%_j%>
+%<der%_jagáš%>
+%<der%_l%>
+%<der%_las%>
+%<der%_laš%>
+%<der%_lágan%>
+%<der%_lágaš%>
+%<der%_meahttun%>
+%<der%_muš%>
+%<der%_nammasaš%>
+%<der%_nuolus%>
+%<der%_náittot%>
+%<der%_saš%>
+%<der%_seagat%>
+%<der%_st%>
+%<der%_stuvva%>
+%<der%_stávval%>
+%<der%_supmi%>
+%<der%_suttat%>
+%<der%_t%>
+%<der%_upmi%>
+%<der%_veara%>
+%<der%_viđá%>
+%<der%_vuohta%>
+%<der%_ár%>
+%<der%_car%>
+%<der%_caus%>
+%<der%_dimin%>
+%<der%_inchl%>
+%<der%_keahtta%>
+%<der%_lasj%>
+%<der%_sasj%>
+%<der%_vuota%>
+;
+
+HandledDerivations =
+!%<der%_at%>
+!%<der%_halla%>
+!%<der%_l%>
+!%<der%_alla%>
+%<der%_passl%>
+%<der%_passs%>
+%<der%_goahti%>
+%<der%_aadv%>
+%<der%_dimin%>
+!%<der%_vuohta%>
+!%<der%_ahtti%>
+!%<der%_h%>
+!%<der%_d%>
+!%<der%_laš%>
+!%<der%_st%>
+!%<der%_nomag%>
+%<der%_nomact%>
+;
+
+;				! end of Sets
+
+Definitions
+
+UnhandledDerivations = Derivations - HandledDerivations ;
+
+;				! end of Definitions
+
+Rules
+
+! "Don't allow compounds until we've fixed trimming, choosing-lexicalised-over-compounds, sem-tags-being-messed-up-in-compounds, etc. etc."
+! V /<= _ ; where V in Cmp ;
+
+"Only allow those derivations that we've made sure survive translation"
+: /<= _ UnhandledDerivations ;
+
+"Don't allow derivations as left-compounds"
+: /<= _ Derivations :* Cmp ;
+
+! "Don't allow more than two left-compounds -- Makefile.am handles this"
+! : /<= _ Cmp :* Cmp :* Cmp ;
+
+!"Don't allow adjective-noun compounds"
+!: /<= _ Adj :* N ;
+
+"Don't allow +Foc/son"
+: /<= _ UnhandledFoc ;
+
+"Don't allow compounds where first part is noun and second is der_nomact"
+: /<= _ N :* %<der%_nomact%> ;
+
+"Don't allow comp or sup + der_sti"
+: /<= _ [ %<comp%> | %<sup%> ] :* %<der%_aadv%> ; 
+
+"Don't allow noun-participle compounds"
+: /<= _ [ Adj | N ] :* Prc ;
+
+"Don't allow imperative in 1st person"
+: /<= _ %<imp%> %<p1%>  ; 
+
+"Don't allow derivations of derivations"
+: /<= _ Derivations :* Derivations ;
+
+;				! end of Rules

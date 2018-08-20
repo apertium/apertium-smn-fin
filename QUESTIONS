@@ -1,0 +1,1043 @@
+markdown syntax.
+
+
+# Account on bug tracker
+
+http://giellatekno.uit.no/bugzilla/buglist.cgi?cmdtype=runnamed&namedcmd=mtbugs
+
+TROND: What is this?
+The search named mtbugs does not exist.
+what is the question?
+is there a bug in the bug base?
+
+
+
+#  yks - pron? 
+
+ @yks<Pron><Sg><Ill> 
+
+$ echo yhteen | ofin
+yhteen	yksi+Num+Card+Sg+Ill
+yhteen	yksi+Pron+Sg+Ill
+yhteen	yks+Pron+Sg+Ill
+yhteen	yhteen+Adv
+yhteen	yhde+N+Sg+Gen
+
+can we just remove the pronoun reading when there is a number reading ? 
+
+TROND: Hmm. But that means "always", right?
+
+
+
+
+
+
+
+# lexicon modifications
+
+> soajálaš ~ siivekäs
+
+
+# change in POS: Adv -> Po
+
+> kaikkialla ~ juohke bealde
+
+omorfi - Adv
+gt sme - bealde +Po
+
+TROND: These are just different:
+One is compounded: fi = "all+on", 
+and on e is not: se = every onside+Po.
+So: transfer rule. 
+
+
+# oma -> ieš
+
+Transferring an adjective to a reflexive pronoun.
+
+ Ja Jumala loi       ihmisen omaksi kuvaksensa. 
+ Ja Ipmil  sivdnidii olbmo   iežas  govvan. 
+
+<Flammie> spectie: I just talked with a Finnish major about reflexive oma 
+constructions, turns out it has its own section in official grammar so it's 
+quite specific construct <http://scripta.kotus.fi/visk/sisallys.php?p=1456>
+
+TROND:
+This is a well-known diff between fi and se. Here we just need transfer rules, 
+like this:
+oma+Cx N+Cx+Px ==> ieš+Px N+Cx
+
+
+
+# Multiple analyses for reflexives
+
+> alddádet/alddáneattet/alddiineattet/alddesteattet
+
+	$ echo "ieš+Pron+Refl+Loc+PxPl2" | smegen
+	ieš+Pron+Refl+Loc+PxPl2	alddiineattet
+	ieš+Pron+Refl+Loc+PxPl2	alddesteattet
+	ieš+Pron+Refl+Loc+PxPl2	alddáneattet
+	ieš+Pron+Refl+Loc+PxPl2	alddádet
+	
+What do we do?
+TROND:
+We fix the isme-norm.fst transducer, by blocking 3 of 4.
+
+
+
+
+
+# Notes while collecting more lexical entries
+
+## PoS differences and transfer
+
+### -ltään/-ltaan
+
+	hengiltään (henki+N+Pl+Abl+Sg3/henki+N+Pl+Abl+Pl3), nimeltään (nimi+N+Sg+Abl+Sg3/nimi+N+Sg+Abl+Pl3)
+	->
+	vuoiŋŋa mielde
+	nama mielde
+
+	..., nimeltä Sakarias, ...
+	..., Sakarja-nammasaš báhppa ... 
+
+### -teen numbers
+
+Sme: guokte|nuppelohkái
+fin: kaksi|toista
+
+Will make note of this on wiki.
+TROND: These two are parallel, "toista" (partitive) and "nuppelohkái" (illative) are both indeclinable, and can be treated as such.
+
+### Comparative and superlative adverbs 
+
+These are fairly productive and consistent at least in finnish but the morphology doesn't seem to have Advs which are comparative or superlative tagged as such.
+
+	lähemmin  +Adv		-> +Adv+Commp
+	lähimmin  +Adv		-> +Adv+Superl
+
+#### Comparative adverbs
+
+> hitaammin ~ njoazibut
+
+	$ echo "hitaammin" | ofin
+	hitaammin	hidas+A+Comp+Pl+Ins
+	hitaammin	hidas+A+Der/sti+Adv+Comp
+
+	$ echo "njoazibut" | sme
+	njoazibut	njoahci+SgNomCmp+SgGenCmp+PlGenCmp+A+Comp+Sg+Nom+Use/Marg+Use/Ped+PxSg2
+	njoazibut	njoahci+SgNomCmp+SgGenCmp+PlGenCmp+A+Comp+Sg+Gen+Use/Marg+Use/Ped+PxSg2
+	njoazibut	njoahci+SgNomCmp+SgGenCmp+PlGenCmp+A+Comp+Sg+Acc+Use/Marg+Use/Ped+PxSg2
+	njoazibut	njoahci+SgNomCmp+SgGenCmp+PlGenCmp+A+Comp+Pl+Nom
+	njoazibut	njoahci+SgNomCmp+SgGenCmp+PlGenCmp+A+Comp+Der2+Der/at+Adv
+
+	$ echo "nopeammin" | ofin
+	nopeammin	nopea+A+Comp+Pl+Ins
+	nopeammin	nopea+A+Der/sti+Adv+Comp
+
+
+	$ echo "hoahpubut" | sme
+	hoahpubut	hoahpubut+Adv+Comp
+
+
+TROND:
+~/gtsvn/kt/fin$ echo "njoazibut" | usme
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+njoazibut	njoahci+A+Comp+Der2+Der/at+Adv
+njoazibut	njoahci+A+Comp+Sg+Acc+PxSg2
+njoazibut	njoahci+A+Comp+Sg+Gen+PxSg2
+njoazibut	njoahci+A+Comp+Sg+Nom+PxSg2
+njoazibut	njoahci+A+Comp+Pl+Nom
+
+
+### More PoS differences
+
+'other' muu : A+Pos+Sg+Nom
+'other' eará : Pron+Indef+Attr
+
+### Idioms? - oađđáhit nahkáriidda : vaivuttaa uneen
+
+### Particles need to transfer
+
+6 vaan sumu nousi maasta ja kasteli koko maan pinnan.
+6 #muhto mierká čuožžilii eatnamis ja njuoskadii @koko eatnama @pinna.
+
+koko, kaikista
+
+### syötävä - borramuš
+
+	syötävä	syötävä+A+Pos+Sg+Nom
+	syötävä	syödä+V+Pass+PrsPcp+Pos+Sg+Nom
+
+	borramuš	borrat+V+TV+Der3+Der/muš+N+Sg+Nom
+	borramuš	borramuš+N+Sg+Nom
+
+
+## CG stuff to fix
+
+### Imperative object marking
+
+Need to add @OBJ tag for imperatives.
+
+	"<Tee>"
+		"tehdä" V Act Imprt Sg2 SELECT:1537 
+		"tehdä" V Ind Prs ConNeg @+FMAINV SELECT:1537 MAP:2524 
+	;	"tee" N Sg Nom SELECT:1537 
+	"<se>"
+		"se" Pron Dem Sg Nom 
+	"<.>"
+		"." Punct CLB ADD:734 
+
+
+
+### Syntactic tag application question
+
+Do I need to apply these to every item in the phrase, or just one? In this case, I'm doing things like:
+
+	lähellä tätä vanhaa metsää
+	Prep	Dem	 A		N
+						@<P
+
+But should it be?
+
+	lähellä tätä vanhaa metsää
+	Prep	Dem	 A		N
+			@<P	@<P		@<P
+
+
+
+### Case of Adv and Po disambiguation -- underway, needs more test cases
+
+	"<Hän>"
+		"hän" Pron Pers Sg Nom @SUBJ→ MAP:2207 
+	"<sanoi>"
+		"sanoa" V Act Ind Prt Sg3 @+FMAINV MAP:2263 
+	"<sen>"
+		"se" Pron Dem Sg Gen @→P MAP:2361 
+	;	"sen" Pcle REMOVE:695 
+	;	"se" Pron Dem Sg Ins IFF:725 
+	"<ennen>"
+		"ennen" Po @X SELECT:1478 MAP:2540 
+	;	"ennen" Adv SELECT:1478 
+	;	"ennen" Adp SELECT:1478 
+	;	"ennen" Pr SELECT:1478 
+	"<.>"
+		"." Punct CLB ADD:671 
+
+As it stands now this is the analysis... However, we need one in which ennen is an adv, and sen is an obj. "He said it before."
+
+Should find more test cases for this. Interesting problem.  In this case it can be fixed because partitive is the case assigned with 'ennen' as either a preposition or a postposition.
+
+
+### particles strike again
+
+> eli
+
+	"<eli>"
+		"eli" Pcle @PCLE MAP:2264 
+	;	"elää" V Act Ind Prt Sg3 @X MAP:2438 REMOVE:2440 
+	;	"eli" Conj CC @X MAP:2438 REMOVE:2440 
+
+> sitten
+
+	"<sitten>"
+		"sitten" Pcle @PCLE MAP:2264 
+	;	"sitten" Adv @X MAP:2438 REMOVE:2440 
+	"<hän>"
+		"hän" Pron Pers Sg Nom @SUBJ→ MAP:2168 
+	"<kuoli>"
+		"kuolla" V Act Ind Prt Sg3 @+FMAINV MAP:2211 
+	"<.>"
+		"." Punct CLB ADD:665 
+
+Has this been fixed by CG rule?
+
+TROND: No, evidently it has not, but it should.
+
+> ensi, viime
+
+These are both listed as particles but they need to be adjectives as well; however I'm not sure how to add indeclinable adjectives to omorfi yet. Are the same entries for the particles suitable for adjectives?
+
+	ensi'][POS=PARTICLE]:ensi	Ennd	;
+	viime'][POS=PARTICLE]:viime	Ennd	;
+
+
+
+### Pinta
+
+	"<6>"
+		"6" Num Card Sg Nom @SUBJ→ 
+	"<vaan>"
+		"vaan" Pcle @PCLE 
+	"<sumu>"
+		"sumu" N Sg Nom @SUBJ→ 
+	"<nousi>"
+		"nousta" V Act Ind Prt Sg3 @+FMAINV 
+	"<maasta>"
+		"maa" N Sg Ela @LOC @←ADVL 
+	"<ja>"
+		"ja" Conj CC @CNP 
+	"<kasteli>"
+		"kastella" V Act Ind Prt Sg3 @+FMAINV 
+	"<koko>"
+		"koko" Pcle @PCLE 
+	"<maan>"
+		"maa" N Sg Gen @X 
+	"<pinnan>"
+		"pinta" N Sg Gen @←OBJ 
+		"pinna" N Sg Gen @←OBJ 
+	"<.>"
+		"." Punct CLB 
+
+?
+
+### Select V
+
+"Ja hän teki maasta kaikki metsän eläimet ja kaikki taivaan linnut ja **toi** ne ihmisen eteen nähdäkseen." 
+
+
+### Select puista N Pl Ela
+
+	"<Syö>"
+		"syödä" V Ind Prs ConNeg @X 
+		"syödä" V Act Ind Prs Sg3 @X 
+		"syödä" V Act Imprt Sg2 @X 
+	"<vapaasti>"
+		"vapaasti" Adv @X 
+		"vapaa" A* Pos Der/sti Adv @X 
+	"<kaikista>"
+		"kaikki" Pron[SUBCAT = INDEF] Pl Ela 
+		"kaikista" Pcle @PCLE 
+	"<muista>"
+		"muistaa" V Ind Prs ConNeg @+FMAINV 
+	"<paratiisin>"
+		"paratiisi" N Sg Gen @←OBJ 
+	"<puista>"
+		"puu" N Pl Ela @X 
+		"puistaa" V Ind Prs ConNeg @X 
+		"puistaa" V Act Imprt Sg2 @X 
+
++2
+
+> Silloin aukenivat heidän molempain silmät, ja he huomasivat olevansa  alasti; ja he sitoivat yhteen viikunapuun lehtiä ja tekivät itselleen  vyöverhot.
+
+lehtiä N/V?
+
+TROND: lehtiä +N+Pl+Par
+
+## need to Select "maa" N Sg Par
+
+	"<eikä>"
+		"ei" V Neg Act Sg3 Foc/ka @+FAUXV 
+	"<ollut>"
+		"olla" V Pass PrfPrc Pos Pl Nom @←OBJ 
+		"olla" V Act PrfPrc Pos Sg Nom @←OBJ 
+	"<ihmistä>"
+		"ihminen" N Sg Par @←OBJ 
+	"<maata>"
+		"maata" V Act Inf1 Sg Lat @-FMAINV 
+		"maa" N Sg Par @←OBJ 
+	"<viljelemässä>"
+		"viljellä" V Act Inf3 Sg Ine @-FMAINV 
+	"<,>"
+		"," Punct CLB 
+
+TROND: CG problem, yes.
+
+
+again... 
+
+	Tämä lohduttaa meitä työssämme ja kättemme vavoissa viljellessämme maata
+
+### Numbers versus pronouns
+
+	"<Yhdellä>"
+		"yksi" Pron Sg Ade @X SELECT:1311 MAP:2597 
+	;	"yksi" Num Card Sg Ade SELECT:1311 
+	"<miehellä>"
+		"mies" N Sg Ade @NUM← MAP:2315 
+	"<on>"
+		"olla" V Act Ind Prs Sg3 @+FMAINV MAP:2322 
+	"<iso>"
+		"iso" A Pos Sg Nom @←SPRED SELECT:851 MAP:2345 
+	;	"iso" N Sg Nom SELECT:851 
+	"<hattu>"
+		"hattu" N Sg Nom @X MAP:2597 
+
+
+
+## Omorfi
+
+### Eden
+
+	$ echo "Eedenissa" | fin
+	Eedenissa	Eedenissa	+?
+
+$ echo "Eedeniin" | fin
+Eedeniin	eeden+N+Sg+Ill
+Eedeniin	eeden+N+Sg+Nom+# ikä+N+Pl+Ins
+
+Looked at omorfi source but not sure how to fix this one.
+
+	Afganistan'][POS=NOUN][SUBCAT=PROPER][KTN=5]:Afganistan	kotus_5_PROPER_geo/stemfiller	;
+	
+	Eeden'][POS=NOUN][SUBCAT=PROPER][KTN=9]:Eede	kotus_9_PROPER_geo/stemfiller	;
+	Eeden'][POS=NOUN][SUBCAT=PROPER][KTN=9]:eede	kotus_9_PROPER_geo/stemfiller	;
+
+Are these comparable? 
+
+Another problem is that Eeden should be returning +N+Prop, but it isn't for some reason.
+
+### Particles
+
+May have a note about this somewhere already. The particle POS in omorfi is a problem, so this will be fixed.
+
+	vasta eilen.
+
+
+### Ensimmäinen - +Adj reading
+
+### Adp is a problematic category in fin. -- solution in progress
+
+Split Finnish Adp into Pr and Po.
+
+Compare bidix with pp-sme-lex.txt and see how these compare. Maybe can get them all in the bidix?
+
+
+### Add Adp and Advs to morphology
+
+Adp:
+
+ + edessä
+ + välissä
+ + aikana
+ + välillä 
+ + väliin
+ + välille
+ + sisällä
+ + sisälle
+ + sisään
+ + lähellä - only Adv, but is Pr and Po
+
+Adv:
+
+
+### siksi että, dannego
+
+?
+
+### Compounds
+
+#### How to not discard compound analyses in the following case?
+
+		kosken	koski<N><Sg><Gen>
+		kosken	koska<CS><Cmpnd>+ei<V><Neg><Act><Sg1>
+		kosken	Koski<N><Prop><Sg><Gen>
+		kosken	koskea<V><Act><Ind><Prs><Sg1>
+
+	TROND: Hmm, I do not get the 2nd one at all.
+
+	RYAN: we have some structures where ei combines with some CS before it. For ettei, this works fine because there is one analysis: 
+
+		ettei	että+Conj+CS+# ei+V+Neg+Act+Sg3
+
+	The problem comes in for others where there is a compound analysis and a non-compound analysis. Compounds will be dropped in hfst-proc for now, so we can't use these... But in order to get them to translate, they need to be compounds. Kosken in this case is probably very rare, but it's a good example of where a compound is needed but will be dropped.
+
+
+### Spaces vs. no spaces
+
+sitä vastoin
+
+$ echo "sitävastoin" | fin
+sitävastoin	sitävastoin+Pcle
+
+Should this return a compound analysis too, so that we can normalize spaces vs nonspaces?
+
+## Transfer notes
+
+### Avoiding having to specify each parameter?
+
+This is fine when there's one attribute we care about
+
+	<call-macro n="set_loc_loc1">
+	  <with-param pos="2"/>
+	</call-macro>
+
+As phrases increase in length, either we have to: 
+
+	<call-macro n="set_loc_loc1">
+	  <with-param pos="2"/>
+	</call-macro>
+    <call-macro n="set_loc_loc1">
+      <with-param pos="1"/>
+    </call-macro>
+
+Or, make a macro to wrap this that does essentially the same thing. It's kind of tedious.
+
+Also, why doesn't this apply to the first position?
+
+	<choose> <!-- no love yet. works on attr but not on noun -->
+	  <when>
+	    <test>
+	      <equal>
+	        <clip pos="2" side="tl" part="a_case"/>
+	        <lit-tag v="Ess"/>
+	      </equal>
+	    </test>
+	    <call-macro n="strip_nbr2">
+		  <with-param pos="1"/>
+	      <with-param pos="2"/>
+	    </call-macro>
+	  </when>
+	</choose>
+
+Expect: 		^attr_nom<SN><@X><Sg><Ess>{^dát<Pron><Dem><Ess>$ ^dállu<N><Ess>$}$
+What happens: 	^attr_nom<SN><@X><Sg><Ess>{^dát<Pron><Dem><Ess>$ ^dállu<N><Sg><Ess>$}$
+
+### Selecting the right words...
+
+I'm attempting to make sure that sme: nubbi, fin: toinen gets treated by the right rules in transfer. The problem is that def-cat in .t1x goes by the finnish side, and unfortunately it looks like I need to pick items by the sme side...
+
+    <def-cat n="attrmod_1"> <!-- Svonni's grupp 1 --> 
+      <cat-item tags="Pron.Dem.*.*."/> <!-- dat, dát, diet, dot, duot -->
+      <cat-item tags="Pron.Indef.*.*."/> <!-- goappašat, guktot -->
+	<!-- <cat-item tags="Pron.Interr.*.*."/> --> <!-- guhte, goabbá -->
+      <cat-item tags="Pron.Rel.*.*.@N→"/> <!-- guhte, goabbá ?? maybe remove interr? -->
+      <cat-item lemma="hyvä" tags="A.*"/> <!-- buorre -->
+      <cat-item lemma="paha" tags="A.*"/> <!-- paha -->
+      <cat-item lemma="yksi" tags="Num.*"/> <!-- okta -->
+    </def-cat>
+    <def-cat n="attrmod_2"> <!-- Svonni's grupp 2 --> 
+      <cat-item tags="Pron.Interr.*.*."/> <!-- mii gii only? -->
+    </def-cat>
+	<def-cat n="attrmod_3"> <!-- Svonni's grupp 3 -->
+	  <cat-item tags="Num.*"/> <!-- how to do all numbers except for one? -->
+	  <cat-item lemma="máŋga" tags="A.*"/>
+      <cat-item lemma="galle" tags="A.*"/>
+      <cat-item lemma="moadde" tags="Num.*"/>
+	</def-cat>
+
+
+	$ echo "toinen" | fin
+	toinen	toinen+N+Sg+Nom
+	toinen	toinen+Num+Ord+Sg+Nom
+	toinen	toinen+Pron+Recipr+Sg+Nom
+	
+	$ echo "nubbi" | automorf
+	nubbi	nubbi<Pron><Indef><Attr>
+	nubbi	nubbi<Pron><Indef><Sg><Nom>
+	nubbi	nubbi<Pron><Recipr><Attr>
+	nubbi	nubbi<Pron><Recipr><Sg><Nom>
+	nubbi	nubbi<A><Ord><Attr>
+	nubbi	nubbi<A><Ord><Sg><Nom>
+
+Currently nubbi ends up going to the rules that handle attrmod_3 because toinen is a Num., but it would ideally be part of attrmod_1, since it's an indefinite pronoun.  
+
+I realize this can be fixed by just adding this to the morphology, but I wonder if perhaps there's a way to go by the sme side. Can it be done in higher level transfers? 
+
+
+### Derived adjectives
+
+	$ echo "soajálaš" | hfst-lookup .deps/sme-fin.automorf.hfst 
+	soajálaš	soadji<N><Der1><Der_laš><A><Attr>
+	soajálaš	soadji<N><Der1><Der_laš><A><Sg><Nom>
+	soajálaš	soadjá<N><Der1><Der_laš><A><Attr>
+	soajálaš	soadjá<N><Der1><Der_laš><A><Sg><Nom>
+
+Ideally this shouldn't be derived... How do we fix? 
+
+### Some prepositions become postpositions, second level transfer -- how to?
+
+	<e><p><l>buohta<s n="Po"/></l><r>vastapäätä<s n="Pr"/></r></p></e>
+	<e><p><l>haga<s n="Po"/></l><r>ilman<s n="Pr"/></r></p></e>
+
+May be a few more, just haven't found them yet
+
+### 3rd infinitive -> ?? 
+
+	 6 Ja Ipmil dajai: "Bohtos almmi gievravuohta čáziid gaskii earuhit  čázit čáziin@".
+	
+	earuhit ___ dihte?
+
+
+### Adverbs and participles?
+
+hämmästyksissä(än)               imašteamis(?), hirpmástuvvan(?)
+juovuksissa                      juhkan, juhkanoaivves, gárremiin, gárrenoaivvis, oaivvahuvvan
+näännyksissä                     roahppánan(?)
+väijyksissä                      vuođgŋimin?
+
+A lot of these supposed finnish adverbs seem to be something else, but consistently seem to correlate with actio essive.
+
+### "Particles"
+
+A lot of the words on the all bible missing wich are 'particles' can be deconstructed to some adverb plus a focus particle (aha, real particles). I wonder if it would be worth storing a minimal version of the words and having the focus markers just transferred...  For instance, there are cases where Finnish has two words reflecting pos and neg., e.g. *myöskin* and *myöskään*; but sámi (to my knowledge) doesn't have the same thing. 
+
+Perhaps Linda or Trond know whether the following is productive:
+
+	missäkin - gosnai, gosge; gostege, gostige, gos
+	missään - gostege ~ gostige ~ goste ~ gosge
+
+	mihinkin - gosanai ~ gosage, gosa
+	mihinkään - gosage
+	
+	myöskin - maiddái
+	myöskään - maiddái
+
+Also
+
+	entä - naba, na?
+	entäpä - naba
+
+	missäpä	- gosba
+	mihinpä - gosaba
+	milloinpa - goasba
+
+
+Basic question: can we construct a list of 1-1 correspondences in most of the sme and fin particles?
+
+	fin 		sme
+	-pa 		-ba
+	-kin		-nai, -ge
+	-kaan		-ge
+	?			-bat
+	?			-nu
+	-han		?
+
+Then if this works out, we need to make sure that the morphology in finnish also provides a deconstructed analysis for these.
+
+
+
+## Vocabularyish stuff
+
+### Staging ground for day of reckoning wrt. particles
+
+http://piratepad.net/8twShp38ZS
+
+### Adverbs
+
+päähän		oskálii ? 
+rohkeasti	roahkkat (n), rohkkes, roahkkadit?
+kovalla		garrasit?
+käsillä		?
+liikkeelle	?
+siihen		dasa (not adv) ? 
+harhaan		meaddit, čádjidahttit (verbs?)		?
+katkerasti	bahča (adj) ? 
+käsin		tänne käsin - deike guovlluid, täältä käsin - dáppil, dáppe guovllos; sieltä käsin - doppil, doppe guovllos
+lopulla		?
+pystyyn		ceagganit ? 
+korkealla	allin, allagasas (taivaalla)
+kuntoon		vuoimmit (p), álššat, veajut ; veadju veadjin ? 
+lopussa		?
+ainiaan		?
+ainiaaksi	?
+pystyssä		v? ceaggut, ceaggát,
+kaiketi		ammal (pcle) ?
+mieliksi		?
+elossa		ealus?		N	
+käsiksi		?
+henkiin		?	
+oikealle		?
+eloon		ellui?		N
+erikseen		sierra, sierranassii
+korkealle	alás, allagassii (taivaalle)
+esille		ovdan, oidnosii (näkyviin)
+iäti			?
+oikealla		?
+kiiruusti	?
+keskenään	gaskaneas-- check if this is split in omorfi ?? 
+loppuun		?
+poikki		doaris ? 
+jäljellä		?
+jäljelle		?
+paitsi	 	 - earret <Pr> ? 
+ammoin                           ?
+haikeasti                        ?
+joutuin                          ?
+kaksittain                       ?
+kuiviin                          ?
+murskaksi                        ?
+syyttömästi                      ?
+taampana                         ?
+tyhjiin                          ? tyhjä - guoros, guorus, urro
+väijyksiin                       vuođgŋimii?
+väijyksissä                      vuođgŋimin?
+eksyksissä                       láhppon
+juovuksissa                      juhkan, juhkanoaivves, gárremiin, gárrenoaivvis, oaivvahuvvan
+hämmästyksissään                 imašteamis(?), hirpmástuvvan(?)
+kauaksi                          ? guhkkii
+kiivaasti                        ?
+näännyksissä                     roahppánan(?)
+sivulle                          siidduid??
+onneksi                          lihkus
+
+tekeillä                         ráhkaduvvomin (Ess??)
+pitkään                          guhkkái?
+
+
+
+
+
+### Particles
+
+All these were listed as particles in omorfi, but i'm not sure how to translate them, some may already be listed like vaikka or kun, but can these work the same in sme?
+
+tarvis                          dárbu ?
+
+in                              ?
+kunpa                           ?
+vaikkapa                        ?
+sitävastoin                     ?
+pas                             ? 
+kaikin                          ? 
+yhtäkaikki                      ? 
+
+### tomu - gavja?
+
+	SME : POS : FIN : POS 
+
+'remains', 'ash'
+
+	gavja : N : tomu : N 
+	tuhka / gutna?
+
+'clothes, dress'
+
+	gárvu : N : puku : N
+
+
+### Some missing adpositions? or are they adpositions?
+
+pois 	pois+Adv
+
+
+välityksellä	välitys+N+Sg+Ade
+
+## Lexical selection
+
+	"<lavalla>"
+		"lapa" N Sg Ade @X MAP:2615 
+		"lava" N Sg Ade @X MAP:2615 
+
+	"<pinnan>"
+		"pinta" N Sg Gen @←OBJ MAP:2276 
+		"pinna" N Sg Gen @←OBJ MAP:2276 
+
+## Syntactic tags?
+
+^tietosanakirjoja/tietosanakirja<N><Pl><Par><@SUBJ→>$
+-> ^nom<SN><@X><Pl><Gen>{^diehto+sátne+girji<N><Pl><Gen>$}$
+	
+Not preserving @Subj tag somehow. Sentence 4 in corp/sampletext.txt
+
+	FMT: The set_syntag1 macro was not being called in the rule
+
+# Misc 
+
+## Apertium lex learner?
+
+## wikitest script
+
+# Notes from Lene on sample text
+
+### Input
+
+Tietosanakirja on kirjoitettu kattava kokoelma tietoa. Tietosanakirja voi olla yleinen ja sisältää tietoa useista eri aiheista, tai se voi keskittyä johonkin tiettyyn aiheeseen, kuten lääketieteeseen tai tekniikkaan. Pääosa osa tietosanakirjoista keskittyy tarjoamaan tietoa tietystä kansallisesta näkökulmasta. Tietosanakirja voi olla myös uskonnollinen hengeltään, mutta tällaisia tietosanakirjoja ei suomeksi ole.
+
+### Apertium produces... 
+
+Diehtosátnegirji lea čállán #gokčat čoakkáldat dieđu. Diehtosátnegirji sáhttá #leat dábálaš ja #sisttis+doallat dieđu #máŋga #eará fáttáin, vai dat sáhttá #čoahkkanit geasa oahpes fáddái, nugo dálkkasdiehtagii vai teknihkkii. #Váldo+oassi oassi diehtosátnegirjjiin čoahkkana fállat dieđu oahppásis nationála geahččanguovllus. Diehtosátnegirji sáhttá #leat maid #oskkolaš vuoiŋŋasteaset, muhte dákkár diehtosátnegirjjit ii Supmii leage.
+
+### Corrected version
+
+Diehtosátnegirji lea čallojuvvon viiddes diehtočoakkáldat. Diehtosátnegirji sáhttá leat dábálaš ja sisttisdoallat dieđu máŋga eará fáttás, vai dat sáhttá vuodjut geasa oahpes fáddái, nugo dálkkasdiehtagii vai teknihkkii. Váldooasi oasis diehtosátnegirjjiin vuodju fállat dieđu dihto nationála geahččanguovllus. Diehtosátnegirji sáhttá leat maid oskkolaš vuoiŋŋastis, muhte dákkár diehtosátnegirjjit eai leat suomagillii.
+
+
+### Lene's notes 
+
++ kokoelma tietoa = diehtočoakkáldat
+
++ gokči - teknihkalaččat riekta, muhto ii leat dábálaš nie dadjat sámegillii -> viiddes
+
++ kuten lääketieteeseen tai tekniikkaan : sme: dahje
+	vai - dušše go lea jearldat
+
++ máŋga fáttás - go numerála lea Sg, de substantiiva lea Sg
+
++ máŋggat - hui ollu 
+
++ keskittyä - vuodjut heive dasa
+
++ Pääosa osa – váldooasi oasis
+
++ oahppásis - dihto
+
+vuoiŋŋasteaset - vuoiŋŋastis
+	namastis
+	
+
+ii leat -  eai leat suomagillii
+
+
+# New issues with including finnish lexc
+
+lääketiede -> dálkkasdieđa used to work, but now it's starred.
+
+## Gotchas:
+
+ + If CG analysis doesn't match up with that provided by apertium-tagger, problem is that our trimmed lexc files will result in more unknown words, which results in more unknown analyses. If CG analysis is fine, it will be fine in apertium when all words have been added.
+
+## Working through the bible again for missing closed classes and checking generation errors.
+
+## @
+
+5 nyt <Pcle>
+		- Adv in bidix, should add Adv in omorfi
+
+5 eikä
+
+4 luona		
+	luonasi
+	luonani		both are adv, but po in sme 
+		luhtán luhtte+Po+PxSg1
+	
+	- tweaked adv rule to handle Po/Adv, but maintain Adv chunk
+
+kanssani / kanssasi - should also have Adv if this Adv analysis is correct, yet omorfi had Adp.
+luokseni / luoksesi - same problem
+
+Need Po tags in omorfi. Can chunk this and "minun kanssa"/like things as Adv later. Need @Advl tag for Po w/o Px tags in CG?
+
+Can't remember what the problem really is when apertium ends up with a syntactic analysis that isn't returned by CG. Checked punctuation and everthing.
+
+
+
+## Sisa/siskkil
+
+$ echo "sisa+Po" | smegen
+sisa+Po	sisa
+sisa+Po	siskkil
+
+## Sen pinnalta
+
+(According to sámi-suoma-sámi sátnegirji:)
+
+$ echo govdilasas | sme 
+govdilasas	govdat+V+IV+Der2+Actor+N+SgGenCmp+Use/NG+Use/Circ#+Use/Circlassa+N+Sg+Gen+Use/Ped+PxSg3
+govdilasas	govdat+V+IV+Der2+Actor+N+SgGenCmp+Use/NG+Use/Circ#+Use/Circlassa+N+Sg+Acc+Use/Ped+PxSg3
+govdilasas	govdat+V+IV+Der2+Actor+N+SgGenCmp+Use/NG+Use/Circ#+Use/Circlassa+N+Sg+Loc
+govdilasas	govdilasas+Adv
+
+$ echo govdilassii | sme
+govdilassii	govdat+V+IV+Der2+Actor+N+SgGenCmp+Use/NG+Use/Circ#+Use/Circlassa+N+Sg+Ill
+govdilassii	govdilassii+Adv
+
+$ echo "pinnalta" | fin
+pinnalta	pinnalta+Po
+pinnalta	pinnalta+Pr
+pinnalta	pinnalta+Adp
+pinnalta	pinna+N+Sg+Abl
+pinnalta	pinta+N+Sg+Abl
+
+$ echo "pinnalle" | fin
+pinnalle	pinnalle+Po
+pinnalle	pinnalle+Pr
+pinnalle	pinnalle+Adp
+pinnalle	pinna+N+Sg+All
+pinnalle	pinta+N+Sg+All
+
+## PrfPrc +Use/NG
+
+680 #leat	^leat<V><IV><PrsPrc>$
+
+$ echo "lean" | sme
+lean	leat+V+IV+Ind+Prs+Sg1
+lean	leat+V+IV+PrfPrc+Use/NG
+
+
+## Stuoris 
+
+482 #stuoris	^stuoris<A><Attr>$
+
+$ echo "stuoris" | sme
+stuoris	stuoris+CmpN/SgN+CmpN/SgG+CmpN/PlG+A+Sg+Nom
+
+    <e><p><l>stuoris<s n="A"/></l><r>suuri<s n="A"/></r></p><par n="A_A"/></e> 
+
+need A+Attr:
+
+$ echo "stuora" | sme
+stuora	stuoris+CmpN/SgN+CmpN/SgG+CmpN/PlG+A+Attr+Dial/-KJ
+
+$ echo "stuorra" | sme
+stuorra	stuoris+Dial/-GG+A+Attr
+
+Cannot generate.
+
+## -go
+
+$ echo "ehpetgo" | sme
+ehpetgo	ii+V+IV+Neg+Ind+Pl2+Qst+Use/Circ
+
+^verb<V><NEG><@+FAUXV>{^Ii<V><IV><Neg><Ind><Pl2><Qst>$}$
+
+does not generate; +Use/Circ
+
+I remember something about how we should be using the non-clitic question marker, e.g., ehpet go. Should I ignore this problem, or what?
+
+## Some postpositions missing in sme.lexc
+
+^áigge/*áigge$
+^guvlui/guovlu<N><Sg><Ill>$
+^ráigge/ráigge<Adv>$
+
+
+## Generation issue with nubbi seems to be +Use/CircN
+
+
+$ echo goalmmát | automorf
+goalmmát	goalmmát	+?
+
+$ echo goalmmát | sme
+goalmmát	+Use/CircNgoalmmát+A+Ord+Sg+Nom
+goalmmát	+Use/CircNgoalmmát+A+Ord+Sg+Gen+Use/Sub
+goalmmát	+Use/CircNgoalmmát+A+Ord+Sg+Acc+Use/Sub
+goalmmát	+Use/CircNgoalmmát+A+Ord+Attr
+
+$ echo "nubbi" | automorf
+nubbi	nubbi<Pron><Indef><Attr>
+nubbi	nubbi<Pron><Indef><Sg><Nom>
+nubbi	nubbi<Pron><Recipr><Attr>
+nubbi	nubbi<Pron><Recipr><Sg><Nom>
+
+$ echo nubbi | sme
+nubbi	+Use/CircNnubbi+A+Ord+Sg+Nom
+nubbi	+Use/CircNnubbi+A+Ord+Attr
+nubbi	nubbi+Pron+Recipr+Sg+Nom
+nubbi	nubbi+Pron+Recipr+Attr
+nubbi	nubbi+Pron+Indef+Sg+Nom
+nubbi	nubbi+Pron+Indef+Attr
+
+## Excl
+
+$ echo '!' | sme
+!	^excl+CLB+Use/Circ
+
+$ echo 'Perkele!' | fin-sme
+Beargalat#!
+
+<e><p><l>excl<s n="CLB"/></l><r>!<s n="Punct"/><s n="CLB"/></r></p></e>
+
++Use/Circ preventing generation.
+
+## Some adverbs missing in sme.lexc
+
+     95 #agi beaivvisge	^agi beaivvisge<Adv>$	^agi/ahki<N><Sg><Acc>/ahki<N><Sg><Gen>$ ^beaivvisge/*beaivvisge$
+     66 #goassege	^goassege<Adv>$	^goassege/*goassege$
+     46 #ovdabeale	^ovdabeale<Adv>$	^ovdabeale/*ovdabeale$
+     27 #dakko bokte	^dakko bokte<Adv>$	^dakko/dakko<Adv>$ ^bokte/bokte<Po>$
+     23 #heaittekeahttá	^heaittekeahttá<Adv>$	^heaittekeahttá/*heaittekeahttá$
+     19 #riektadit	^riektadit<Adv>$	^riektadit/*riektadit$
+     16 #ovdalgihtii	^ovdalgihtii<Adv>$	^ovdalgihtii/*ovdalgihtii$
+     14 #boaitto beallai	^boaitto beallai<Adv>$	^boaitto/*boaitto$ ^beallai/beallai<Po>/beallai<Pr>$
+     12 #garrasit	^garrasit<Adv>$	^garrasit/garas<A><Der2><Der_at><Adv>$
+     11 #náitosii	^náitosii<Adv>$	^náitosii/náittus<N><Sg><Ill>$
+     11 #guovtte sadjái	^guovtte sadjái<Adv>$	^guovtte/guokte<Num><Sg><Gen>$ ^sadjái/sadji<N><Sg><Ill>/sadjái<Po>$
+     11 #dáiddolaččat	^dáiddolaččat<Adv>$	^dáiddolaččat/dáidu<N><Der1><Der_laš><A><Comp><Attr>/dáidu<N><Der1><Der_laš><A><Comp><Sg><Nom>/dáidu<N><Der1><Der_laš><A><Der2><Der_at><Adv>/dáidu<N><Der1><Der_laš><A><Pl><Nom>/dáidu<N><Der1><Der_laš><A><Sg><Acc><PxSg2>/dáidu<N><Der1><Der_laš><A><Sg><Gen><PxSg2>$
+      9 #vallái	^vallái<Adv>$	^vallái/*vallái$
+      9 #eará guovllus	^eará guovllus<Adv>$	^eará/eará<Pron><Indef><Attr>/eará<Pron><Indef><Sg><Acc>/eará<Pron><Indef><Sg><Gen>/eará<Pron><Indef><Sg><Nom>$ ^guovllus/guovlu<N><Sg><Acc><PxSg3>/guovlu<N><Sg><Gen><PxSg3>/guovlu<N><Sg><Loc>$
+      9 #čiekŋalassii	^čiekŋalassii<Adv>$	^čiekŋalassii/*čiekŋalassii$
+      8 #juohke bealde	^juohke bealde<Adv>$	^juohke/juohke<Pron><Indef>$ ^bealde/bealde<Po>/bealde<Pr>$
+      7 #sisaguovlluid	^sisaguovlluid<Adv>$	^sisaguovlluid/*sisaguovlluid$
+      7 #ovddeš	^ovddeš<Adv>$	^ovddeš/*ovddeš$
+      7 #lagamustá	^lagamustá<Adv>$	^lagamustá/lagamustá<Adv><Superl>$
+      7 #farggabut	^farggabut<Adv>$	^farggabut/farggabut<Adv><Comp>$
+      6 #vulos guovlluid	^vulos guovlluid<Adv>$	^vulos/vulos<Adv>$ ^guovlluid/guovlu<N><Pl><Acc>/guovlu<N><Pl><Gen>$
+      6 #guhkit	^guhkit<Adv>$	^guhkit/guhkit<Adv><Comp>/guhkki<A><Comp><Attr>/guhkki<A><Comp><Sg><Nom>/guhkki<A><Der2><Der_at><Adv>/guhkki<A><Pl><Nom>$
+      6 #eará guvlui	^eará guvlui<Adv>$	^eará/eará<Pron><Indef><Attr>/eará<Pron><Indef><Sg><Acc>/eará<Pron><Indef><Sg><Gen>/eará<Pron><Indef><Sg><Nom>$ ^guvlui/guovlu<N><Sg><Ill>$
+      6 #dárkileappot	^dárkileappot<Adv>$	^dárkileappot/*dárkileappot$
+      6 #Dakko bokte	^Dakko bokte<Adv>$	^Dakko/Dakko<Adv>$ ^bokte/bokte<Po>$
+      5 #maŋil	^maŋil<Adv>$	^maŋil/maŋil<Po>$
+      5 #duohkái	^duohkái<Adv>$	^duohkái/duohki<N><Sg><Ill>$
+      5 #dássidit	^dássidit<Adv>$	^dássidit/*dássidit$
+      2 #maŋemusháve	^maŋemusháve<Adv>$	^maŋemusháve/*maŋemusháve$
+      2 #dábálaččat	^dábálaččat<Adv>$	^dábálaččat/*dábálaččat$
+      1 #Dábálaččat	^Dábálaččat<Adv>$	^Dábálaččat/*Dábálaččat$
+
+
+
+## Words without illative/locative
+
+fran@victorio:~$ echo nuorta+N+Sg+Ill | dsme
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+nuorta+N+Sg+Ill	nuorta+N+Sg+Ill	+?
+
+fran@victorio:~$ echo nuorta+N+Sg+Loc | dsme
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+nuorta+N+Sg+Loc	nuorta+N+Sg+Loc	+?
+
+fran@victorio:~$ echo nuorta+N+Sg+Gen | dsme
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+nuorta+N+Sg+Gen	nuortta
+
+fran@victorio:~$ echo nuorta+N+Sg+Acc | dsme
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+nuorta+N+Sg+Acc	nuortta
+
+fran@victorio:~$ echo nuorta+N+Sg+Nom | dsme
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+nuorta+N+Sg+Nom	nuorta
+
+fran@victorio:~$ echo nuorta+N+Sg+Com | dsme
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+nuorta+N+Sg+Com	nuorttain
+
+fran@victorio:~$ echo nuorta+N+Ess | dsme
+0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
+nuorta+N+Ess	nuortan
+
+
+# elämä -> eallin 
+
+Translate with verb-derived-noun instead of actio. can all agent participles coincide with such nouns in sme?
+
+
+# Focus particles
+
+How to translate: Foc/han, Foc/s, Foc/pa ? 
+
+# seammá
+
+We want to be able to generate "seammá+Pron+Indef+Sg+Loc" but we can't at the moment 
+because we only have an adverb reading for that. :(
+
+    LEXICON SEAMMA
+    +Sg+Nom:%> K ;
+    +Sg+Acc:%> K ;
+    +Sg+Gen:%> K ;
+    +Sg+Gen+Use/Sub:»# NAMAT ; !
+    +Sg+Ill:%>j K ;  ! Let's await the verdict of the jury..
+    ! +Sg+Loc:%>s K ; ! Let's settle for the Adv reading
+    +Sg+Loc+Use/Sub:%>n K ;  ! !SOUTH, well..., probably this one should Adv as well
+    ...
+
+# 3rd Infinitive Passive Instructive
+
+Note to self:
+
+heidät pitää Jumalan lapsiksi kutsuttaman.
+sii gohčoduvvojit Ipmila mánnán.
+
+Hän on oleva suuri, ja hänet pitää kutsuttaman Korkeimman Pojaksi.
+Son šaddá leat stuoris ja gohčoduvvo Alimusa Bárdnin.
+
+Sentähden myös se pyhä, mikä syntyy, pitää kutsuttaman Jumalan Pojaksi.
+Dan dihtii lea bassi dat mánná gii riegáda ja gohčoduvvo bassin ja Ipmila Bárdnin.
+
+Fairly clear. kutsua+V+Pass+Inf3+Sg+Ins needs to drop these and go to passive. Transfer rules can then add subj person from surrounding contexts.
+
+What is nice though is that mostly all of the cases of this I can find are around pitää (aux verb, 'must')
+
+# missing tag, reminder
+ ^lähtemäisillään/lähteä<V><Act><DRV=MAISILLAPxPl3>/lähteä<V><Act><DRV=MAISILLAPxSg3>$

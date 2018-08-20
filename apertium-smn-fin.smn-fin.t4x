@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<transfer>
+  <section-def-cats>
+    
+    <def-cat n="default">
+      <cat-item tags="*"/>
+    </def-cat>
+
+    <def-cat n="unknown">
+      <cat-item tags=""/>
+    </def-cat>
+
+    <def-cat n="clit">
+      <cat-item lemma="kaan" tags="adv"/>
+      <cat-item lemma="kin" tags="adv"/>
+      <cat-item lemma="kin" tags="foc_kin"/>
+      <cat-item lemma="ko" tags="qst"/>
+    </def-cat>
+
+    <def-cat n="clit-tag">
+      <cat-item lemma="han" tags="foc_han"/>
+    </def-cat>
+   
+  </section-def-cats>
+  
+  <section-def-attrs>
+    <def-attr n="a_kill"> <!-- De burde fiksest i bidix. -->
+      <attr-item tags="g3"/>
+      <attr-item tags="g7"/>
+      <attr-item tags="nomag"/>
+    </def-attr>
+
+    <def-attr n="a_cas">
+      <attr-item tags="nom"/>
+      <attr-item tags="CD"/>
+    </def-attr>
+
+     <def-attr n="a_nbr">
+      <attr-item tags="sg"/>
+      <attr-item tags="pl"/>
+      <attr-item tags="ND"/>
+    </def-attr>
+       
+    <def-attr n="a_foc">
+      <attr-item tags="foc_kin"/>
+      <attr-item tags="foc_han"/>
+    </def-attr>
+
+    <def-attr n="a_XD">
+      <attr-item tags="XD"/>
+    </def-attr>
+    <def-attr n="a_CD">
+      <attr-item tags="CD"/>
+    </def-attr>
+    <def-attr n="a_ND">
+      <attr-item tags="ND"/>
+    </def-attr>
+
+       
+    <def-attr n="a_pos">
+      <attr-item tags="adv"/>
+      <attr-item tags="pcle"/>
+      <attr-item tags="foc_kin"/>
+      <attr-item tags="foc_han"/>
+      <attr-item tags="part"/>
+    </def-attr>
+
+    <def-attr n="a_der">
+      <attr-item tags="der_s"/>
+    </def-attr>
+
+    <def-attr n="a_sgnom">
+      <attr-item tags="sg.nom"/>
+    </def-attr>
+
+    <def-attr n="a_cmp_feil">
+      <attr-item tags="cmp_hyph.sg"/>
+    </def-attr>
+    <def-attr n="a_cmp_only">
+      <attr-item tags="cmp"/>
+    </def-attr>
+
+    <def-attr n="a_cmp">
+      <attr-item tags="cmp"/>
+      <attr-item tags="cmp_hyph"/>
+      <attr-item tags="cmp.guio"/>
+      <attr-item tags="cmp_sgnom.cmp_hyph.cmp"/>
+      <attr-item tags="cmp_sggen.cmp_hyph.cmp"/>
+      <attr-item tags="cmp_sgnom.cmp"/>
+      <attr-item tags="cmp_sggen.cmp"/>
+      <attr-item tags="cmp_sgnom.cmp_splitr"/>
+      <attr-item tags="cmp_sggen.cmp_splitr"/>
+      <attr-item tags="sg.nom.cmp"/>
+      <attr-item tags="sg.gen.cmp"/>
+      <attr-item tags="cmp_plnom.cmp_hyph.cmp"/>
+      <attr-item tags="cmp_plgen.cmp_hyph.cmp"/>
+      <attr-item tags="cmp_plnom.cmp"/>
+      <attr-item tags="cmp_plgen.cmp"/>
+      <attr-item tags="pl.nom.cmp"/>
+      <attr-item tags="pl.gen.cmp"/>
+      <attr-item tags="pl.nom.cmp_splitr"/>
+      <attr-item tags="pl.gen.cmp_splitr"/>
+    </def-attr>
+
+    <def-attr n="a_sem">
+      <attr-item tags="sem_act"/>
+      <attr-item tags="sem_body_group_hum_time"/>
+      <attr-item tags="sem_build_obj"/>
+      <attr-item tags="sem_dir"/>
+      <attr-item tags="sem_domain_prod-audio"/>
+      <attr-item tags="sem_event_plc-elevate"/>
+      <attr-item tags="sem_geom_obj"/>
+      <attr-item tags="sem_measr_sign"/>
+      <attr-item tags="sem_org_prod-cogn"/>
+      
+      <attr-item tags="sem_act_route"/>
+      <attr-item tags="sem_act_plc"/>
+      <attr-item tags="sem_amount"/>
+      <attr-item tags="sem_amount_semcon"/>
+      <attr-item tags="sem_ani"/>
+      <attr-item tags="sem_ani_body-abstr_hum"/>
+      <attr-item tags="sem_ani_build_hum_txt"/>
+      <attr-item tags="sem_ani_build-part"/>
+      <attr-item tags="sem_ani_group"/>
+      <attr-item tags="sem_ani_group_hum"/>
+      <attr-item tags="sem_ani_hum"/>
+      <attr-item tags="sem_aniprod"/>
+      <attr-item tags="sem_aniprod_hum"/>
+      <attr-item tags="sem_aniprod_obj-clo"/>
+      <attr-item tags="sem_aniprod_perc-phys"/>
+      <attr-item tags="sem_aniprod_plc"/>
+      <attr-item tags="sem_ani_veh"/>
+      <attr-item tags="sem_body"/>
+      <attr-item tags="sem_body-abstr"/>
+      <attr-item tags="sem_body-abstr_prod-audio_semcon"/>
+      <attr-item tags="sem_body_clth"/>
+      <attr-item tags="sem_body_food"/>
+      <attr-item tags="sem_body_group_hum"/>
+      <attr-item tags="sem_body_hum"/>
+      <attr-item tags="sem_body_mat"/>
+      <attr-item tags="sem_body_measr"/>
+      <attr-item tags="sem_body_plc"/>
+      <attr-item tags="sem_body_time"/>
+      <attr-item tags="sem_build"/>
+      <attr-item tags="sem_build_edu_org"/>
+      <attr-item tags="sem_build_org"/>
+      <attr-item tags="sem_build-part"/>
+      <attr-item tags="sem_cat"/>
+      <attr-item tags="sem_clth"/>
+      <attr-item tags="sem_clth-jewl"/>
+      <attr-item tags="sem_clth-jewl_curr"/>
+      <attr-item tags="sem_clth-jewl_org"/>
+      <attr-item tags="sem_clth-part"/>
+      <attr-item tags="sem_ctain"/>
+      <attr-item tags="sem_ctain_plc"/>
+      <attr-item tags="sem_ctain-abstr"/>
+      <attr-item tags="sem_ctain-clth"/>
+      <attr-item tags="sem_ctain-clth_veh"/>
+      <attr-item tags="sem_ctain_furn"/>
+      <attr-item tags="sem_ctain_tool"/>
+      <attr-item tags="sem_curr"/>
+      <attr-item tags="sem_dance"/>
+      <attr-item tags="sem_domain"/>
+      <attr-item tags="sem_drink"/>
+      <attr-item tags="sem_dummytag"/>
+      <attr-item tags="sem_edu"/>
+      <attr-item tags="sem_edu_event"/>
+      <attr-item tags="sem_edu_mat"/>
+      <attr-item tags="sem_edu_org"/>
+      <attr-item tags="sem_event"/>
+      <attr-item tags="sem_event_food"/>
+      <attr-item tags="sem_event_hum"/>
+      <attr-item tags="sem_event_plc"/>
+      <attr-item tags="sem_feat"/>
+      <attr-item tags="sem_feat-measr"/>
+      <attr-item tags="sem_feat-measr_plc"/>
+      <attr-item tags="sem_feat-phys"/>
+      <attr-item tags="sem_feat-phys_tool-write"/>
+      <attr-item tags="sem_feat-phys_veh"/>
+      <attr-item tags="sem_feat-phys_wthr"/>
+      <attr-item tags="sem_feat_plant"/>
+      <attr-item tags="sem_feat-psych"/>
+      <attr-item tags="sem_food"/>
+      <attr-item tags="sem_food-med"/>
+      <attr-item tags="sem_food_plant"/>
+      <attr-item tags="sem_furn"/>
+      <attr-item tags="sem_game"/>
+      <attr-item tags="sem_game_obj-play"/>
+      <attr-item tags="sem_geom"/>
+      <attr-item tags="sem_group"/>
+      <attr-item tags="sem_group_hum"/>
+      <attr-item tags="sem_group_hum_plc"/>
+      <attr-item tags="sem_hum"/>
+      <attr-item tags="sem_hum_plc"/>
+      <attr-item tags="sem_hum.coll"/>
+      <attr-item tags="sem_hum_lang"/>
+      <attr-item tags="sem_hum_lang_plc"/>
+      <attr-item tags="sem_hum_obj"/>
+      <attr-item tags="sem_hum_org"/>
+      <attr-item tags="sem_hum_tool"/>
+      <attr-item tags="sem_hum_veh"/>
+      <attr-item tags="sem_ideol"/>
+      <attr-item tags="sem_lang"/>
+      <attr-item tags="sem_lang_tool"/>
+      <attr-item tags="sem_mat"/>
+      <attr-item tags="sem_mat_plant"/>
+      <attr-item tags="sem_mat_txt"/>
+      <attr-item tags="sem_measr"/>
+      <attr-item tags="sem_measr_time"/>
+      <attr-item tags="sem_money"/>
+      <attr-item tags="sem_money_obj"/>
+      <attr-item tags="sem_money_txt"/>
+      <attr-item tags="sem_obj"/>
+      <attr-item tags="sem_obj-clo"/>
+      <attr-item tags="sem_obj-el"/>
+      <attr-item tags="sem_obj-ling"/>
+      <attr-item tags="sem_obj-play"/>
+      <attr-item tags="sem_obj-rope"/>
+      <attr-item tags="sem_obj_semcon"/>
+      <attr-item tags="sem_obj_state"/>
+      <attr-item tags="sem_obj-surfc"/>
+      <attr-item tags="sem_org"/>
+      <attr-item tags="sem_org_rule"/>
+      <attr-item tags="sem_org_txt"/>
+      <attr-item tags="sem_part"/>
+      <attr-item tags="sem_part_prod-cogn"/>
+      <attr-item tags="sem_perc-emo"/>
+      <attr-item tags="sem_perc-phys"/>
+      <attr-item tags="sem_plant"/>
+      <attr-item tags="sem_plant-part"/>
+      <attr-item tags="sem_plant_plant-part"/>
+      <attr-item tags="sem_plc"/>
+      <attr-item tags="sem_plc-abstr"/>
+      <attr-item tags="sem_plc-abstr_rel_state"/>
+      <attr-item tags="sem_plc-abstr_route"/>
+      <attr-item tags="sem_plc-elevate"/>
+      <attr-item tags="sem_plc-line"/>
+      <attr-item tags="sem_plc_pos"/>
+      <attr-item tags="sem_plc_route"/>
+      <attr-item tags="sem_plc_substnc"/>
+      <attr-item tags="sem_plc_substnc_wthr"/>
+      <attr-item tags="sem_plc_time"/>
+      <attr-item tags="sem_plc_tool-catch"/>
+      <attr-item tags="sem_plc-water"/>
+      <attr-item tags="sem_plc_wthr"/>
+      <attr-item tags="sem_pos"/>
+      <attr-item tags="sem_process"/>
+      <attr-item tags="sem_prod"/>
+      <attr-item tags="sem_prod-audio"/>
+      <attr-item tags="sem_prod-audio_txt"/>
+      <attr-item tags="sem_prod-cogn"/>
+      <attr-item tags="sem_prod-cogn_txt"/>
+      <attr-item tags="sem_prod-ling"/>
+      <attr-item tags="sem_prod-vis"/>
+      <attr-item tags="sem_rel"/>
+      <attr-item tags="sem_route"/>
+      <attr-item tags="sem_rule"/>
+      <attr-item tags="sem_semcon"/>
+      <attr-item tags="sem_semcon_txt"/>
+      <attr-item tags="sem_sign"/>
+      <attr-item tags="sem_state"/>
+      <attr-item tags="sem_state-sick"/>
+      <attr-item tags="sem_substnc"/>
+      <attr-item tags="sem_substnc_wthr"/>
+      <attr-item tags="sem_sur"/>
+      <attr-item tags="sem_time"/>
+      <attr-item tags="sem_time_wthr"/>
+      <attr-item tags="sem_tool"/>
+      <attr-item tags="sem_tool-catch"/>
+      <attr-item tags="sem_tool-clean"/>
+      <attr-item tags="sem_tool-it"/>
+      <attr-item tags="sem_tool-measr"/>
+      <attr-item tags="sem_tool-music"/>
+      <attr-item tags="sem_tool-write"/>
+      <attr-item tags="sem_txt"/>
+      <attr-item tags="sem_veh"/>
+      <attr-item tags="sem_wpn"/>
+      <attr-item tags="sem_wthr"/>
+      <attr-item tags="sem_year"/>
+    </def-attr>
+
+    
+  </section-def-attrs>
+ 
+  <section-def-vars>
+    <def-var n="number"/>
+  </section-def-vars>  
+
+  <section-def-macros>
+    <def-macro n="fixup1" npar="1">
+      <choose>
+        <when>
+          <test><and><equal><clip pos="1" side="tl" part="a_der"/><lit-tag v="der_s"/></equal>
+                     <equal><clip pos="1" side="tl" part="a_cmp"/><lit v=""/></equal></and></test>
+          <let><clip pos="1" side="tl" part="a_der"/><lit v=""/></let>
+        </when>
+      </choose>
+
+      <choose>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="foc_kin"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_pos"/><lit-tag v="adv"/></let>
+        </when>
+      </choose>
+      <choose>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_cas"/><lit-tag v="CD"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="nom"/></let>
+        </when>
+      </choose>
+      <choose>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="ND"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></let>
+        </when>
+      </choose>
+      <let><clip pos="1" side="tl" part="a_cmp_feil"/><lit-tag v="sg"/></let>
+      <let><clip pos="1" side="tl" part="a_cmp_only"/><lit v=""/></let> <!-- Ok while we don't treat compounds -->
+      <let><clip pos="1" side="tl" part="a_kill"/><lit v=""/></let>
+      <let><clip pos="1" side="tl" part="a_sem"/><lit v=""/></let> <!-- Should be fixed upstream -->
+    </def-macro>
+  </section-def-macros>
+
+  <section-rules>
+    
+    <rule comment=""> 
+      <pattern>
+        <pattern-item n="unknown"/>
+      </pattern>
+      <action>
+        <call-macro n="fixup1"><with-param pos="1"/></call-macro>
+        <out>
+            <lu><clip pos="1" side="tl" part="whole"/></lu>
+        </out>
+      </action>
+    </rule>
+     
+    <rule comment=""> 
+      <pattern>
+        <pattern-item n="default"/>
+      </pattern>
+      <action>
+        <call-macro n="fixup1"><with-param pos="1"/></call-macro>
+        <out>
+            <lu><clip pos="1" side="tl" part="whole"/></lu>
+        </out>
+      </action>
+    </rule>
+     
+    <rule comment=""> 
+      <pattern>
+        <pattern-item n="unknown"/>
+        <pattern-item n="clit"/>
+      </pattern>
+      <action>
+        <choose>
+          <when>
+            <test><or><equal caseless="yes"><clip pos="2" side="tl" part="lem"/><lit v="kin"/></equal>
+                      <equal caseless="yes"><clip pos="2" side="tl" part="lem"/><lit v="kaan"/></equal></or></test>
+            <let><clip pos="2" side="tl" part="whole"/>
+                 <concat><get-case-from pos="2"><lit v="myös"/></get-case-from><lit-tag v="adv"/></concat></let>
+          </when>
+        </choose>
+        <out>
+          <lu>
+            <clip pos="1" side="tl" part="whole"/>
+          </lu>
+          <b pos="1"/>
+          <lu>
+            <clip pos="2" side="tl" part="whole"/>
+          </lu>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment=""> 
+      <pattern>
+        <pattern-item n="default"/>
+        <pattern-item n="clit"/>
+      </pattern>
+      <action>
+        <call-macro n="fixup1"><with-param pos="1"/></call-macro>
+        <call-macro n="fixup1"><with-param pos="2"/></call-macro>
+        <out>
+          <mlu>
+            <lu><clip pos="1" side="tl" part="whole"/></lu>
+            <lu><clip pos="2" side="tl" part="whole"/></lu>
+          </mlu>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment=""> 
+      <pattern>
+        <pattern-item n="default"/>
+        <pattern-item n="clit"/>
+        <pattern-item n="clit-tag"/>
+      </pattern>
+      <action>
+        <call-macro n="fixup1"><with-param pos="1"/></call-macro>
+        <call-macro n="fixup1"><with-param pos="2"/></call-macro>
+        <call-macro n="fixup1"><with-param pos="3"/></call-macro>
+        <out>
+          <mlu>
+            <lu><clip pos="1" side="tl" part="whole"/></lu>
+            <lu><clip pos="2" side="tl" part="whole"/><clip pos="3" side="tl" part="a_foc"/></lu>
+          </mlu>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment=""> 
+      <pattern>
+        <pattern-item n="default"/>
+        <pattern-item n="clit-tag"/>
+      </pattern>
+      <action>
+        <call-macro n="fixup1"><with-param pos="1"/></call-macro>
+        <out>
+          <lu><clip pos="1" side="tl" part="whole"/><clip pos="2" side="tl" part="a_foc"/></lu>
+        </out>
+      </action>
+    </rule>
+      
+  </section-rules>
+</transfer>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -*- nxml -*- -->
+<postchunk>
+  <section-def-cats>
+    <def-cat n="default">
+      <cat-item name="n"/>
+      <cat-item name="x"/>
+      <cat-item name="a"/>
+      <cat-item name="prn"/>
+      <cat-item name="conneg"/>
+      <cat-item name="supn"/>
+    </def-cat>
+    <def-cat n="cmp">
+      <cat-item name="n-"/>
+    </def-cat>
+    <def-cat n="sent">
+      <cat-item name="punt"/>
+    </def-cat>
+  </section-def-cats>
+  <section-def-attrs>
+    <def-attr n="a_XD">
+      <attr-item tags="XD"/>
+    </def-attr>
+    <def-attr n="a_CD">
+      <attr-item tags="CD"/>
+    </def-attr>
+    <def-attr n="a_ND">
+      <attr-item tags="ND"/>
+    </def-attr>
+    <def-attr n="a_nbr">
+      <attr-item tags="sg"/>
+      <attr-item tags="pl"/>
+      <attr-item tags="sp"/>
+      <attr-item tags="ND"/>
+    </def-attr>
+    <def-attr n="a_cmp_all">
+      <attr-item tags="cmp_splitr"/>
+      <attr-item tags="cmp_attr.cmp_splitr"/>
+      <attr-item tags="cmp.guio"/>
+      <attr-item tags="cmp.hyph"/>
+      <attr-item tags="cmp"/>
+      <attr-item tags="cmp_sh.cmp"/>
+      <attr-item tags="cmp_sh.cmp_hyph.cmp"/>
+      <attr-item tags="cmp_sgnom.cmp_hyph.cmp"/>
+      <attr-item tags="cmp_sggen.cmp_hyph.cmp"/>
+      <attr-item tags="cmp_sgnom.cmp"/>
+      <attr-item tags="cmp_sgnom.cmp.guio"/>
+      <attr-item tags="cmp_sggen.cmp"/>
+      <attr-item tags="cmp_sgnom.cmp_splitr"/>
+      <attr-item tags="cmp_sggen.cmp_splitr"/>
+      <attr-item tags="cmp_plnom.cmp_splitr"/>
+      <attr-item tags="cmp_plgen.cmp_splitr"/>
+      <attr-item tags="cmp_plnom.cmp_hyph.cmp"/>
+      <attr-item tags="cmp_plgen.cmp_hyph.cmp"/>
+      <attr-item tags="cmp_plnom.cmp"/>
+      <attr-item tags="cmp_plgen.cmp"/>
+      <attr-item tags="pl.nom.cmp_splitr"/>
+      <attr-item tags="pl.gen.cmp_splitr"/>
+      <attr-item tags="cmp_attr"/>
+    </def-attr>
+
+
+    <def-attr n="a_cmp">
+      <attr-item tags="cmp_splitr"/>
+      <attr-item tags="cmp_attr.cmp_splitr"/>
+      <attr-item tags="cmp.guio"/>
+      <attr-item tags="cmp.hyph"/>
+      <attr-item tags="cmp_sh.cmp"/>
+      <attr-item tags="cmp_sh.cmp_hyph.cmp"/>
+      <attr-item tags="cmp_sgnom.cmp_hyph.cmp"/>
+      <attr-item tags="cmp_sggen.cmp_hyph.cmp"/>
+      <attr-item tags="cmp_sgnom.cmp"/>
+      <attr-item tags="cmp_sgnom.cmp.guio"/>
+      <attr-item tags="cmp_sggen.cmp"/>
+      <attr-item tags="cmp_sgnom.cmp_splitr"/>
+      <attr-item tags="cmp_sggen.cmp_splitr"/>
+      <attr-item tags="cmp_plnom.cmp_splitr"/>
+      <attr-item tags="cmp_plgen.cmp_splitr"/>
+      <attr-item tags="cmp_plnom.cmp_hyph.cmp"/>
+      <attr-item tags="cmp_plgen.cmp_hyph.cmp"/>
+      <attr-item tags="cmp_plnom.cmp"/>
+      <attr-item tags="cmp_plgen.cmp"/>
+      <attr-item tags="pl.nom.cmp_splitr"/>
+      <attr-item tags="pl.gen.cmp_splitr"/>
+      <attr-item tags="cmp_attr"/>
+    </def-attr>
+
+  </section-def-attrs>
+  <section-def-vars>
+    <def-var n="paraula"/>
+  </section-def-vars>
+  <section-rules>
+    <rule comment="CHUNK:">
+      <pattern>
+        <pattern-item n="default"/>
+      </pattern>
+      <action>
+        <let><clip pos="1" part="a_ND"/><lit-tag v="sg"/></let>
+        <let><clip pos="1" part="a_CD"/><lit-tag v="nom"/></let>
+        <let><clip pos="1" part="a_XD"/><lit-tag v="px3sg"/></let>
+        <let><clip pos="1" part="a_cmp"/><lit v=""/></let> 
+        <out>
+          <lu>
+            <clip pos="1" part="whole"/>
+          </lu>
+        </out>
+      </action>
+    </rule> 
+
+    <rule comment="CHUNK:">
+      <pattern>
+        <pattern-item n="cmp"/>
+      </pattern>
+      <action>
+        <let><clip pos="1" part="a_ND"/><lit-tag v="sg"/></let>
+        <let><clip pos="1" part="a_CD"/><lit-tag v="nom"/></let>
+        <let><clip pos="1" part="a_XD"/><lit-tag v="px3sg"/></let>
+        <let><clip pos="1" part="a_cmp_all"/><lit v=""/></let> <!-- For sneaky compoundy tags.-->
+        <out>
+          <lu>
+            <clip pos="1" part="whole"/>
+          </lu>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="CHUNK:">
+      <pattern>
+        <pattern-item n="sent"/>
+      </pattern>
+      <action>
+        <out>
+          <lu>
+            <clip pos="1" part="whole"/>
+          </lu>
+        </out>
+      </action>
+    </rule>
+  </section-rules>
+</postchunk>
