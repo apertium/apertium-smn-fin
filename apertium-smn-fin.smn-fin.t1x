@@ -64,6 +64,10 @@
       <cat-item lemma="leat" tags="vblex.*.indic.pres.*"/>
       <cat-item lemma="leat" tags="vblex.*.indic.pret.*"/>
     </def-cat>
+    <def-cat n="neg">
+      <cat-item tags="vblex.neg.*"/>
+      <cat-item tags="vblex.iv.neg.*"/>
+    </def-cat>
     <def-cat n="conneg-pret">
       <cat-item tags="vblex.*.indic.pret.conneg.*"/>
     </def-cat>
@@ -236,9 +240,6 @@
       <attr-item tags="conneg"/>
       <attr-item tags="connegii"/>
     </def-attr>
-    <def-attr n="a_voice">
-      <attr-item tags="actv"/>
-    </def-attr>
     <def-attr n="a_qst">
       <attr-item tags="qst"/>
     </def-attr>
@@ -246,6 +247,12 @@
       <attr-item tags="cond"/>
       <attr-item tags="cond.pres"/>
       <attr-item tags="cond.pret"/>
+    </def-attr>
+    <def-attr n="a_neg">
+      <attr-item tags="neg"/>
+    </def-attr>
+    <def-attr n="a_voice">
+      <attr-item tags="actv"/>
     </def-attr>
     <def-attr n="a_tense">
       <attr-item tags="pres"/>
@@ -282,8 +289,7 @@
       <attr-item tags="der_minen.sg.tra"/>
     </def-attr>
     <def-attr n="a_pass">
-      <attr-item tags="der_passs.vblex.iv"/>
-      <attr-item tags="der_passl.vblex.iv"/>
+      <attr-item tags="der_pass"/>
     </def-attr>
     <def-attr n="a_deriv">
       <attr-item tags="der_dimin"/>
@@ -391,6 +397,12 @@
       <attr-item tags="sg.ess"/>
       <attr-item tags="ND.ess"/>
       <attr-item tags="ess"/>
+    </def-attr>
+    <def-attr n="a_par">
+      <attr-item tags="pl.par"/>
+      <attr-item tags="sg.par"/>
+      <attr-item tags="ND.par"/>
+      <attr-item tags="par"/>
     </def-attr>
 
     <def-attr n="a_px_pers">
@@ -1087,6 +1099,28 @@
       <let><var n="cn_sn"/><lit v=""/></let>
 <!--      <let><clip pos="1" side="tl" part="a_attr"/><lit-tag v="ND.CD"/></let>-->
 
+      <!--  ACTIVE -->
+
+<!--
+	  <choose>
+        <when>
+          <test><and><equal><clip pos="1" side="tl" part="a_mood"/><lit-tag v="indic"/></equal>
+                     <not><equal><clip pos="1" side="sl" part="a_pass"/><lit-tag v="der_pass"/></equal></not></and></test>
+          <let><clip pos="1" side="tl" part="a_voice"/><lit-tag v="actv"/></let>
+        </when>
+        <when>
+          <test><and><equal><clip pos="1" side="sl" part="a_neg"/><lit-tag v="neg.indic"/></equal>
+                     <not><equal><clip pos="1" side="sl" part="a_pass"/><lit-tag v="der_pass"/></equal></not></and></test>
+          <let><clip pos="1" side="tl" part="a_neg"/><concat><lit-tag v="neg"/><lit-tag v="actv"/></concat></let>
+        </when>
+        <when>
+          <test><and><equal><clip pos="1" side="sl" part="a_neg"/><lit-tag v="indic"/></equal>
+                     <not><equal><clip pos="1" side="sl" part="a_pass"/><lit-tag v="der_pass"/></equal></not></and></test>
+          <let><clip pos="1" side="tl" part="a_voice"/><concat><lit-tag v="neg"/><lit-tag v="actv"/></concat></let>
+        </when>
+	</choose>
+
+	-->
       <!-- ==== AGREEMENT ==== -->
 
       <choose>
@@ -1335,6 +1369,7 @@
         </when>
       </choose>
 
+
       <!--  ESSIVE -->
 
       <choose>
@@ -1346,6 +1381,20 @@
                          <equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="prn"/></equal>
                          <equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="adj"/></equal></or></and></test>
           <let><clip pos="1" side="tl" part="a_ess"/><lit-tag v="sg.ess"/></let>
+        </when>
+      </choose>
+
+      <!--  PARTITIVE -->
+
+      <choose>
+        <when>
+          <test><and><equal><clip pos="1" side="tl" part="a_par"/><lit-tag v="par"/></equal>
+                     <or><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="n"/></equal>
+                         <equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="num"/></equal>
+                         <equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="np"/></equal>
+                         <equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="prn"/></equal>
+                         <equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="adj"/></equal></or></and></test>
+          <let><clip pos="1" side="tl" part="a_par"/><lit-tag v="sg.par"/></let>
         </when>
       </choose>
 
