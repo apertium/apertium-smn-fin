@@ -10838,6 +10838,7 @@
     
     <!-- SECTION: Proper nouns -->
 
+    <e><p><l>Aanaar<s n="np"/></l><r>Inari<s n="np"/></r></p></e>
     <e><p><l>Suomâ<s n="np"/></l><r>Suomi<s n="np"/></r></p></e>
     <e><p><l>Abba<s n="np"/></l><r>Abba<s n="np"/></r></p></e>
     <e><p><l>Abel<s n="np"/></l><r>Aabel<s n="np"/></r></p></e>
@@ -21503,6 +21504,7 @@
     <e><p><l>leđe<s n="vblex"/><s n="iv"/></l><r>olla<s n="vblex"/></r></p><par n="V_V"/></e>
     <e><p><l>ij<s n="vblex"/><s n="iv"/><s n="neg"/><s n="indic"/></l><r>ei<s n="vblex"/></r></p><par n="V_V_neg"/></e>
 
+    <e><p><l>testađ<s n="vblex"/><s n="tv"/></l><r>testata<s n="vblex"/></r></p><par n="V_V"/></e>
     <e><p><l>aassâđ<s n="vblex"/><s n="iv"/></l><r>asua<s n="vblex"/></r></p><par n="V_V"/></e>
     <e><p><l>ahevâššâđ<s n="vblex"/><s n="iv"/></l><r>kaivata<s n="vblex"/></r></p><par n="V_V"/></e>
     <e><p><l>ahevâššâđ<s n="vblex"/><s n="iv"/></l><r>ikävöidä<s n="vblex"/></r></p><par n="V_V"/></e>
