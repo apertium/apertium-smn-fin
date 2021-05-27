@@ -7,7 +7,7 @@ AC_PREREQ(2.52)
 m4_define([required_apertium_version], [3.2.0])
 m4_define([required_lttoolbox_version], [3.2.0])
 
-AC_INIT([Apertium Northern Saami-Finnish], [0.1.0], [trondtr@users.sourceforge.net], [apertium-smn-fin], [http://wiki.apertium.org/wiki/Apertium-smn-fin])
+AC_INIT([Apertium Northern Saami-Finnish], [0.1.0], [trondtr@users.sourceforge.net], [apertium-smn-fin], [https://wiki.apertium.org/wiki/Apertium-smn-fin])
 AM_INIT_AUTOMAKE
 
 AC_PROG_LN_S
@@ -127,7 +127,7 @@ else
 fi
 
 
-m4_ifdef([AP_CHECK_LING],[],[AC_MSG_ERROR([AP_CHECK_LING not defined, is apertium.m4 in ACLOCAL_PATH? See: http://wiki.apertium.org/wiki/Installation_troubleshooting])])
+m4_ifdef([AP_CHECK_LING],[],[AC_MSG_ERROR([AP_CHECK_LING not defined, is apertium.m4 in ACLOCAL_PATH? See: https://wiki.apertium.org/wiki/Installation_troubleshooting])])
 
 
 AP_CHECK_LING([1], [giella-smn])
