@@ -1,0 +1,10 @@
+{
+    "fin-smn": {
+        "input": "fin-smn-input.txt",
+        "mode": "fin-smn"
+    },
+    "smn-fin": {
+        "input": "smn-fin-input.txt",
+        "mode": "smn-fin"
+    }
+}

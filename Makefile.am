@@ -2,7 +2,6 @@
 ## Makefile for Northern Saami--Finnish
 ###############################################################################
 
-VERSION=0.1.0
 LANG1=smn
 LANG2=fin
 PREFIX1=$(LANG1)-$(LANG2)
@@ -251,11 +250,4 @@ test-install: all
 	@rm -rf tmp-$@
 
 test: all test-install
-	echo "ja ❡" | apertium -d . smn-fin | tee .test-mt
-	@echo "ja " > .test-ref
-	@diff .test-ref .test-mt
-	echo "ja" | apertium -d . fin-smn | tee .test-mt
-	@echo "ja" > .test-ref
-	@diff .test-ref .test-mt
-	@rm .test-ref .test-mt
-
+	apertium-regtest test
