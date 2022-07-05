@@ -1,4 +1,5 @@
-<metalrx>
+<?xml version="1.0" encoding="UTF-8"?>
+<lrx>
 
 
   <def-seqs>
@@ -384,4 +385,4 @@
   </rule>
 
 </rules>
-</metalrx>
+</lrx>

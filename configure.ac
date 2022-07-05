@@ -16,66 +16,9 @@ AC_PROG_AWK
 PKG_CHECK_MODULES(APERTIUM,   apertium >= required_apertium_version, [], [PKG_CHECK_MODULES(APERTIUM,   apertium-3.2 >= required_apertium_version)])
 PKG_CHECK_MODULES(LTTOOLBOX,   lttoolbox >= required_lttoolbox_version, [], [PKG_CHECK_MODULES(LTTOOLBOX,   lttoolbox-3.2 >= required_lttoolbox_version)])
 
-AC_PATH_PROG(CGCOMP, cg-comp, no)
-if test x$ac_cv_path_CGCOMP = x
-then
-  AC_MSG_ERROR([You don't have cg-comp installed.])
-fi
-if test x$ac_cv_path_CGCOMP = xno
-then
-  AC_MSG_ERROR([You don't have cg-comp installed.])
-fi
-
-AC_PATH_PROG(CGPROC, cg-proc, no)
-if test x$ac_cv_path_CGPROC = x
-then
-  AC_MSG_ERROR([You don't have cg-proc installed.])
-fi
-if test x$ac_cv_path_CGPROC = xno
-then
-  AC_MSG_ERROR([You don't have cg-proc installed.])
-fi
-
-AC_PATH_PROG(HFSTPROC, hfst-proc, no)
-if test x$ac_cv_path_HFSTPROC = x
-then
-  AC_MSG_ERROR([You don't have hfst-proc installed.])
-fi
-if test x$ac_cv_path_HFSTPROC = xno
-then
-  AC_MSG_ERROR([You don't have hfst-proc installed.])
-fi
-
-AC_PATH_PROG(HFSTLEXC, hfst-lexc, no)
-if test x$ac_cv_path_HFSTLEXC = x
-then
-  AC_MSG_ERROR([You don't have hfst-lexc installed.])
-fi
-if test x$ac_cv_path_HFSTLEXC = xno
-then
-  AC_MSG_ERROR([You don't have hfst-lexc installed.])
-fi
-
-AC_PATH_PROG(HFSTTWOLC, hfst-twolc, no)
-if test x$ac_cv_path_HFSTTWOLC = x
-then
-  AC_MSG_ERROR([You don't have hfst-twolc installed.])
-fi
-if test x$ac_cv_path_HFSTTWOLC = xno
-then
-  AC_MSG_ERROR([You don't have hfst-twolc installed.])
-fi
-
-AC_PATH_PROG(HFSTSUBSTITUTE, hfst-substitute, no)
-if test x$ac_cv_path_HFSTSUBSTITUTE = x
-then
-  AC_MSG_ERROR([You don't have hfst-subsitute installed.])
-fi
-if test x$ac_cv_path_HFSTSUBSTITUTE = xno
-then
-  AC_MSG_ERROR([You don't have hfst-substitute installed.])
-fi
-
+PKG_CHECK_MODULES(HFST, hfst >= 3.16.0)
+PKG_CHECK_MODULES(CG3, cg3 >= 1.3.6)
+PKG_CHECK_MODULES(APERTIUM_LEX_TOOLS, apertium-lex-tools >= 0.4.0)
 
 #
 # Check for xsltproc
@@ -89,26 +32,6 @@ fi
 if test x$ac_cv_path_XSLTPROC = xno
 then
   AC_MSG_ERROR([You don't have xsltproc installed.])
-fi
-
-AC_PATH_PROG(LRXCOMP, lrx-comp, no)
-if test x$ac_cv_path_LRXCOMP = x
-then
-  AC_MSG_ERROR([You don't have lrx-comp installed.])
-fi
-if test x$ac_cv_path_LRXCOMP = xno
-then
-  AC_MSG_ERROR([You don't have lrx-comp installed.])
-fi
-
-AC_PATH_PROG(LRXPROC, lrx-proc, no)
-if test x$ac_cv_path_LRXPROC = x
-then
-  AC_MSG_ERROR([You don't have lrx-proc installed.])
-fi
-if test x$ac_cv_path_LRXPROC = xno
-then
-  AC_MSG_ERROR([You don't have lrx-proc installed.])
 fi
 
 AC_PATH_PROG(GZCAT, gzcat, no)
